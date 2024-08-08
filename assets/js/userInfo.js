@@ -67,3 +67,54 @@ let result_Box_To = document.querySelector('#result_Box_To ul');
 // **btn**
 let search_Btn = document.getElementById('search_Btn');
 let clear_Btn = document.getElementById('clear_Btn');
+// ********stations list**********
+let stations_List = ['Abdulpur','Ashanganj','Akkelpur','Azampur','B_Sirajul_Islam','Baijitpur','Biman_Bandar','Birampur','Burimari','Chadpur','Dhaka','Dinapur','Fulbari','Gachihata','Harashpur','Ishwardi','Jamalpur_Twon','Kauia','Lalmonirhat','Maijgaon','Natore','Nilphamari','Padma','Quasba','Rangpur','Rajshahi','Thakurgaon_Road','Ullapara'];
+
+
+// **********collect Data a arry and filter the value********
+//**********all_Data_Collect_F*****Form******
+input.onkeyup = () => {
+    let result = [];
+    let user_Input_Value = input.value;
+    if(user_Input_Value.length) {
+        result = stations_List.filter((value) => {
+          return result = value.toLocaleLowerCase().includes(user_Input_Value.toLocaleLowerCase());
+        })
+    }
+    all_Data_Append_C_Fild_F(result);
+}
+//**********all_Data_Collect_Append current fild***********
+let all_Data_Append_C_Fild_F = (result) => {
+    let allData = result.map((list) => {
+        return "<li onclick = selectInput(this)>"+ list +"</li>";
+    }) 
+    result_Box.innerHTML = allData.join('');    
+}
+// ***********set data inpu fild*********
+function selectInput(list){  //Not Work
+    input.value = list.innerHTML;
+    result_Box.innerHTML = '';
+}
+// **********input To F**********
+input_To.onkeyup = () => {
+    let result2 = [];
+    let inputTo = input_To.value;
+    if(inputTo.length) {
+        result2 = stations_List.filter((value) => {
+          return result2 = value.toLocaleLowerCase().includes(inputTo.toLocaleLowerCase());
+        })
+    }
+    all_Data_Append_Input_To(result2, result_Box_To);
+} 
+//**********all_Data_Collect_Append current fild***********
+let all_Data_Append_Input_To = (result, result_Box_To) => {
+    let allData = result.map((list) => {
+        return "<li onclick='select_Input_To(this)'>"+ list +"</li>";
+    })
+    result_Box_To.innerHTML = allData.join('');   
+}
+// ***********set data inpu fild*********
+function select_Input_To(list) {
+    input_To.value = list.innerHTML;
+    result_Box_To.innerHTML = '';
+}
