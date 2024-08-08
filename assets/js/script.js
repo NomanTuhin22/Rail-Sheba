@@ -52,11 +52,7 @@ let forget_Password_F = () => {
     }
  }
  // ***********forget_Password_F*****Event********
-<<<<<<< HEAD
- forget_Password.addEventListener('click', forget_Password_F);
-=======
 forget_Password.addEventListener('click', forget_Password_F);
->>>>>>> fcd5df5 (userInfo file create and some modify)
 // ************data_Remember_F*****F*********
 let data_Remember_F = () => {
     let save = 'auto remember data';
