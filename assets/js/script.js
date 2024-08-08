@@ -33,6 +33,26 @@ let worning_F = (worning) => {
       clearInterval(clear);
   },1000)
 }
+// ***********forget_Password_F*************
+let forget_Password_F = () => {
+    let passwordValue = password.value;
+    if(!email.value == '' && !passwordValue.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/)) {
+       label_Password.innerText = 'New Password';
+     //Rail00@#
+      let num = Math.floor(Math.random(100) * 10);
+      let newPassword = `Abc0${num}@#`;
+      //  ****copy clipboard***
+      navigator.clipboard.writeText(newPassword);
+      password.value = newPassword;
+      worning_F(newPassword);
+    }
+    else{
+     let empty ='Empty @email !!';
+     worning_F(empty);
+    }
+ }
+ // ***********forget_Password_F*****Event********
+ forget_Password.addEventListener('click', forget_Password_F);
 // ************data_Remember_F*****F*********
 let data_Remember_F = () => {
     let save = 'auto remember data';
