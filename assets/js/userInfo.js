@@ -196,7 +196,30 @@ let valiation_F = () => {
         localStorage.setItem('all_Data',JSON.stringify(all_Data));
         alert('working')
     }
-    
 }
+
+let fadeIn = document.querySelector('.fadeIn');
+let servicess = document.getElementById('servicess');
+// ***********input From->  Fild****Event*****
+input.addEventListener('click', () => {
+    servicess.classList.toggle('fadeIn');
+    helping_Title.innerText = 'Form Station';
+    helping_Text.innerText = 'আপনি কোন স্টেশন থেকে যাত্রা শুরু কোরবেন ?';
+    helping_Img.src = './assets/images/start-jurny.webp';
+});
+// ***********input to Fild****Event*****
+input_To.addEventListener('click', () => {
+    servicess.classList.toggle('fadeIn');
+    helping_Title.innerText = 'To Station';
+    helping_Text.innerText = 'আপনার যাত্রার শেষ স্টেশনটির নাম লিখুন';
+    helping_Img.src = './assets/images/detanation.png';
+});
+// ***********input Choce Class Fild****Event*****
+selection.addEventListener('click', () => {
+    servicess.classList.toggle('fadeIn');
+    helping_Title.innerText = 'Choce A Class';
+    helping_Text.innerText = 'আপনি কোন ধরনের আসন সুবিধা নিতে চান ?';
+    helping_Img.src = './assets/images/class.webp';
+});
 // **********Secarch Btn ****Event**********
 search_Btn.addEventListener('click',valiation_F);
