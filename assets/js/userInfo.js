@@ -7,12 +7,10 @@ let Panchagarh_To_Dhaka = ['B Sirajul Islam','Kismat','Ruhia','Thakurgaon_Road',
 let all_Station = {
     Panchagarh_To_Dhaka,
 }
-
  //localstorage Train name send 
  localStorage.setItem('train_info', JSON.stringify(train_Info));
  //localstorage Train all station send 
  localStorage.setItem('all_Station', JSON.stringify(all_Station));
-
 // ********navigation*********
 let toggle_Btn = document.getElementById('toggle_Btn');
 let menu_List = document.getElementById('menu_List');
@@ -26,7 +24,6 @@ toggle_Btn.addEventListener('click', () => {
 // ********user Accound Create**********
 let user_Id = localStorage.getItem('userData');
 let userData_Obj = JSON.parse(user_Id); 
-
 // ********send_Data_log_div*********
 let send_Data_log_div = () => {
     // ***append userData into menu li***
@@ -37,7 +34,6 @@ logout_Btn.addEventListener('click', () => {
     window.open("login.html" , '_self');
     localStorage.clear();
 })
-
 // ********alert_Text selector*********
 let alert_Text = document.getElementById('alert_Text');
 // ********alert_Text alert_Text_F*********
@@ -52,7 +48,6 @@ window.onload = () => {
        alert_Text.style.opacity = '1';
    },4000);
 }
-
 
 // ***********user Input Validtion selection**********
 let input = document.getElementById('input_Station');
@@ -72,6 +67,7 @@ let stations_List = ['Abdulpur','Ashanganj','Akkelpur','Azampur','B_Sirajul_Isla
 // **********some Data Stor in localStorage*************
 let form_Staion = input.value;
 let to_Station = input_To.value;
+
 let date_V = jurney_Date.value;
 let send_Data = new Date(date_V);
 //***user Current Day***
@@ -95,7 +91,6 @@ let total_Duration_H = total_M_Second.getHours();
 let total_Duration_M = total_M_Second.getMinutes();
 //***ticket Value***
 let random_Ticket = Math.floor(Math.random() * (100 - 1 + 1) + 1);
-
 
 // **********collect Data a arry and filter the value********
 //**********all_Data_Collect_F*****Form******
@@ -194,7 +189,8 @@ let valiation_F = () => {
         localStorage.setItem('indexPage', JSON.stringify(indexPage_Obj));
         //*********send Data localStorage***********
         localStorage.setItem('all_Data',JSON.stringify(all_Data));
-        alert('working')
+        //**moveto boking page**
+        window.open("boking.html", "_self");
     }
 }
 
