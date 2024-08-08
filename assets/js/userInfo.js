@@ -69,6 +69,32 @@ let search_Btn = document.getElementById('search_Btn');
 let clear_Btn = document.getElementById('clear_Btn');
 // ********stations list**********
 let stations_List = ['Abdulpur','Ashanganj','Akkelpur','Azampur','B_Sirajul_Islam','Baijitpur','Biman_Bandar','Birampur','Burimari','Chadpur','Dhaka','Dinapur','Fulbari','Gachihata','Harashpur','Ishwardi','Jamalpur_Twon','Kauia','Lalmonirhat','Maijgaon','Natore','Nilphamari','Padma','Quasba','Rangpur','Rajshahi','Thakurgaon_Road','Ullapara'];
+// **********some Data Stor in localStorage*************
+let form_Staion = input.value;
+let to_Station = input_To.value;
+let date_V = jurney_Date.value;
+let send_Data = new Date(date_V);
+//***user Current Day***
+let select_Day = send_Data.getDate();
+let m = send_Data.toDateString();
+//***user Current Month***
+let select_M = m.substring(4, 7);
+
+let start_Time = new Date().toLocaleTimeString();
+//****end Time**********
+let current_Time = new Date();
+let convert_M_Second = current_Time.getTime();
+//***rendom number***
+let random_Number = Math.floor(Math.random() * (8 - 1 + 1) + 1);
+let addMlSeconds = 60 * 60 * 1000; // 1 h = 3600000 s
+let end_M_Second = (addMlSeconds * random_Number);
+//*** end time ***
+let total_M_Second = new Date(convert_M_Second + end_M_Second);
+let end_Time = total_M_Second.toLocaleTimeString();
+let total_Duration_H = total_M_Second.getHours();
+let total_Duration_M = total_M_Second.getMinutes();
+//***ticket Value***
+let random_Ticket = Math.floor(Math.random() * (100 - 1 + 1) + 1);
 
 
 // **********collect Data a arry and filter the value********
@@ -118,3 +144,59 @@ function select_Input_To(list) {
     input_To.value = list.innerHTML;
     result_Box_To.innerHTML = '';
 }
+
+// ***********user data cullect and send localStorage F***********
+let user_Data_Send_LocalStorage = () => {
+    let all_Data = {
+        start_station : `${form_Staion}`,
+        to_Station    : `${to_Station}`,
+        start_Time    : `${start_Time}`,
+        end_Time      : `${end_Time}`,
+        select_Day    : `${select_Day}`,
+        select_M      : `${select_M}`,
+        total_Duration_H : `${total_Duration_H}`,
+        total_Duration_M : `${total_Duration_M}`,
+        random_Ticket : `${random_Ticket}`,
+    }
+    return all_Data;
+}
+
+// ***********valiation F***********
+let valiation_F = () => {
+    // get value F call
+    let all_Data = user_Data_Send_LocalStorage();
+    // *** all dainamic data append in this objct*********
+    let start_Jurney_V = input.value;
+    let end_Jurney_V = input_To.value;
+    let jurney_Date_V = jurney_Date.value;
+    let selection_V = selection.value;
+    
+    if((start_Jurney_V && end_Jurney_V && jurney_Date_V && selection_V) == ''){
+        helping_Text.innerText = 'Empty Value !!';
+        helping_Text.classList.add('h-wornig');
+    }
+    else if((start_Jurney_V || end_Jurney_V).match(/\d+/) || (start_Jurney_V || end_Jurney_V).match(/[!@#\$%\^\&*\)\(+=._-]{1,}$/g)) {
+        helping_Text.innerText = 'Not Match !!';
+        helping_Text.classList.add('h-wornig');
+    }
+    else{
+        helping_Title.innerText = 'Loging Success';
+        helping_Text.innerText ='';
+        helping_Img.src = '';
+        // **create object**
+        let indexPage_Obj = {};
+        indexPage_Obj.start_Station = start_Jurney_V;
+        indexPage_Obj.end_Station = end_Jurney_V;
+        indexPage_Obj.J_Date =  jurney_Date_V;
+        indexPage_Obj.class =  selection_V;
+       
+        // **send data local storage**
+        localStorage.setItem('indexPage', JSON.stringify(indexPage_Obj));
+        //*********send Data localStorage***********
+        localStorage.setItem('all_Data',JSON.stringify(all_Data));
+        alert('working')
+    }
+    
+}
+// **********Secarch Btn ****Event**********
+search_Btn.addEventListener('click',valiation_F);
