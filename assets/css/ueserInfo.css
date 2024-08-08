@@ -42,6 +42,9 @@
   padding-top: 15px;
   line-height: 20px;
 }
+.custom-items{
+  margin-top: 10px;
+}
 .custom-items li{
   list-style-type: none;
   padding: 30px 20px 13px 20px;
@@ -78,7 +81,7 @@
 .dropdown-div{
   position: absolute;
   top: 70px;
-  right: 14%;
+  right: 14% !important;
   width: 300px;
   height: 150px;
   background-color: #ffff;
@@ -419,9 +422,9 @@
   object-fit: contain;
 }
 /* **********custom info************ */
-  .custom-some-height{
-    height: 150px !important;
-  }
+.custom-some-height{
+  height: 150px !important;
+}
 .custom-some-font{
   font-family: var(--roboto);
   line-height: 50px ;
@@ -495,6 +498,12 @@
 /* ***********media screen************  */
 /* *******576px******** */
 @media (min-width: 576px) {
+  /*dropdown menu*/
+  .dropdown-div{
+    position: absolute;
+    left: -50%;
+    width: 400px;
+  }
   .vedio_div{
     width: 90%;
     height: auto;
@@ -508,7 +517,12 @@
 }
 /* *******576px******** */
 @media (min-width: 768px) {
-
+  /*dropdown menu*/
+  .dropdown-div{
+    position: absolute;
+    left: -40%;
+    width: 450px;
+  }
 }
 /* *******992px******** */
 @media (max-width: 991px) {
@@ -539,6 +553,11 @@
   .toggle{
     display: flex;
     justify-content: end;
+  }
+  /*dropdown menu*/
+  .dropdown-div{
+    position: absolute;
+    left: -25%;
   }
   /* ***input section*** */
   .input-container{
@@ -572,6 +591,18 @@
   .custom-menubar{
     padding: 0 30px;
   }
+  .custom-items li {
+    padding: 30px 12px 13px 12px;
+  }
+  .custom-items li a {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  /*dropdown menu*/
+  .dropdown-div{
+    right: 15% !important;
+    width: 215px !important;
+  }
  /* ***input section*** */
  .input-container{
   width: 60%;
@@ -597,6 +628,13 @@
 }
 /* *******576px******** */
 @media (min-width: 1200px) {
+  .custom-items li {
+    padding: 30px 15px 13px 15px;
+  }
+  .custom-items li a {
+    font-size: 17px;
+    font-weight: 400;
+  }
     .custom-menubar{
         padding: 0 50px;
      }

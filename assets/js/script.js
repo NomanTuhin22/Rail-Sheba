@@ -38,7 +38,7 @@ let forget_Password_F = () => {
     let passwordValue = password.value;
     if(!email.value == '' && !passwordValue.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/)) {
        label_Password.innerText = 'New Password';
-     //Rail00@#
+      //Rail00@#
       let num = Math.floor(Math.random(100) * 10);
       let newPassword = `Abc0${num}@#`;
       //  ****copy clipboard***
