@@ -33,7 +33,13 @@ let worning_F = (worning) => {
       clearInterval(clear);
   },1000)
 }
-
+// ************data_Remember_F*****F*********
+let data_Remember_F = () => {
+    let save = 'auto remember data';
+    worning_F(save);
+}
+// ***remember***Event***
+remember.addEventListener('click', data_Remember_F);
 // *********setData_LocalStorage_F****F*****
 let setData_LocalStorage_F = (user_Email, user_Password) => {
     let userEmil = user_Email;
@@ -43,7 +49,6 @@ let setData_LocalStorage_F = (user_Email, user_Password) => {
         userInfo.u_Password = userPassword;
         localStorage.setItem('userData', JSON.stringify(userInfo));
 }
-
 // *************create_Accound_F*****F*********
 let loging_Accound_F = () => {
     let getData = localStorage.getItem('userData');
