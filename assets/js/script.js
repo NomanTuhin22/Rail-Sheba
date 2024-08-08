@@ -52,7 +52,11 @@ let forget_Password_F = () => {
     }
  }
  // ***********forget_Password_F*****Event********
+<<<<<<< HEAD
  forget_Password.addEventListener('click', forget_Password_F);
+=======
+forget_Password.addEventListener('click', forget_Password_F);
+>>>>>>> fcd5df5 (userInfo file create and some modify)
 // ************data_Remember_F*****F*********
 let data_Remember_F = () => {
     let save = 'auto remember data';
@@ -69,7 +73,7 @@ let setData_LocalStorage_F = (user_Email, user_Password) => {
         userInfo.u_Password = userPassword;
         localStorage.setItem('userData', JSON.stringify(userInfo));
 }
-// *************create_Accound_F*****F*********
+// *************loging_Accound_F*****F*********
 let loging_Accound_F = () => {
     let getData = localStorage.getItem('userData');
     if(getData === null) {
@@ -80,11 +84,10 @@ let loging_Accound_F = () => {
         worning_F(empty);
     }else{
         //****goto home page*/
-        //window.open("./index.html");
-        alert('working runing');
+        window.open("./userInfo.html");
     }
 }
-// *******create_Accound_F*****Event*****
+// *******loging_Accound_F*****Event*****
 loggin_Btn.addEventListener('click', loging_Accound_F);
 // ***********create_Btn_F******validaton data****
 let validation_F = () => {
@@ -100,8 +103,7 @@ let validation_F = () => {
             if(user_Password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/)){
              //*****sed data card 3******** 
             //****go to home page*/
-            //window.open("./index.html", "_self");
-            alert('working runing');
+            window.open("./userInfo.html", "_self");
             //user_Password(user_Password);
              setData_LocalStorage_F(user_Email ,user_Password);
              email.value ='';
@@ -117,7 +119,6 @@ let validation_F = () => {
             worning_F(p_Mise);
         } 
     }
-    
 }
 
 // ********create_Btn_F******Event****
