@@ -15,4 +15,68 @@ let forget_Password = document.getElementById('forget_Password');
 let card_Three = document.getElementById('card_Three');
 let get_Email = document.getElementById('get_Email');
 
-console.log(email.value);
+// *******create worning******p****
+let p = document.createElement('p');
+    p.classList.add('worning');
+
+// *************worning_F*****F*********
+let worning_F = (worning) => {
+  worning_div.children[0].style.display='none';
+  worning_div.children[1].style.display='none';
+  p.innerText = `${worning}`;
+  worning_div.appendChild(p);
+  //****worning append***
+  let clear = setInterval(() => {
+      worning_div.children[0].style.display='block';
+      worning_div.children[1].style.display='block';
+      p.remove();
+      clearInterval(clear);
+  },1000)
+}
+
+// *********setData_LocalStorage_F****F*****
+let setData_LocalStorage_F = (user_Email, user_Password) => {
+    let userEmil = user_Email;
+    let userPassword = user_Password;
+    let userInfo = {};
+        userInfo.u_Email = userEmil;
+        userInfo.u_Password = userPassword;
+        localStorage.setItem('userData', JSON.stringify(userInfo));
+}
+
+// ***********create_Btn_F******validaton data****
+let validation_F = () => {
+    let user_Email = email.value;
+    let user_Password = password.value;
+
+    if(user_Email =="" || user_Password == ""){
+      let empty = 'Empty Value !'
+      worning_F(empty);
+    }
+    else {
+        if(user_Email.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
+            if(user_Password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/)){
+             //*****sed data card 3******** 
+            //****go to home page*/
+            //window.open("./index.html", "_self");
+            alert('working runing');
+            //user_Password(user_Password);
+             setData_LocalStorage_F(user_Email ,user_Password);
+             email.value ='';
+             password.value ='';
+           }
+           else {
+               let p_Misematch = 'Enter Valid Email Password !';
+               worning_F(p_Misematch);
+           }
+        }
+        else {
+            let p_Mise = 'Not Valid @mail !';
+            worning_F(p_Mise);
+        } 
+    }
+    
+}
+
+// ********create_Btn_F******Event****
+create_Btn.addEventListener('click', validation_F);
