@@ -44,6 +44,23 @@ let setData_LocalStorage_F = (user_Email, user_Password) => {
         localStorage.setItem('userData', JSON.stringify(userInfo));
 }
 
+// *************create_Accound_F*****F*********
+let loging_Accound_F = () => {
+    let getData = localStorage.getItem('userData');
+    if(getData === null) {
+        alert('Not Found Accound !!');
+    }
+    if(!(getData.u_Email && getData.u_Password)){
+        let empty = 'Not Found Accound !!!';
+        worning_F(empty);
+    }else{
+        //****goto home page*/
+        //window.open("./index.html");
+        alert('working runing');
+    }
+}
+// *******create_Accound_F*****Event*****
+loggin_Btn.addEventListener('click', loging_Accound_F);
 // ***********create_Btn_F******validaton data****
 let validation_F = () => {
     let user_Email = email.value;
