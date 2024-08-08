@@ -26,6 +26,34 @@ toggle_Btn.addEventListener('click', () => {
 // ********user Accound Create**********
 let user_Id = localStorage.getItem('userData');
 let userData_Obj = JSON.parse(user_Id); 
+
+// ********send_Data_log_div*********
+let send_Data_log_div = () => {
+    // ***append userData into menu li***
+    userEmil.innerHTML =`${userData_Obj.u_Email}`;
+}
+// *********Logout Btn *****event************
+logout_Btn.addEventListener('click', () => {
+    window.open("login.html" , '_self');
+    localStorage.clear();
+})
+
+// ********alert_Text selector*********
+let alert_Text = document.getElementById('alert_Text');
+// ********alert_Text alert_Text_F*********
+window.onload = () => {
+   //**call F**
+   send_Data_log_div();
+   setInterval(() => {
+     alert_Text.classList.add('alert_Text');
+     alert_Text.style.opacity = '.3';
+   },3000);
+   setInterval(() => {
+       alert_Text.style.opacity = '1';
+   },4000);
+}
+
+
 // ***********user Input Validtion selection**********
 let input = document.getElementById('input_Station');
 let input_To = document.getElementById('input_To');
