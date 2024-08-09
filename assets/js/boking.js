@@ -87,6 +87,23 @@ let prev_Train = document.getElementById('prev_Train');
 show_D_S_Starion.innerHTML = `${data.start_Station}`;
 show_D_S_End.innerHTML = `${data.end_Station}`;
 show_Div_Date.innerHTML = `${data.J_Date}`;
+//hidden div items selection
+let h_start_Station = document.getElementById('h_start_Station');
+let h_end_Stat = document.getElementById('h_end_Stat');
+let h_date = document.getElementById('h_date');
+let h_Selection = document.querySelector('#selection');
+// **replace lostorage Data hidden div (input.value)
+h_start_Station.value = `${data.start_Station}`;
+h_end_Stat.value = `${data.end_Station}`;
+h_date.value = `${data.J_Date}`;
+h_Selection.options[1].innerHTML= `${data.class}`;
+
+// ***hidden div Event***
+let change_Station = document.getElementById('change_Station');
+change_Station.addEventListener('click', () => {
+  show_Container.style.display = 'none';
+  hidden_Container.style.display = 'block';
+})
 
 //**popup_window inicial */
 let popup_window_Section = `
