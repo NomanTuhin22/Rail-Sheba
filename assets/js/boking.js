@@ -76,6 +76,17 @@ let hidden_Container = document.getElementById('hidden_Container');
 show_Container.innerHTML = `${show_Div}`;
 hidden_Container.innerHTML = `${hidden_div}`;
 hidden_Container.style.display = 'none';
+// ************inicial starion data add*************
+//show div items selection
+let show_D_S_Starion = document.getElementById('show_D_S_Starion');
+let show_D_S_End = document.getElementById('show_D_S_End');
+let show_Div_Date = document.getElementById('show_Div_Date');
+let next_Train = document.getElementById('next_Train');
+let prev_Train = document.getElementById('prev_Train');
+// ***append show div data***
+show_D_S_Starion.innerHTML = `${data.start_Station}`;
+show_D_S_End.innerHTML = `${data.end_Station}`;
+show_Div_Date.innerHTML = `${data.J_Date}`;
 
 //**popup_window inicial */
 let popup_window_Section = `
