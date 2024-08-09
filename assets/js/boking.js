@@ -1,6 +1,9 @@
 //********Get all_Data into localStorage**********
 let all_User_Data = JSON.parse(localStorage.getItem('all_Data'));
 let indexPage_Data = JSON.parse(localStorage.getItem('indexPage'));
+// ******Get input data in localstorage*******
+let input_Data = localStorage.getItem('indexPage');
+let data = JSON.parse(input_Data);
 
 // **********ticket section and hidden_popup_window ************
 let main_Container = document.querySelectorAll('.main-container');
@@ -10,7 +13,6 @@ let train_Name_3 = document.getElementById('train_Name_3');
 let hide_and_show_div = document.querySelectorAll('#hide_and_show_div');
 let toggle_Menu = document.querySelectorAll('.toggle_Menu');
 let train_Details = document.querySelectorAll('#train_Details');
-
 //***start time***
 let start_Time = document.querySelectorAll('.start-time');
 let total_time= document.querySelectorAll('.total-time');
