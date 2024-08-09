@@ -242,8 +242,8 @@ ticket_Container.forEach((value, index) => {
         getData.ticket_Amount = `${amount}`;
         // send value
         localStorage.setItem('indexPage',JSON.stringify(getData));
-        //move the ticket_Boking.html page 
-        //window.open("ticket_Boking.html", "_self");
+        //move the ticket_Booking.html page 
+        window.open("ticket_Booking.html", "_self");
       }
   })
   
