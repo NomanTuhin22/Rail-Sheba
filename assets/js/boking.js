@@ -21,6 +21,23 @@ let number =  Math.floor(Math.random() * (3 - 0) + 0);
 main_Container.forEach((list) => {
     list.style.display = 'none';
 })
+// ***********train name(list) hide and show***********
+toggle_Menu.forEach((value, index) => {
+    let hide = 0;
+    //*train 2,3 details hide*
+    if(index > 0){
+      hide_and_show_div[index].style.display = 'none';
+    }
+    value.addEventListener('click', () => {
+        if(hide == 1){
+          hide_and_show_div[index].style.display = 'none';
+          hide = 0;
+        }else{
+          hide_and_show_div[index].style.display = 'block';
+          hide = 1;
+        }
+    })
+  })
 // find popup...train name and set value F
 let current_Train_F = (trainOne, trainTwo, trainThree) => {
     all_User_Data.train_List_0 = `${trainOne}`;
