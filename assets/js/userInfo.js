@@ -190,7 +190,7 @@ let valiation_F = () => {
         //*********send Data localStorage***********
         localStorage.setItem('all_Data',JSON.stringify(all_Data));
         //**moveto boking page**
-        window.open("boking.html", "_self");
+        window.open("./boking.html", "_self");
     }
 }
 
