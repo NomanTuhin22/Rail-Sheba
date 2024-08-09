@@ -104,6 +104,12 @@ change_Station.addEventListener('click', () => {
   show_Container.style.display = 'none';
   hidden_Container.style.display = 'block';
 })
+// ***show div Event***
+let close_Btn = document.getElementById('close_Btn');
+close_Btn.addEventListener('click', () => {
+  hidden_Container.style.display = 'none';
+  show_Container.style.display = 'block';
+})
 
 //**popup_window inicial */
 let popup_window_Section = `
