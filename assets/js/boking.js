@@ -143,6 +143,29 @@ let current_Train_F = (trainOne, trainTwo, trainThree) => {
     }
   }
 
+//*********all arivale station genarator F*********/
+let append_All_Station_F = (nex_Station) => {
+  let all_Station = JSON.parse(localStorage.getItem('all_Station'));
+  let all_Station_Array = all_Station.Panchagarh_To_Dhaka;
+
+  all_Station_Array.forEach((station) => {
+    nex_Station.innerHTML += `
+      <div>
+       <div class="d-flex gap-2 arival-logo-div">
+         <h5><span><img src="./assets/images/arival-logo.png" alt="logo"></span></h5>
+         <h5>${station}</h5>
+       </div>
+       <div id='all_Span' class="d-flex justify-content-between gap-5 arival-items-div">
+         <span>Arrival:<span class="arival-text"></span></span>
+         <span>Halt:<span class="arival-text">00min</span></span>
+         <span>Departure:<span class="arival-text">07:20 am BST</span></span>
+         <span>Duration:<span class="arival-text">00h</span></span>
+       </div>
+     </div>
+    `;
+  })
+}
+
 //**********train_Details *****sectoin********
 train_Details.forEach((btn, index) => {
   btn.addEventListener('click', (e) => {
@@ -156,7 +179,7 @@ train_Details.forEach((btn, index) => {
  
     // all station container in popup window
     let nex_Station = document.getElementById('nex_Station');
-    // append_All_Station_F(nex_Station);
+    append_All_Station_F(nex_Station);
 
     //***popup window close btn ****/
     let arival_Container_Close = document.getElementById('arival_Container_Close');
