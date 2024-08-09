@@ -5,6 +5,43 @@ let indexPage_Data = JSON.parse(localStorage.getItem('indexPage'));
 let input_Data = localStorage.getItem('indexPage');
 let data = JSON.parse(input_Data);
 
+
+//**popup_window inicial */
+let popup_window_Section = `
+ <div id="hidden_popup_window" class="trin-stop-staion-container">
+    <div class="train-stop-s-sub-container">
+      <div class="train-stop-main-continer bounceIn shadow">
+        <!-- **train-stop-name** -->
+        <div class="t-stop-name d-flex justify-content-between">
+          <h6 id='current_T'>DOLONCHAPA EXPRESS (768)</h6>
+          <h5 id="arival_Container_Close"><i class="fa-solid fa-circle-xmark"></i></h5>
+        </div>
+        <!-- **Runs On** -->
+         <div class="days">
+            <h6>Runs On : 
+              <span>Fri</span>
+              <span>Sat</span>
+              <span>Sun</span>
+              <span>Mon</span>
+              <span>Tue</span>
+              <span>wed</span>
+              <span>Thu</span>
+            </h6>
+         </div>
+         <!--**routes station** -->
+         <div class="routes"><h5><span>Routes</span></h5></div>
+         <!-- **station** -->
+          <div class="arrival-container">
+          <!-- ***arival station add*** -->
+          <div id='nex_Station'></div>
+          <!-- **total duration** -->
+          <div class="total-duration"><h6>Total Duration: <strong id='popup_Duration'>11:35h</strong></h6></div>
+        </div>
+      </div>
+    </div>
+  </div>
+`;
+let hidden_Popup_Window = document.getElementById('hidden_Popup_Window');
 // **********ticket section and hidden_popup_window ************
 let main_Container = document.querySelectorAll('.main-container');
 let train_Name_1 = document.getElementById('train_Name_1');
@@ -105,3 +142,27 @@ let current_Train_F = (trainOne, trainTwo, trainThree) => {
       current_Train_F(all_Train_Names[3], all_Train_Names[4], all_Train_Names[5]);
     }
   }
+
+//**********train_Details *****sectoin********
+train_Details.forEach((btn, index) => {
+  btn.addEventListener('click', (e) => {
+    //poput window append
+    hidden_Popup_Window.innerHTML = `${popup_window_Section}`;
+    // popup window - train name
+    let current_T = document.getElementById('current_T');
+    if(index == 0){current_T.innerText = `${all_User_Data.train_List_0}`}
+    if(index == 1){current_T.innerText = `${all_User_Data.train_List_1}`}
+    if(index == 2){current_T.innerText = `${all_User_Data.train_List_2}`}
+ 
+    // all station container in popup window
+    let nex_Station = document.getElementById('nex_Station');
+    // append_All_Station_F(nex_Station);
+
+    //***popup window close btn ****/
+    let arival_Container_Close = document.getElementById('arival_Container_Close');
+    arival_Container_Close.addEventListener('click', () => {
+      hidden_Popup_Window.innerHTML = '';
+    })
+
+  })
+})
