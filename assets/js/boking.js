@@ -1,5 +1,6 @@
 //********Get all_Data into localStorage**********
 let all_User_Data = JSON.parse(localStorage.getItem('all_Data'));
+let indexPage_Data = JSON.parse(localStorage.getItem('indexPage'));
 
 // **********ticket section and hidden_popup_window ************
 let main_Container = document.querySelectorAll('.main-container');
@@ -10,6 +11,37 @@ let hide_and_show_div = document.querySelectorAll('#hide_and_show_div');
 let toggle_Menu = document.querySelectorAll('.toggle_Menu');
 let train_Details = document.querySelectorAll('#train_Details');
 
+//***start time***
+let start_Time = document.querySelectorAll('.start-time');
+let total_time= document.querySelectorAll('.total-time');
+//***start time jone***
+start_Time[0].children[0].innerText = `${all_User_Data.select_Day} ${all_User_Data.select_M} ${all_User_Data.start_Time}`;
+start_Time[1].children[0].innerText = `${all_User_Data.select_Day} ${all_User_Data.select_M} ${all_User_Data.start_Time}`;
+start_Time[2].children[0].innerText = `${all_User_Data.select_Day} ${all_User_Data.select_M} ${all_User_Data.start_Time}`;
+//***start time station***
+start_Time[0].children[1].innerText = `${indexPage_Data.start_Station}`;
+start_Time[1].children[1].innerText = `${indexPage_Data.start_Station}`;
+start_Time[2].children[1].innerText = `${indexPage_Data.start_Station}`;
+//***total duration ***/
+total_time[0].children[1].innerText = `${all_User_Data.total_Duration_H}H | ${all_User_Data.total_Duration_M}M`;
+total_time[1].children[1].innerText = `${all_User_Data.total_Duration_H}H | ${all_User_Data.total_Duration_M}M`;
+total_time[2].children[1].innerText = `${all_User_Data.total_Duration_H}H | ${all_User_Data.total_Duration_M}M`;
+//***ticket random value ***/
+let ticket = document.querySelectorAll('.ticket');
+ticket[0].children[2].children[1].innerText =`${all_User_Data.random_Ticket}`;
+ticket[1].children[2].children[1].innerText =`${all_User_Data.random_Ticket}`;
+ticket[2].children[2].children[1].innerText =`${all_User_Data.random_Ticket}`;
+ticket[3].children[2].children[1].innerText =`${all_User_Data.random_Ticket}`;
+//***end time***
+let end_Time = document.querySelectorAll('.end-time');
+end_Time[0].children[0].innerText = `${all_User_Data.select_Day} ${all_User_Data.select_M} ${all_User_Data.end_Time}`;
+end_Time[1].children[0].innerText = `${all_User_Data.select_Day} ${all_User_Data.select_M} ${all_User_Data.end_Time}`;
+end_Time[2].children[0].innerText = `${all_User_Data.select_Day} ${all_User_Data.select_M} ${all_User_Data.end_Time}`;
+
+end_Time[0].children[1].innerText = `${all_User_Data.end_Time}`;
+end_Time[0].children[1].innerText = `${indexPage_Data.end_Station}`;
+end_Time[1].children[1].innerText = `${indexPage_Data.end_Station}`;
+end_Time[2].children[1].innerText = `${indexPage_Data.end_Station}`;
 
 //******popup_window and ticket container******
 let all_Train_list = JSON.parse(localStorage.getItem('train_info'));
