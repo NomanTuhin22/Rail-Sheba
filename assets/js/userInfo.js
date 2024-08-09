@@ -31,7 +31,7 @@ let send_Data_log_div = () => {
 }
 // *********Logout Btn *****event************
 logout_Btn.addEventListener('click', () => {
-    window.open("login.html" , '_self');
+    window.open("index.html" , '_self');
     localStorage.clear();
 })
 // ********alert_Text selector*********

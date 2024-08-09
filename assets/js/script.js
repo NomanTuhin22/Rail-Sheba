@@ -37,14 +37,21 @@ let worning_F = (worning) => {
 let forget_Password_F = () => {
     let passwordValue = password.value;
     if(!email.value == '' && !passwordValue.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/)) {
-       label_Password.innerText = 'New Password';
-      //Rail00@#
-      let num = Math.floor(Math.random(100) * 10);
-      let newPassword = `Abc0${num}@#`;
-      //  ****copy clipboard***
-      navigator.clipboard.writeText(newPassword);
-      password.value = newPassword;
-      worning_F(newPassword);
+       label_Password.innerText = 'Enter Phone Number';
+       forget_Password.innerText = 'Get New Password';
+       //phone Number Validation
+       if(passwordValue.match(/(\+88)?-?01[1-9]\d{8}/g)){
+            let num = Math.floor(Math.random(100) * 10);
+            //Rail00@#
+            let newPassword = `Abc0${num}@#`;
+            //****copy clipboard***
+            navigator.clipboard.writeText(newPassword);
+            password.value = newPassword;
+            worning_F(newPassword);
+        }else{
+            let empty ='Place Valide P/Number !!';
+            worning_F(empty);
+        }
     }
     else{
      let empty ='Empty @email !!';
@@ -53,6 +60,7 @@ let forget_Password_F = () => {
  }
  // ***********forget_Password_F*****Event********
 forget_Password.addEventListener('click', forget_Password_F);
+
 // ************data_Remember_F*****F*********
 let data_Remember_F = () => {
     let save = 'auto remember data';
