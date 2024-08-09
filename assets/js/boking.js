@@ -224,3 +224,27 @@ train_Details.forEach((btn, index) => {
 
   })
 })
+
+//**********bookNow_Btn E*****sectoin********
+let ticket_Container = document.querySelectorAll('.ticket');
+let bookNow_Btn = document.querySelectorAll('#bookNow_Btn');
+let getData = JSON.parse(localStorage.getItem('indexPage'));
+//******bookNow-Btn click and move the ticket.html page ***********/
+ticket_Container.forEach((value, index) => {
+  value.addEventListener('click', (e) => {
+      if(e.target.id == 'bookNow_Btn'){
+        //select this id and find the prent-Element
+        let c_Div = e.target.parentElement;
+        let p_Div = c_Div.parentElement.children[0].innerHTML;
+        let amount = c_Div.parentElement.children[1].children[0].innerText;
+        // set value
+        getData.class = `${p_Div}`;
+        getData.ticket_Amount = `${amount}`;
+        // send value
+        localStorage.setItem('indexPage',JSON.stringify(getData));
+        //move the ticket_Boking.html page 
+        //window.open("ticket_Boking.html", "_self");
+      }
+  })
+  
+})
