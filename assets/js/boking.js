@@ -5,6 +5,77 @@ let indexPage_Data = JSON.parse(localStorage.getItem('indexPage'));
 let input_Data = localStorage.getItem('indexPage');
 let data = JSON.parse(input_Data);
 
+//******Modify User Destaination section*******
+// ***show div***
+let show_Div = `
+  <div id="show_Div" class="modify-show-div row  justify-content-lg-between align-items-lg-end">
+    <!--**one**-->
+    <div class=".col-sm .col-lg-4 m-show-div-one d-flex gap-3">
+      <div><img class="rounded-circle shadow border-5 border-light" src="./assets/images/m-logo.jpg" width="72px" height="72px" alt="img"></div>
+      <div>
+        <h5 ><strong id="show_D_S_Starion">B Sirajul Islam</strong> - <strong id="show_D_S_End">Thakurgaon_Road</strong></h5>
+        <h5 id="show_Div_Date"></h5>
+      </div>
+    </div>
+    <!--**Two**-->
+    <div class=".col-sm .col-lg-4 m-show-div-two text-center">
+      <span class="shadow-sm">
+        <button id='prev_Train'> <i class="fa-solid fa-angle-left"></i> Prev.Day</button>
+        <button id='next_Train'>Next.Day <i class="fa-solid fa-angle-right"></i></button>
+      </span>
+    </div>
+    <!--**Three**-->
+    <div class=".col-sm .col-lg-4 m-show-div-three d-sm-flex justify-content-sm-center justify-content-lg-end"><button id="change_Station" class="shadow-sm">Change Station</button></div>
+  </div>
+`;
+// ***hidden div***
+let hidden_div = `
+   <div id="hidden_Div" class="modify-hidden-div row row-cols-auto justify-content-lg-center justify-content-xl-evenly">
+   <!-- **one** -->
+   <div class="col-sm-12 col-lg-auto">
+     <p><label for="form">Form</label></p>
+     <input id="h_start_Station" class="col-input" type="text" value="B Sirajul Islam">
+   </div>
+   <!-- **two** -->
+   <div class="col-sm-12 col-lg-auto">
+     <p><label for="To">To</label></p>
+     <input id="h_end_Stat" class="col-input" type="text" value="Dinajpur">
+   </div>
+   <!-- **three** -->
+   <div class="col-sm-12 col-lg-auto">
+     <p><label for="Date Of Journey">Date Of Journey</label></p>
+     <input id="h_date" class="col-input col-date" type="date">
+   </div>
+   <!-- **four** -->
+   <div class="col-sm-12 col-lg-auto select-div">
+     <p><label for="Choose Class">Choose Class</label></p>
+     <select class="col-input bg-white" id="selection">
+       <option value="0">Choce a Class</option>
+       <option value="1" selected="selected">AC-B</option>
+       <option value="2">SNIGDHA</option>
+       <option value="3">F-BERTH</option>
+       <option value="4">F-SEAT</option>
+       <option value="5">F-CHAIR</option>
+       <option value="6">S-CHAIR</option>
+       <option value="7">SHOVAN</option>
+       <option value="8">SHULOV</option>
+       <option value="9">AC-CHAIR</option>
+    </select>
+   </div>
+   <!-- **five** -->
+   <div class="col-sm-12 col-lg-auto search-train">
+     <p><button id="close_Btn">Close <i class="fa-solid fa-x"></i> </button></p>
+     <button>Search Train</button>
+   </div>
+  </div>
+`;
+// ******Get input data in localstorage*******
+let show_Container = document.getElementById('show_Container');
+let hidden_Container = document.getElementById('hidden_Container');
+//*****append show and hidden div*****
+show_Container.innerHTML = `${show_Div}`;
+hidden_Container.innerHTML = `${hidden_div}`;
+hidden_Container.style.display = 'none';
 
 //**popup_window inicial */
 let popup_window_Section = `
@@ -200,7 +271,6 @@ for(let i in all_S_Span){
   }
  }
 }
-
 //**********train_Details *****sectoin********
 train_Details.forEach((btn, index) => {
   btn.addEventListener('click', (e) => {
@@ -246,5 +316,4 @@ ticket_Container.forEach((value, index) => {
         window.open("ticket_Booking.html", "_self");
       }
   })
-  
 })
