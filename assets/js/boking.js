@@ -164,6 +164,41 @@ let append_All_Station_F = (nex_Station) => {
      </div>
     `;
   })
+
+//**********station value append into div**********6/7
+let all_S_Span = document.querySelectorAll('#nex_Station div #all_Span');
+let popup_Duration = document.getElementById('popup_Duration');
+//11:04:41
+let start_Jurney_Time = all_User_Data.start_Time;
+let hour = start_Jurney_Time.substring(0, 2);
+let minit = start_Jurney_Time.substring(3, 5);
+let h = parseInt(hour);
+let m = parseInt(minit);
+//incress minit
+let num = Math.floor(Math.random() * (20 - 15) + 15);
+// all popup window data append
+for(let i in all_S_Span){
+  if([i] <= all_S_Span.length){
+    let halt_Time = Math.floor(Math.random() * (5 - 1) + 1);
+    let Duration_Time = Math.floor(Math.random() * (20 - 5) + 5);
+    m = m + num;
+    let date = new Date();
+    date.setHours(h);
+    date.setMinutes(m);
+    let arival_Time = date.toLocaleTimeString();
+    date.setMinutes(m + halt_Time);
+    let departure_Mint = date.toLocaleTimeString();
+
+    // append data eatch Station...
+    all_S_Span[i].children[0].innerText =`Arival : ${arival_Time}`;
+    all_S_Span[i].children[1].innerText =`Halt : ${halt_Time} min`;
+    all_S_Span[i].children[2].innerText = `Departure: ${departure_Mint} BST`;
+    all_S_Span[i].children[3].innerText = `Duration: ${Duration_Time} min`;
+    //1st station duration
+    all_S_Span[0].children[3].innerText = `Duration: 00 min`;
+    popup_Duration.innerText = `${arival_Time}`;
+  }
+ }
 }
 
 //**********train_Details *****sectoin********
