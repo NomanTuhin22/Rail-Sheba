@@ -10,12 +10,17 @@ let hide_and_show_div = document.querySelectorAll('#hide_and_show_div');
 let toggle_Menu = document.querySelectorAll('.toggle_Menu');
 let train_Details = document.querySelectorAll('#train_Details');
 
+
 //******popup_window and ticket container******
 let all_Train_list = JSON.parse(localStorage.getItem('train_info'));
 let all_Train_Names = all_Train_list.train;
 
 // ******ticket container section*******
 let number =  Math.floor(Math.random() * (3 - 0) + 0);
+// ***********main_Container Hide***********
+main_Container.forEach((list) => {
+    list.style.display = 'none';
+})
 // find popup...train name and set value F
 let current_Train_F = (trainOne, trainTwo, trainThree) => {
     all_User_Data.train_List_0 = `${trainOne}`;
