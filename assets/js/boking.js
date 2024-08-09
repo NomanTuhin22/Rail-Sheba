@@ -377,7 +377,6 @@ train_Details.forEach((btn, index) => {
     arival_Container_Close.addEventListener('click', () => {
       hidden_Popup_Window.innerHTML = '';
     })
-
   })
 })
 

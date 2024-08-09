@@ -1,11 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rail Sheba</title>
+    <!-- Boot strap v[5.2]  css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/ticket_Booking.css">
 </head>
 <body>
-    <h1>hi this page work Ticket Booking</h1>
+    <div class="ticket-container">
+    <!-- ***********veryfy Account************ -->
+    <div class="veryfy-container">
+       <div class="veryfy-child-div shadow d-none">
+           <p><input type="text" placeholder="You'r Phone Number"></p>
+           <p><input type="text" placeholder="Rail Seba Password"></p>
+       </div>
+    <!-- *************navigation************* -->
+     <my-navigation></my-navigation>
+    <!-- ***********ticket selection section************ -->
+     <div class="ticket-preant-container shadow">
+        <div class="ticket-selection d-flex justify-content-center">
+            <div class="select-coach-container w-100">
+            <!-- dropdown menu -->
+              <div class="select-coach-subcontainer">
+                <h4>Select Coach</h4>
+                <div class="dropdown">
+                  <button class="custom-btn-c  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Select Coach
+                  </button>
+                  <ul class="custom-menu dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a id="chose" class="custom-li dropdown-item" href="#">K - 0 Seat(s)</a></li>
+                    <li><a id="chose" class="custom-li dropdown-item" href="#">KH - 0 Seat(s)</a></li>
+                    <li><a id="chose" class="custom-li dropdown-item" href="#">GA - 0 Seat(s)</a></li>
+                    <li><a id="chose" class="custom-li dropdown-item" href="#">GH - 0 Seat(s)</a></li>
+                    <li><a id="chose" class="custom-li dropdown-item" href="#">UMA - 0 Seat(s)</a></li>
+                    <li><a id="chose" class="custom-li dropdown-item" href="#">CHA - 0 Seat(s)</a></li>
+                  </ul>
+                </div>
+              </div>
+            <!-- type of ticket -->
+              <div id="type_Of_C_Ticket" class="type-of-ticket d-flex gap-3 justify-content-evenly">
+                <div><i class="fa-regular fa-square"></i> Available</div>
+                <div><i class="fa-regular fa-square"></i> Booked</div>
+                <div><i class="fa-regular fa-square"></i> Selected</div>
+              </div>
+            <!-- all ticket here  -->
+             <div id="all_Ticket_Here" class="all-ticket-here-container">
+                <div class="all-ticket-here-subcontainer">
+                <!-- all-ticket append div-->
+                <div id="all_Ticket_Container" class="all-ticket-here">
+                  <div class="main-container main">
+                     <div id="container0" class="t-container"></div>
+                  </div>
+                  <div class="main-container">
+                     <div id="container1" class="t-container"></div>
+                  </div>
+                  <div class="main-container">
+                     <div id="container2" class="t-container"></div>
+                  </div>
+                  <div class="main-container">
+                     <div id="container3" class="t-container"></div>
+                  </div>
+                  <div class="main-container">
+                     <div id="container4" class="t-container"></div>
+                  </div>
+                  <div class="main-container">
+                     <div id="container5" class="t-container"></div>
+                  </div>
+                  <div class="main-container">
+                     <div id="container6" class="t-container"></div>
+                  </div>
+                </div>
+             </div>
+            </div>
+            </div>
+            <!-- ***sidebar (seat-details)*** -->
+            <div class="sidebar-seat-details w-100">
+               <div class="seat-details-container">
+                   <h4>Seat Details</h4>
+                   <!-- ***header*** -->
+                   <div class="custom-sidebar-div d-flex justify-content-evenly">
+                       <strong>Class </strong>
+                       <strong>Seats</strong>
+                       <strong>Fare</strong>
+                    </div>
+                   <!-- ***body*** -->
+                   <div id="custom_Sidebar_T_Div" class="custom-sidebar-div-one">
+                    <!-- ***menu*** -->
+                    <div class="ticket d-flex justify-content-evenly">
+                       <strong></strong>
+                       <strong></strong>
+                       <strong></strong>
+                    </div>
+                    <!-- //***one*** -->
+                    <div class="ticket d-flex justify-content-evenly">
+                       <strong></strong>
+                       <strong></strong>
+                       <strong></strong>
+                    </div>
+                    <!-- //***Three*** -->
+                    <div class="ticket d-flex justify-content-evenly">
+                       <strong></strong>
+                       <strong></strong>
+                       <strong></strong>
+                    </div>
+                    <!-- //***four*** -->
+                    <div class="ticket d-flex justify-content-evenly">
+                       <strong></strong>
+                       <strong></strong>
+                       <strong></strong>
+                    </div>
+                    <p>Total :<span id="total_Amount">00.00</span></p>
+                  </div>
+                  <!-- ***another div*** -->
+                  <div class="Boarding-station">
+                    <h5>Boarding Station *</h5>
+                    <h6 id="boarding_Station"> B Sirajul Islam Station <span id="boarding_Time">(09:10 PM)</span></h6>
+                 </div>
+                 <!-- ***CONTINUE PURCHASE*** -->
+                <div class="continue-purchase-div">
+                 <p><button>CONTINUE PURCHASE</button></p>
+                 <h5><a href="#" id="clear_Ticket_Box">Close</a></h5>
+                </div>
+               </div>
+            </div>
+        </div>
+     </div>
+    </div>
+    <!-- ******bootstrap js cnd******* -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- ********my script (ticket.js) ********* -->
+     <script src="./asstes/script/ticket.js"></script>
 </body>
 </html>

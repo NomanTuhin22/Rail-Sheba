@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* font family */
+:root{
+    --roboto : "Roboto", sans-serif;
+    --r_condensed : "Roboto Condensed", sans-serif;
+    --raleway : "Raleway", sans-serif;
+}
+/* ***********ticket selection section************ */
+.ticket-selection{
+    padding: 50px 50px 50px 50px ;
+    background: rgb(172,46,46);
+    background: radial-gradient(circle, rgba(172,46,46,1) 12%, rgba(121,238,169,1) 100%);
+}
+.ticket-preant-container{
+    background: #fff;
+}
+.select-coach-container{
+    background:#fff;
+    padding: 0 30px;
+}
+.sidebar-seat-details{
+    background:#fff;
+}
+.select-coach-subcontainer{
+    font-family: var(--roboto);
+}
+.select-coach-subcontainer h4{
+    text-align: center;
+    font-weight: 700;
+    padding-top: 20px;
+}
+.select-coach-subcontainer .custom-btn-c{
+    width: 80%;
+    font-family: var(--roboto);
+    padding: 8px 0;
+    font-size: 17px;
+    background: none;
+    border: 2px solid #da924e;
+    margin-left: 50px;
+    box-shadow: 1px 2px 8px 0px #c0c0c0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: #da924e;
+    font-weight: 700;
+}
+.select-coach-subcontainer .custom-menu {
+    width: 80%;
+}
+.select-coach-subcontainer .custom-li {
+    color: #ec8c32;
+    font-weight: 700;
+}
+.select-coach-subcontainer .custom-li:focus{
+    background-color: #6fca73;
+    color:whitesmoke;
+}
+.select-coach-container .type-of-ticket{
+    font-family: var(--roboto);
+    padding: 5px 0;
+    font-weight: 500;
+    color:#f19e4f;
+    cursor: pointer;
+}
+.select-coach-container .type-of-ticket div:first-child{
+    color:#0ae637;
+}
+.select-coach-container .type-of-ticket div:nth-child(2){
+    color:#f19e4f;
+}
+.select-coach-container .type-of-ticket div:last-child{
+    color: #7bff00;
+}
+.select-coach-container .type-of-ticket div i:last-child {
+    color: #384c6b;
+}
+.all-ticket-here{
+    height: auto;
+    padding-bottom: 50px;
+    margin-left: 40px;
+    width: 100%;
+}
+.all-ticket-here .main-container div{
+    margin: 10px 0;
+    width: 500px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+.all-ticket-here .main-container0{
+    margin: 10px 0;
+    width: 500px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+.all-ticket-here .main-container0 .t-container ~ strong{
+    width: 80px;
+    color: #000;
+    font-family: var(--roboto);
+    font-size: 14px;
+    padding: 15px 10px;
+    margin: 7px;
+    border: 2px solid #0ae637;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+.show{
+    display: block;
+}
+.all-ticket-here-left .main-container ,.t-container strong {
+    width: 80px;
+    color: #000;
+    font-family: var(--roboto);
+    font-size: 14px;
+    padding: 15px 10px;
+    margin: 7px;
+    border: 2px solid #0ae637;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+.sidebar-seat-details {
+    padding: 19px 0 ;
+}
+.sidebar-seat-details h4:first-child{
+    font-family: var(--roboto);
+    font-weight: 700;
+    color:#0f2444;
+}
+.sidebar-seat-details .custom-sidebar-div{
+    font-family: var(--roboto);
+    padding: 10px;
+    background: #88b484;
+    margin-right: 90px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-size: 20px;
+    letter-spacing: .8px;
+    color:#f3f3f3;
+}
+.sidebar-seat-details .custom-sidebar-div-one{
+    margin-right: 90px;
+    height: 250px;
+    background-color: #f1f1f1;
+    text-align: center;
+    /* padding-top: 250px; */
+}
+.sidebar-seat-details .custom-sidebar-div-one p{
+    background: #88b484;
+    padding: 10px;
+    font-family: var(--roboto);
+    font-size: 20px;
+    font-weight: 700;
+    color:#f3f3f3;
+    letter-spacing: .9px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+.custom-sidebar-div-one .ticket{
+    height: 37px;
+    font-family: var(--roboto);
+    font-size: 16px;
+    font-weight: 700;
+    color:#c95926;
+    letter-spacing: .9px;
+    border-radius: 5px;
+    margin: 7px 0;
+    padding: 9px 0;
+}
+.Boarding-station{
+    margin-top: 50px;
+    padding: 5px 90px 5px 0;
+    font-family: var(--roboto);
+    color:#0f2444;
+}
+.Boarding-station h5{
+    font-family: var(--roboto);
+    color:#0f2444;
+    font-weight: 500;
+}
+.Boarding-station h6{
+    font-family: var(--roboto);
+    color:#283c5a;
+    border: 1px solid #0f2444;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    text-align: center;
+}
+.continue-purchase-div p{
+    text-align: center;
+    margin-right: 90px;
+}
+.continue-purchase-div p button{
+    font-family: var(--roboto);
+    font-weight: 400;
+    padding: 10px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    background: #006747;
+    color: whitesmoke;
+    letter-spacing: 1px;
+}
+.continue-purchase-div h5{
+    float: right;
+    margin-right: 90px;
+}
+.continue-purchase-div h5 a{
+    color:#006747;
+    padding: 10px 20px;
+    background-color: #f7f7f7;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    font-family: var(--roboto);
+}
+/* **********************Js Class******************** */
+.ticket-Color-Toggle{
+    background-color: #f1a256;
+    color:#fff !important;
+    border: 2px solid #f1a256 !important;
+}
+.ticket-booking-Toggle{
+    background-color: #7bff00;
+    color:#fff !important;
+    border: 2px solid #7bff00 !important;
+}
+/* **********************media screen******************** */
+/************ Small devices (landscape phones, 576px and up) ***********/
+@media (min-width: 576px) {
+    .select-coach-container {
+        padding: 0 10px;
+    }
+    .select-coach-subcontainer .custom-btn-c {
+        width: 97%;
+        margin-left: 7px;
+    }
+    .ticket-selection {
+        padding: 50px 10px;
+    }
+    .all-ticket-here-left .main-container ,.t-container strong {
+        width: 60px;
+        padding: 15px 10px;
+    }
+    .all-ticket-here .main-container div {
+        width: 370px;
+    }
+    .gap-3 {
+        gap: 0 !important;
+    }
+    .select-coach-container .type-of-ticket {
+        padding: 10px 0;
+        padding-left: 0px;
+    }
+    .all-ticket-here {
+       margin-left: 0;
+    }
+    /*******slide bar**********/
+    .sidebar-seat-details {
+        padding-left: 10px !important;
+    }
+    .sidebar-seat-details {
+        padding-top: 19px;
+        padding-left: 10px;
+    }
+    .sidebar-seat-details {
+        padding-left: 40px;
+    }
+    .sidebar-seat-details .custom-sidebar-div {
+        margin-right: 15px;
+    }
+    .sidebar-seat-details .custom-sidebar-div-one {
+        margin-right: 15px;
+    }
+    .Boarding-station {
+        padding: 5px 15px 5px 0;
+    }
+    .continue-purchase-div p {
+        margin-right: 15px;
+    }
+    .continue-purchase-div h5 {
+        margin-right: 15px;
+    }
+}
+
+/************* Medium devices (tablets, 850px and up) **********/
+@media (min-width: 850px) {
+    .main-container{
+        overflow: hidden;
+    }
+    .all-ticket-here .main-container div {
+        width: 420px;
+    }
+}
+ /************* Medium devices (tablets, 900px and up) *************/
+@media (min-width: 850px) {
+    .all-ticket-here .main-container div {
+        width: 460px;
+    }
+}
+ /************* larg devices (tablets, 1100px and up) *************/
+@media (min-width: 1100px) {
+    .all-ticket-here .main-container div {
+        width: 510px;
+        margin-left: 20px;
+    }
+    .all-ticket-here-left .main-container ,.t-container strong {
+        width: 70px;
+        font-size: 14px;
+        padding: 15px 12px;
+        margin: 7px;
+    }
+}
+ /************* X-Large devices (large desktops, 1200px and up) **********/
+@media (min-width: 1200px) {
+    .all-ticket-here .main-container div {
+        width: 510px;
+        margin-left: 40px;
+    }
+}
+ /************* X-Large devices (large desktops, 1300px and up) **********/
+@media (min-width: 1300px) {
+    .all-ticket-here .main-container div {
+        width: 510px;
+        margin-left: 60px;
+    }
+}
+ /************* XX-Large devices (larger desktops, 1350px and up) ********/
+@media (min-width: 1350px) {
+    .all-ticket-here .main-container div {
+        margin-left: 80px;
+    }
+}
+ /************* XX-Large devices (larger desktops, 1400px and up) ********/
+@media (min-width: 1400px) {
+    .all-ticket-here .main-container div {
+        margin-left: 90px;
+    }
+}
