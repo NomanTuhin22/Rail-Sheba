@@ -98,6 +98,58 @@ h_end_Stat.value = `${data.end_Station}`;
 h_date.value = `${data.J_Date}`;
 h_Selection.options[1].innerHTML= `${data.class}`;
 
+//*******Ticket Next & Previce section******** */
+// current month array []
+let this_Month = [];
+
+let allDate = new Date();
+currentYear = allDate.getFullYear();
+currentMonth = allDate.getMonth();
+// current month last day
+let all_Days = new Date(currentYear, currentMonth, 0).getDate();
+//current month create in this loop
+for(let i = 1; i <= all_Days; i++){
+  this_Month.push(i);
+}
+// substring (2024-08-29)
+let days =  data.J_Date.substring(8);
+let day  = parseInt(days);
+let d = day;
+
+//*******next_Train Btn E********/
+let count = 1;
+next_Train.addEventListener('click', () => {
+  if(count <= 5 && (this_Month.length <= all_Days)){
+    count++;
+    if(d < 9){
+      show_Div_Date.innerHTML = `${currentYear} - 0${currentMonth} - 0${this_Month[d++]}`;
+    }else{
+      show_Div_Date.innerHTML = `${currentYear} - ${currentMonth} - ${this_Month[d++]}`;
+    }
+  }else{
+    count = 1;
+    d = day;
+  }
+})
+
+//*******prev_Train Btn E********/
+let count2 = 1;
+let dd = day - 1;
+prev_Train.addEventListener('click', () => {
+  if(count2 <= 6 && (this_Month.length >= -1)){
+    count2++;
+    if(dd < 9){
+      show_Div_Date.innerHTML = `${currentYear} - 0${currentMonth} - 0${this_Month[dd--]}`;
+    }else{
+      show_Div_Date.innerHTML = `${currentYear} - ${currentMonth} - ${this_Month[dd--]}`;
+    }
+  } 
+  else{
+    count2 = 1;
+    dd = day;
+  }
+})
+
 // ***hidden div Event***
 let change_Station = document.getElementById('change_Station');
 change_Station.addEventListener('click', () => {
