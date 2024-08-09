@@ -182,8 +182,8 @@ let valiation_F = () => {
         let indexPage_Obj = {};
         indexPage_Obj.start_Station = start_Jurney_V;
         indexPage_Obj.end_Station = end_Jurney_V;
-        indexPage_Obj.J_Date =  jurney_Date_V;
-        indexPage_Obj.class =  selection_V;
+        indexPage_Obj.J_Date = jurney_Date_V;
+        indexPage_Obj.class = selection_V;
        
         // **send data local storage**
         localStorage.setItem('indexPage', JSON.stringify(indexPage_Obj));
@@ -219,3 +219,14 @@ selection.addEventListener('click', () => {
 });
 // **********Secarch Btn ****Event**********
 search_Btn.addEventListener('click',valiation_F);
+
+// ***********input to Fild  clear****Event*****
+let input_Clear_Btn = () => {
+    input.value = '';
+    input_To.value = '';
+    jurney_Date.value = '';
+    selection.value = '';
+}
+// **********input_Clear_Btn****Event**********
+clear_Btn.addEventListener('click', input_Clear_Btn);
+
