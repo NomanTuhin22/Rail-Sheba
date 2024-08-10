@@ -68,7 +68,6 @@ for(let i = 1; i <= k_Ticket; i++) {
         }
     })
 }
-
 //***dainamic Ticket Genarator F(chose-KH)***
 for(let i = 1; i <= kh_Ticket; i++) {
     let kh =`<strong id='js_create_t_Kh'>KH- 00</strong>`;
@@ -111,6 +110,21 @@ for(let i = 1; i <= gh_Ticket; i++) {
             value.innerText = `Gh-0${index}`;  
         }else{
             value.innerText = `Gh-${index}`;
+        }
+    })
+}
+//***dainamic Ticket Genarator F(chose-Umo)***
+for(let i = 1; i <= umo_Ticket; i++) {
+    let cha =`<strong id='js_create_Umo'>k- 00</strong>`;
+    container_Umo.innerHTML += `${cha}`;
+    
+    let js_create_Umo = document.querySelectorAll('#js_create_Umo');
+    js_create_Umo.forEach((value, index) => {
+        ///*cheack if index(1-9)is, true then append 0 (0, 00, 9 ,09) */
+        if(index < 10 && index > 0){
+            value.innerText = `UMO-0${index}`;  
+        }else{
+            value.innerText = `UMO-${index}`;
         }
     })
 }
