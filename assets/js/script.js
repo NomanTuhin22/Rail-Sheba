@@ -1,4 +1,10 @@
 
+//*********preloader section*********
+let loading = document.getElementById('loading');
+function pre_Loader(){
+    loading.style.display = 'none';
+}
+
 // *********Card 1 *****selectior******
 let card_One = document.getElementById('card_One');
 // *********Card 2 ****selectior*******
