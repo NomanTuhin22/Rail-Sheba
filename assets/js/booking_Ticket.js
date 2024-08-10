@@ -67,8 +67,9 @@ let booking_Items = (ticket) => {
              }else{
                  booking_Items_Array.push(e.target);
              }
-          
- 
+             // send ticket info...
+             seat_Details_F(booking_Items_Array);
+             
              if(booking_Items_Array.length <= 4){
                  strong.classList.add('ticket-booking-Toggle');
              }
@@ -239,3 +240,58 @@ menu_List.forEach((item, index) => {
         }
     })
 })
+
+//*******seat_Details_F********/
+let seat_Details_F = (booking_Items_Array) => {
+    let boking_Item_array = duplicates_items_Remove_F(booking_Items_Array);
+
+    if(boking_Item_array.length == 1){
+        custom_Sidebar_T_Div[0].style.backgroundColor = '#c3e4ae';
+        strong_One_1_Class.innerText = `${seat_Class}`;
+        strong_Two_1_Seats.innerText= `${boking_Item_array[0]}`;
+        strong_Three_1_Fare.innerText = `${ticket_Amount}৳`;
+        total_Amount.innerText = `${ticket_Amount}৳`;
+        //1st juerney Station
+        boarding_Station.innerText =`${start_Station} (${juerney_Start_Time})`;
+    }
+    if(boking_Item_array.length == 2){
+        custom_Sidebar_T_Div[1].style.backgroundColor = '#c3e4ae';
+        strong_One_2_Class.innerText = `${seat_Class}`;
+        strong_Two_2_Seats.innerText= `${boking_Item_array[1]}`;
+        strong_Three_2_Fare.innerText = `${ticket_Amount}৳`;
+        total_Amount.innerText = `${ticket_Amount * 2}৳`;
+    }
+    if(boking_Item_array.length == 3){
+        custom_Sidebar_T_Div[2].style.backgroundColor = '#c3e4ae';
+        strong_One_3_Class.innerText = `${seat_Class}`;
+        strong_Two_3_Seats.innerText= `${boking_Item_array[2]}`;
+        strong_Three_3_Fare.innerText = `${ticket_Amount}৳`;
+        total_Amount.innerText = `${ticket_Amount * 3}৳`;
+    }
+    if(boking_Item_array.length == 4){
+        custom_Sidebar_T_Div[3].style.backgroundColor = '#c3e4ae';
+        strong_One_4_Class.innerText = `${seat_Class}`;
+        strong_Two_4_Seats.innerText= `${boking_Item_array[3]}`;
+        strong_Three_4_Fare.innerText = `${ticket_Amount}৳`;
+        total_Amount.innerText = `${ticket_Amount * 4}৳`;
+    }
+    if(boking_Item_array.length == 5){
+        alert('Only 4 Ticket You booking !!')
+         //Class
+        strong_One_1_Class.innerText='Select Ticket !';
+        strong_One_2_Class.innerText='Select Ticket !';
+        strong_One_3_Class.innerText='Select Ticket !';
+        strong_One_4_Class.innerText='Select Ticket !';
+        //Seats
+        strong_Two_1_Seats.innerText='';
+        strong_Two_2_Seats.innerText='';
+        strong_Two_3_Seats.innerText='';
+        strong_Two_4_Seats.innerText='';
+        //Fare amount
+        strong_Three_1_Fare.innerText = '';
+        strong_Three_2_Fare.innerText = '';
+        strong_Three_3_Fare.innerText = '';
+        strong_Three_4_Fare.innerText = '';
+    }
+}
+
