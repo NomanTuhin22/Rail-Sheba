@@ -128,3 +128,18 @@ for(let i = 1; i <= umo_Ticket; i++) {
         }
     })
 }
+//***dainamic Ticket Genarator F(chose-Cha)***
+for(let i = 1; i <= cha_Ticket; i++) {
+    let cha =`<strong id='js_create_Cha'>k- 00</strong>`;
+    container_Cha.innerHTML += `${cha}`;
+
+    let js_create_Cha = document.querySelectorAll('#js_create_Cha');
+    js_create_Cha.forEach((value, index) => {
+        ///*cheack if index(1-9)is, true then append 0 (0, 00, 9 ,09) */
+        if(index < 10 && index > 0){
+            value.innerText = `Cha-0${index}`;  
+        }else{
+            value.innerText = `Cha-${index}`;
+        }
+    })  
+}
