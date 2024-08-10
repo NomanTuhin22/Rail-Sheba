@@ -52,3 +52,19 @@ for(let i = 1; i <= 105; i++) {
         }
     })
 }
+
+//***dainamic Ticket Genarator (chose-K) F***
+for(let i = 1; i <= k_Ticket; i++) {
+    let k =`<strong id='js_create_k'>K- 00</strong>`;
+    container_K.innerHTML += `${k}`;
+
+    let js_create_k = document.querySelectorAll('#js_create_k');
+    js_create_k.forEach((value, index) => {
+        ///*cheack if index(1-9)is, true then append 0 (0, 00, 9 ,09) */
+        if(index < 10 && index > 0){
+            value.innerText = `K-0${index}`;  
+        }else{
+            value.innerText = `K-${index}`;
+        }
+    })
+}
