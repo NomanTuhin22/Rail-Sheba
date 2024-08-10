@@ -52,7 +52,35 @@ for(let i = 1; i <= 105; i++) {
         }
     })
 }
+//*******visiable ticket selection (chose k) *****(E)****
+let js_create_t_Visiable = document.querySelectorAll('#js_create_t_Visiable');
+//secection ticket array
+let booking_Items_Array = [];
 
+//*****hidden ticket selection eatch (Chose k/kh/g/gh/umo/ch..) F********
+let booking_Items = (ticket) => {
+    ticket.forEach((strong, index) => {
+         strong.addEventListener('click', (e) => {
+             //ticket validation.......(booked / unbooked);
+             if(strong.id == 'booked'){
+                 alert('This will be booked');
+             }else{
+                 booking_Items_Array.push(e.target);
+             }
+          
+ 
+             if(booking_Items_Array.length <= 4){
+                 strong.classList.add('ticket-booking-Toggle');
+             }
+             else{
+                 for(let a = 0; a <= 4; a++){       
+                    booking_Items_Array[a].classList.remove('ticket-booking-Toggle');
+                 }
+                 booking_Items_Array = [];
+             }
+         })
+    })
+ }
 //***dainamic Ticket Genarator (chose-K) F***
 for(let i = 1; i <= k_Ticket; i++) {
     let k =`<strong id='js_create_k'>K- 00</strong>`;
@@ -151,6 +179,8 @@ let js_create_t_Gh = document.querySelectorAll('#js_create_t_Gh');
 let js_create_Umo = document.querySelectorAll('#js_create_Umo');
 let js_create_Cha = document.querySelectorAll('#js_create_Cha');
 // visialble ticket genarator F call
+booking_Items(js_create_t_Visiable);
+//***dorpdown menu E and this(chose)display***
 menu_List.forEach((item, index) => {
     item.addEventListener('click', (e) => {
         if(index == 0){
