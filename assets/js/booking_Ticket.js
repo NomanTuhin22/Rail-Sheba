@@ -20,7 +20,6 @@ chose[4].innerText = `umo-Seat(${umo_Ticket})`;
 chose[5].innerText = `ch-Seat(${cha_Ticket})`;
 //******all ticket container*******
 let main_Visiable_C = document.querySelector('.main');
-let main_container = document.querySelectorAll('.main-container');
 let visiable_container = document.querySelector('#container0');
 let container_K = document.querySelector('#container1');
 let container_Kh = document.querySelector('#container2');
@@ -29,6 +28,7 @@ let container_Gh = document.querySelector('#container4');
 let container_Umo = document.querySelector('#container5');
 let container_Cha = document.querySelector('#container6');
 //**all container hide */
+let main_container = document.querySelectorAll('.main-container');
 main_container[1].style.display = 'none';
 main_container[2].style.display = 'none';
 main_container[3].style.display = 'none';
@@ -117,7 +117,7 @@ for(let i = 1; i <= gh_Ticket; i++) {
 for(let i = 1; i <= umo_Ticket; i++) {
     let cha =`<strong id='js_create_Umo'>k- 00</strong>`;
     container_Umo.innerHTML += `${cha}`;
-    
+
     let js_create_Umo = document.querySelectorAll('#js_create_Umo');
     js_create_Umo.forEach((value, index) => {
         ///*cheack if index(1-9)is, true then append 0 (0, 00, 9 ,09) */
@@ -143,3 +143,69 @@ for(let i = 1; i <= cha_Ticket; i++) {
         }
     })  
 }
+// *****dropdown menu selector ***(E)*****
+let js_create_k = document.querySelectorAll('#js_create_k');
+let js_create_t_Kh = document.querySelectorAll('#js_create_t_Kh');
+let js_create_t_G = document.querySelectorAll('#js_create_t_G');
+let js_create_t_Gh = document.querySelectorAll('#js_create_t_Gh');
+let js_create_Umo = document.querySelectorAll('#js_create_Umo');
+let js_create_Cha = document.querySelectorAll('#js_create_Cha');
+// visialble ticket genarator F call
+menu_List.forEach((item, index) => {
+    item.addEventListener('click', (e) => {
+        if(index == 0){
+            main_Visiable_C.style.display = 'none';
+            main_container[1].style.display = 'block';
+            main_container[2].style.display = 'none';
+            main_container[3].style.display = 'none';
+            main_container[4].style.display = 'none';
+            main_container[5].style.display = 'none';
+            main_container[6].style.display = 'none';
+        }
+        else if(index == 1){
+            main_Visiable_C.style.display = 'none';
+            main_container[1].style.display = 'none';
+            main_container[2].style.display = 'block';
+            main_container[3].style.display = 'none';
+            main_container[4].style.display = 'none';
+            main_container[5].style.display = 'none';
+            main_container[5].style.display = 'none';
+        }
+        else if(index == 2){
+            main_Visiable_C.style.display = 'none';
+            main_container[1].style.display = 'none';
+            main_container[2].style.display = 'none';
+            main_container[3].style.display = 'block';
+            main_container[4].style.display = 'none';
+            main_container[5].style.display = 'none';
+            main_container[6].style.display = 'none';
+        }
+        else if(index == 3){;
+            main_Visiable_C.style.display = 'none';
+            main_container[1].style.display = 'none';
+            main_container[2].style.display = 'none';
+            main_container[3].style.display = 'none';
+            main_container[4].style.display = 'block';
+            main_container[5].style.display = 'none';
+            main_container[5].style.display = 'none';
+        }
+        else if(index == 4){
+            main_Visiable_C.style.display = 'none';
+            main_container[1].style.display = 'none';
+            main_container[2].style.display = 'none';
+            main_container[3].style.display = 'none';
+            main_container[4].style.display = 'none';
+            main_container[5].style.display = 'block';
+            main_container[6].style.display = 'none';
+        }
+        else if(index == 5){
+            main_Visiable_C.style.display = 'none';
+            main_container[1].style.display = 'none';
+            main_container[2].style.display = 'none';
+            main_container[3].style.display = 'none';
+            main_container[4].style.display = 'none';
+            main_container[5].style.display = 'none';    
+            main_container[6].style.display = 'block';    
+        }
+    })
+})
