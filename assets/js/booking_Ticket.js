@@ -82,6 +82,17 @@ let booking_Items = (ticket) => {
          })
     })
  }
+
+ //********booked ticket Loop*********/
+js_create_t_Visiable.forEach((strong, index) => {
+    for(let i = k_Ticket; i <= index; i++){
+        strong.style.backgroundColor = 'rgb(255, 129, 10)';
+        strong.style.color= '#fff';
+        strong.style.border = 'none';
+        strong.setAttribute('id', 'booked');
+    }
+})
+
 //***dainamic Ticket Genarator (chose-K) F***
 for(let i = 1; i <= k_Ticket; i++) {
     let k =`<strong id='js_create_k'>K- 00</strong>`;
@@ -240,6 +251,57 @@ menu_List.forEach((item, index) => {
         }
     })
 })
+
+//*************seat_Details_F****$ section*****
+let custom_Sidebar_T_Div = document.querySelectorAll('#custom_Sidebar_T_Div div');
+let custom_Sidebar_Ticket_Div = document.querySelectorAll('.ticket');
+
+let clear_Ticket_Box = document.getElementById('clear_Ticket_Box');
+//Class
+let strong_One_1_Class = custom_Sidebar_T_Div[0].children[0];
+let strong_One_2_Class = custom_Sidebar_T_Div[1].children[0];
+let strong_One_3_Class = custom_Sidebar_T_Div[2].children[0];
+let strong_One_4_Class = custom_Sidebar_T_Div[3].children[0];
+//Seats
+let strong_Two_1_Seats = custom_Sidebar_T_Div[0].children[1];
+let strong_Two_2_Seats = custom_Sidebar_T_Div[1].children[1];
+let strong_Two_3_Seats = custom_Sidebar_T_Div[2].children[1];
+let strong_Two_4_Seats = custom_Sidebar_T_Div[3].children[1];
+//Fare
+let strong_Three_1_Fare = custom_Sidebar_T_Div[0].children[2];
+let strong_Three_2_Fare = custom_Sidebar_T_Div[1].children[2];
+let strong_Three_3_Fare = custom_Sidebar_T_Div[2].children[2];
+let strong_Three_4_Fare = custom_Sidebar_T_Div[3].children[2];
+
+// get the value in locastorage
+let getValue = JSON.parse(localStorage.getItem('indexPage'));
+let seat_Class = getValue.class;
+let start_Station = getValue.start_Station;
+let ticket_Amount = getValue.ticket_Amount;
+//total Amount 
+let total_Amount = document.getElementById('total_Amount');
+//jurney start station
+let boarding_Station = document.getElementById('boarding_Station');
+let boarding_Time = document.getElementById('boarding_Time');
+//jurney start time
+let getValue_localStorage = JSON.parse(localStorage.getItem('all_Data'));
+let juerney_Start_Time = getValue_localStorage.start_Time;
+
+// *******duplicates_items_Remove_F********
+let duplicates_items_Remove_F = (booking_Items_Array) => {
+    let chose = [];
+    //append value in chose array
+    booking_Items_Array.forEach((item) => {
+       let items = item.innerText;
+       chose.push(items);
+    })
+    //remove mathch value
+    let item = chose.filter((item, index) => {
+        return chose.indexOf(item) == index;
+    })
+    
+    return item;
+}
 
 //*******seat_Details_F********/
 let seat_Details_F = (booking_Items_Array) => {
