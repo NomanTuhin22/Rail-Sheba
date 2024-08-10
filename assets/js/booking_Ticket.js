@@ -35,3 +35,20 @@ main_container[3].style.display = 'none';
 main_container[4].style.display = 'none';
 main_container[5].style.display = 'none';
 main_container[6].style.display = 'none';
+
+//***dainamic Ticket Genarator,(active chose-K) visiable container ***
+for(let i = 1; i <= 105; i++) {
+    let ticket =`<strong id='js_create_t_Visiable' class='myclass'>k- 00</strong>`;
+    visiable_container.innerHTML += `${ticket}`;
+    main_Visiable_C.style.display = 'block';
+
+    let js_create_t_Visiable = document.querySelectorAll('#js_create_t_Visiable');
+    js_create_t_Visiable.forEach((value, index) => {
+        /*cheack if index(1-9)is, true then append 0 (0, 00, 9 ,09) */
+        if(index < 10 && index > 0){
+            value.innerText = `K-0${index}`;  
+        }else{
+            value.innerText = `K-${index}`;
+        }
+    })
+}
