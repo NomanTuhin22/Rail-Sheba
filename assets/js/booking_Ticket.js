@@ -68,3 +68,19 @@ for(let i = 1; i <= k_Ticket; i++) {
         }
     })
 }
+
+//***dainamic Ticket Genarator F(chose-KH)***
+for(let i = 1; i <= kh_Ticket; i++) {
+    let kh =`<strong id='js_create_t_Kh'>KH- 00</strong>`;
+    container_Kh.innerHTML += `${kh}`;
+
+    let js_create_t_Kh = document.querySelectorAll('#js_create_t_Kh');
+    js_create_t_Kh.forEach((value, index) => {
+        ///*cheack if index(1-9)is, true then append 0 (0, 00, 9 ,09) */
+        if(index < 10 && index > 0){
+            value.innerText = `KH-0${index}`;  
+        }else{
+            value.innerText = `KH-${index}`;
+        }
+    })
+}
