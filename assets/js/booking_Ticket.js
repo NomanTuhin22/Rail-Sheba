@@ -93,6 +93,17 @@ js_create_t_Visiable.forEach((strong, index) => {
     }
 })
 
+//********purchase ticket E*********/
+let purchase_Btn = document.getElementById('purchase_Btn');
+purchase_Btn.addEventListener('click', () => {
+    booking_Items_Array.forEach((items, index) => {
+        items.style.backgroundColor = 'rgb(255, 129, 10)';
+        items.style.color= '#fff';
+        items.style.border = 'none';
+        items.setAttribute('id', 'booked');
+    })
+})
+
 //***dainamic Ticket Genarator (chose-K) F***
 for(let i = 1; i <= k_Ticket; i++) {
     let k =`<strong id='js_create_k'>K- 00</strong>`;
