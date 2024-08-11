@@ -207,6 +207,8 @@ booking_Items(js_create_t_Visiable);
 menu_List.forEach((item, index) => {
     item.addEventListener('click', (e) => {
         if(index == 0){
+            //visialble ticket call
+            booking_Items(js_create_k);
             main_Visiable_C.style.display = 'none';
             main_container[1].style.display = 'block';
             main_container[2].style.display = 'none';
@@ -216,6 +218,8 @@ menu_List.forEach((item, index) => {
             main_container[6].style.display = 'none';
         }
         else if(index == 1){
+            //visialble ticket call
+            booking_Items(js_create_t_Kh);
             main_Visiable_C.style.display = 'none';
             main_container[1].style.display = 'none';
             main_container[2].style.display = 'block';
@@ -225,6 +229,8 @@ menu_List.forEach((item, index) => {
             main_container[5].style.display = 'none';
         }
         else if(index == 2){
+            //visialble ticket call
+            booking_Items(js_create_t_G);
             main_Visiable_C.style.display = 'none';
             main_container[1].style.display = 'none';
             main_container[2].style.display = 'none';
@@ -233,7 +239,9 @@ menu_List.forEach((item, index) => {
             main_container[5].style.display = 'none';
             main_container[6].style.display = 'none';
         }
-        else if(index == 3){;
+        else if(index == 3){
+            //visialble ticket call
+            booking_Items(js_create_t_Gh);
             main_Visiable_C.style.display = 'none';
             main_container[1].style.display = 'none';
             main_container[2].style.display = 'none';
@@ -243,6 +251,8 @@ menu_List.forEach((item, index) => {
             main_container[5].style.display = 'none';
         }
         else if(index == 4){
+            //visialble ticket call
+            booking_Items(js_create_Umo);
             main_Visiable_C.style.display = 'none';
             main_container[1].style.display = 'none';
             main_container[2].style.display = 'none';
@@ -252,6 +262,8 @@ menu_List.forEach((item, index) => {
             main_container[6].style.display = 'none';
         }
         else if(index == 5){
+            //visialble ticket call
+            booking_Items(js_create_Cha);
             main_Visiable_C.style.display = 'none';
             main_container[1].style.display = 'none';
             main_container[2].style.display = 'none';
