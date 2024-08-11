@@ -50,6 +50,7 @@ let forget_Password_F = () => {
             let num = Math.floor(Math.random(100) * 10);
             //Rail00@#
             let newPassword = `Abc0${num}@#`;
+            alert('tempowary Password :'+ newPassword);
             //****copy clipboard***
             navigator.clipboard.writeText(newPassword);
             password.value = newPassword;
@@ -85,11 +86,8 @@ let setData_LocalStorage_F = (user_Email, user_Password) => {
 }
 // *************loging_Accound_F*****F*********
 let loging_Accound_F = () => {
-    let getData = localStorage.getItem('userData');
-    if(getData === null) {
-        alert('Not Found Accound !!');
-    }
-    if(!(getData.u_Email && getData.u_Password)){
+    let getData = JSON.parse(localStorage.getItem('userData'));
+    if(getData === null){
         let empty = 'Not Found Accound !!!';
         worning_F(empty);
     }else{
