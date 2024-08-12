@@ -61,7 +61,7 @@ export let footer = `
             <p class="mr-4"><a href="#">Terms and Conditions |</a> </p>
             <p> <a href="#"> Privacy Policy</a></p>
         </div>
-        <div class="d-flex justify-content-center align-items-center pt-5 custom-footer-logo">
+        <div class="d-flex justify-content-center align-items-center pt-4 custom-footer-logo">
             <div><img src="./assets/images/logo.png" width="100px" alt="logo"></div>
             <div class="logo-text">
                 <p>Bangladesh Railway </p>

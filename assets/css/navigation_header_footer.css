@@ -158,9 +158,10 @@
 }
 .powered-by h6{
   font-family: var(--r_condensed);
-  font-size: 25px;
+  font-size: 22px;
   color:#da924e;
   padding-bottom: 10px;
+  font-weight: 700;
 }
 .powered-by-card{
   color:#333333;
@@ -186,6 +187,7 @@
   padding:  20px 10px 0 5px;
   line-height: 0;
   font-size: 26px;
+  font-weight: 500;
 }
 .powered-by-card  div{
   padding-top: 15px;
@@ -195,12 +197,14 @@
   font-size: 16px;
   padding-left: 5px;
   padding-right: 10px;
+  font-weight: 500;
 }
 .custom-tc p a{
   font-family: var(--roboto);
   font-size: 18px;
   letter-spacing: .2px;
   color:#3a7749;
+  font-weight: 500;
 }
 .custom-footer-logo .logo-text{
   font-family: var(--roboto);
@@ -208,6 +212,11 @@
 .custom-footer-logo .logo-text p:first-child{
   font-size: 26px;
   color:#da924e;
+  font-weight: 500;
+}
+.custom-footer-logo .logo-text p:last-child{
+  font-weight: 600;
+  color:#3a7749;
 }
 
 /* ***********media screen************  */
