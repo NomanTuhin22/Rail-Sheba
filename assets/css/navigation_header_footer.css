@@ -1,5 +1,8 @@
 @import url(../css/style.css);
 /********navigation section*************/
+.shadow {
+	background: #ecfdf5 !important;
+}
 .menu-min-div{
     transition: all ease-in-out 1s;
     -webkit-transition: all ease-in-out 1s;
