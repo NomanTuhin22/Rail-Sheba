@@ -16,11 +16,15 @@ let menu_List = document.getElementById('menu_List');
 let userEmil = document.getElementById('userEmil');
 let logout_Btn = document.getElementById('logout_Btn');
 
-// //***toggle menu */
+/***toggle menu */
 toggle_Btn.addEventListener('click', () => {
     menu_List.classList.toggle('hidden');   
 })
-
+/******logout_Btn*********/
+logout_Btn.addEventListener('click', () => {
+    //move the index.html page 
+    window.open("index.html", "_self");
+})
 //******Modify User Destaination section*******
 // ***show div***
 let show_Div = `
@@ -418,3 +422,7 @@ ticket_Container.forEach((value, index) => {
       }
   })
 })
+
+//**************footer section*************
+let footer_Container = document.getElementById('footer');
+footer_Container.innerHTML = `${footer}`;

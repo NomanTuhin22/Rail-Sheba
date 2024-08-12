@@ -301,67 +301,6 @@
 .custom-some-font h6{
   line-height: 30px ;
 }
-/* **********custom-footer************ */
-.custom-footer{
-  border-top: 3px solid #10b981;
-  background-color: #ecfdf5;
-}
-.powered-by {
-  padding: 50px 30px;
-}
-.powered-by h6{
-  font-family: var(--r_condensed);
-  font-size: 25px;
-  color:#da924e;
-  padding-bottom: 10px;
-}
-.powered-by-card{
-  color:#333333;
-  padding: 10px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-}
-.powered-by-card img{
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  padding: 5px;
-}
-.powered-by-card .name{
-  font-family: var(--roboto);
-  padding:  20px 10px 0 5px;
-  line-height: 0;
-  font-size: 26px;
-}
-.powered-by-card  div{
-  padding-top: 15px;
-}
-.powered-by-card .working{
-  font-family: var(--roboto);
-  font-size: 16px;
-  padding-left: 5px;
-  padding-right: 10px;
-}
-.custom-tc p a{
-  font-family: var(--roboto);
-  font-size: 18px;
-  letter-spacing: .2px;
-  color:#3a7749;
-}
-.custom-footer-logo .logo-text{
-  font-family: var(--roboto);
-}
-.custom-footer-logo .logo-text p:first-child{
-  font-size: 26px;
-  color:#da924e;
-}
 
 /* ***********media screen************  */
 /* *******576px******** */
@@ -408,12 +347,6 @@
   .services-logo .services-h4{
     width: 220px;
   }
-  /***footer***/
-  .custom-footer{
-    margin-top: 50px;
-    padding-bottom: 50px;
-  }
-
 }
 /* *******992px******** */
 @media (min-width: 992px) {

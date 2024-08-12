@@ -50,7 +50,7 @@ export let footer = `
         <div class="powered-by">
             <h6>Powered By</h6>
             <div class="d-flex shadow powered-by-card">
-                <img class="shadow" src="./asstes/images/noman.jpg" alt="img">
+                <img class="shadow" src="./assets/images/noman.jpg" alt="img">
                 <div>
                  <p class="name">Noman Tuhin</p>
                  <p class="working">As a juniyer Devloper in JavaScript</p>
@@ -62,7 +62,7 @@ export let footer = `
             <p> <a href="#"> Privacy Policy</a></p>
         </div>
         <div class="d-flex justify-content-center align-items-center pt-5 custom-footer-logo">
-            <div><img src="./asstes/images/logo.png" width="100px" alt="logo"></div>
+            <div><img src="./assets/images/logo.png" width="100px" alt="logo"></div>
             <div class="logo-text">
                 <p>Bangladesh Railway </p>
                 <p>নিরাপদ. আরামদায়. সাশ্রায়ী</p>
