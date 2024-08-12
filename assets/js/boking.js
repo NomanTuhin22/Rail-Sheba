@@ -1,9 +1,25 @@
+import {navigation, worning, footer} from "./nav_worning_footer.js";
+
 //********Get all_Data into localStorage**********
 let all_User_Data = JSON.parse(localStorage.getItem('all_Data'));
 let indexPage_Data = JSON.parse(localStorage.getItem('indexPage'));
 // ******Get input data in localstorage*******
 let input_Data = localStorage.getItem('indexPage');
 let data = JSON.parse(input_Data);
+
+// ********navigation*********
+let navigation_container = document.getElementById('navigation');
+navigation_container.innerHTML = `${navigation}`;
+
+let toggle_Btn = document.getElementById('toggle_Btn');
+let menu_List = document.getElementById('menu_List');
+let userEmil = document.getElementById('userEmil');
+let logout_Btn = document.getElementById('logout_Btn');
+
+// //***toggle menu */
+toggle_Btn.addEventListener('click', () => {
+    menu_List.classList.toggle('hidden');   
+})
 
 //******Modify User Destaination section*******
 // ***show div***
@@ -103,8 +119,8 @@ h_Selection.options[1].innerHTML= `${data.class}`;
 let this_Month = [];
 
 let allDate = new Date();
-currentYear = allDate.getFullYear();
-currentMonth = allDate.getMonth();
+let currentYear = allDate.getFullYear();
+let currentMonth = allDate.getMonth();
 // current month last day
 let all_Days = new Date(currentYear, currentMonth, 0).getDate();
 //current month create in this loop

@@ -103,7 +103,7 @@ let validation_F = () => {
     let user_Password = password.value;
 
     if(user_Email =="" || user_Password == ""){
-      let empty = 'Empty Value !'
+      let empty = 'Empty Value !';
       worning_F(empty);
     }
     else {

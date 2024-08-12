@@ -13,41 +13,45 @@ let all_Station = {
  localStorage.setItem('all_Station', JSON.stringify(all_Station));
 // ********navigation*********
 let toggle_Btn = document.getElementById('toggle_Btn');
+console.log(toggle_Btn);
 let menu_List = document.getElementById('menu_List');
 let userEmil = document.getElementById('userEmil');
 let logout_Btn = document.getElementById('logout_Btn');
 
+
+let tem = document.createElement('template');
+console.log(tem);
 //***toggle menu */
-toggle_Btn.addEventListener('click', () => {
-    menu_List.classList.toggle('hidden');   
-})
+// toggle_Btn.addEventListener('click', () => {
+//     menu_List.classList.toggle('hidden');   
+// })
 // ********user Accound Create**********
-let user_Id = localStorage.getItem('userData');
-let userData_Obj = JSON.parse(user_Id); 
+// let user_Id = localStorage.getItem('userData');
+// let userData_Obj = JSON.parse(user_Id); 
 // ********send_Data_log_div*********
-let send_Data_log_div = () => {
-    // ***append userData into menu li***
-    userEmil.innerHTML =`${userData_Obj.u_Email}`;
-}
-// *********Logout Btn *****event************
-logout_Btn.addEventListener('click', () => {
-    window.open("index.html" , '_self');
-    localStorage.clear();
-})
+// let send_Data_log_div = () => {
+//     // ***append userData into menu li***
+//     userEmil.innerHTML =`${userData_Obj.u_Email}`;
+// }
+// // *********Logout Btn *****event************
+// logout_Btn.addEventListener('click', () => {
+//     window.open("index.html" , '_self');
+//     localStorage.clear();
+// })
 // ********alert_Text selector*********
-let alert_Text = document.getElementById('alert_Text');
-// ********alert_Text alert_Text_F*********
-window.onload = () => {
-   //**call F**
-   send_Data_log_div();
-   setInterval(() => {
-     alert_Text.classList.add('alert_Text');
-     alert_Text.style.opacity = '.3';
-   },3000);
-   setInterval(() => {
-       alert_Text.style.opacity = '1';
-   },4000);
-}
+// let alert_Text = document.getElementById('alert_Text');
+// // ********alert_Text alert_Text_F*********
+// window.onload = () => {
+//    //**call F**
+//    send_Data_log_div();
+//    setInterval(() => {
+//      alert_Text.classList.add('alert_Text');
+//      alert_Text.style.opacity = '.3';
+//    },3000);
+//    setInterval(() => {
+//        alert_Text.style.opacity = '1';
+//    },4000);
+// }
 
 // ***********user Input Validtion selection**********
 let input = document.getElementById('input_Station');
@@ -65,14 +69,14 @@ let clear_Btn = document.getElementById('clear_Btn');
 // ********stations list**********
 let stations_List = ['Abdulpur','Ashanganj','Akkelpur','Azampur','B_Sirajul_Islam','Baijitpur','Biman_Bandar','Birampur','Burimari','Chadpur','Dhaka','Dinapur','Fulbari','Gachihata','Harashpur','Ishwardi','Jamalpur_Twon','Kauia','Lalmonirhat','Maijgaon','Natore','Nilphamari','Padma','Quasba','Rangpur','Rajshahi','Thakurgaon_Road','Ullapara'];
 // **********some Data Stor in localStorage*************
+//***ticket Value***
 let form_Staion = input.value;
 let to_Station = input_To.value;
-
 let date_V = jurney_Date.value;
-let send_Data = new Date(date_V);
+let send_Date = new Date(date_V);
 //***user Current Day***
-let select_Day = send_Data.getDate();
-let m = send_Data.toDateString();
+let select_Day = send_Date.getDate();
+let m = send_Date.toDateString();
 //***user Current Month***
 let select_M = m.substring(4, 7);
 
@@ -81,7 +85,7 @@ let start_Time = new Date().toLocaleTimeString();
 let current_Time = new Date();
 let convert_M_Second = current_Time.getTime();
 //***rendom number***
-let random_Number = Math.floor(Math.random() * (8 - 1 + 1) + 1);
+let random_Number = Math.floor(Math.random() * (6 - 1 + 1) + 1);
 let addMlSeconds = 60 * 60 * 1000; // 1 h = 3600000 s
 let end_M_Second = (addMlSeconds * random_Number);
 //*** end time ***
@@ -89,7 +93,6 @@ let total_M_Second = new Date(convert_M_Second + end_M_Second);
 let end_Time = total_M_Second.toLocaleTimeString();
 let total_Duration_H = total_M_Second.getHours();
 let total_Duration_M = total_M_Second.getMinutes();
-//***ticket Value***
 let random_Ticket = Math.floor(Math.random() * (100 - 1 + 1) + 1);
 
 // **********collect Data a arry and filter the value********
