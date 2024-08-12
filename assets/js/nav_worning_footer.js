@@ -39,7 +39,7 @@ export let navigation = `
 export let worning = `
     <div class="d-flex justify-content-center w-100 w-lg-80" id="alert_Text">
        <div class="d-flex gap-3 justify-content-center align-items-lg-center alert-messages shadow px-3">
-           <p><img class="aleart-img mt-3" src="./asstes/images/aleart.jpg" alt="img"></p>
+           <p><img class="aleart-img mt-3" src="./assets/images/aleart.jpg" alt="img"></p>
            <p class="text-danger">১২ জুন, ২০২৪ তারিখ হতে ঈদের পূর্বদিন পর্যন্ত আন্তঃনগর নীলসাগর ও চিলাহাটি এক্সপ্রেস ট্রেন ঢাকা রেলওয়ে স্টেশনের পরিবর্তে ঢাকা ক্যান্টনমেন্ট রেলওয়ে স্টেশন হতে চলাচল করবে। উক্ত ট্রেন দুইটি বিমানবন্দর স্টেশনে যাত্রা বিরতি করবে না।</p>
        </div>
     </div>

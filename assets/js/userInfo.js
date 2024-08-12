@@ -41,6 +41,9 @@ logout_Btn.addEventListener('click', () => {
     localStorage.clear();
 })
 //********alert_Text selector*********
+let worning_Container = document.getElementById('worning_Container');
+worning_Container.innerHTML = `${worning}`;
+
 let alert_Text = document.getElementById('alert_Text');
 // ********alert_Text alert_Text_F*********
 window.onload = () => {
