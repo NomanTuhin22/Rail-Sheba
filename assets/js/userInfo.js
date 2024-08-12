@@ -32,8 +32,8 @@ let user_Id = localStorage.getItem('userData');
 let userData_Obj = JSON.parse(user_Id); 
 // ********send_Data_log_div*********
 let send_Data_log_div = () => {
-    // ***append userData into menu li***
-    userEmil.innerHTML =`${userData_Obj.u_Email}`;
+   // ***append userData into menu li***
+   userEmil.innerHTML =`${userData_Obj.u_Email}`;
 }
 // // *********Logout Btn *****event************
 logout_Btn.addEventListener('click', () => {
@@ -72,7 +72,7 @@ let result_Box_To = document.querySelector('#result_Box_To ul');
 let search_Btn = document.getElementById('search_Btn');
 let clear_Btn = document.getElementById('clear_Btn');
 // ********stations list**********
-let stations_List = ['Abdulpur','Ashanganj','Akkelpur','Azampur','B_Sirajul_Islam','Baijitpur','Biman_Bandar','Birampur','Burimari','Chadpur','Dhaka','Dinapur','Fulbari','Gachihata','Harashpur','Ishwardi','Jamalpur_Twon','Kauia','Lalmonirhat','Maijgaon','Natore','Nilphamari','Padma','Quasba','Rangpur','Rajshahi','Thakurgaon_Road','Ullapara'];
+let stations_List = ['Abdulpur','Ashanganj','Akkelpur','Azampur','B_Sirajul_Islam','Baijitpur','Biman_Bandar','Birampur','Burimari','Chadpur','Dhaka','Dinazpur','Fulbari','Gachihata','Harashpur','Ishwardi','Jamalpur_Twon','Kauia','Lalmonirhat','Maijgaon','Natore','Nilphamari','Padma','Quasba','Rangpur','Rajshahi','Thakurgaon_Road','Ullapara'];
 // **********some Data Stor in localStorage*************
 //***ticket Value***
 let form_Staion = input.value;
@@ -100,8 +100,24 @@ let total_Duration_H = total_M_Second.getHours();
 let total_Duration_M = total_M_Second.getMinutes();
 let random_Ticket = Math.floor(Math.random() * (100 - 1 + 1) + 1);
 
-// **********collect Data a arry and filter the value********
-//**********all_Data_Collect_F*****Form******
+//**********all_Data_Collect_Append current fild***********
+let all_Data_Append_C_Fild_F = (result) => {
+    //create li array
+    let allData = result.map((list) => {
+        return `<li id='myid'>${list}</li>`;    
+    }) 
+    //append li into ul
+    result_Box.innerHTML = allData.join('');
+    //**set data inpu fild***
+    let list = document.querySelectorAll('#myid');
+    list.forEach((li) => {
+        li.addEventListener('click', () => {
+            input.value = li.innerHTML;
+            result_Box.innerHTML = '';
+        })
+    })
+}
+// **********input_From F**********
 input.onkeyup = () => {
     let result = [];
     let user_Input_Value = input.value;
@@ -112,19 +128,25 @@ input.onkeyup = () => {
     }
     all_Data_Append_C_Fild_F(result);
 }
+
 //**********all_Data_Collect_Append current fild***********
-let all_Data_Append_C_Fild_F = (result) => {
+let all_Data_Append_Input_To = (result, result_Box_To) => {
+    //create li array
     let allData = result.map((list) => {
-        return "<li onclick = selectInput(this)>"+ list +"</li>";
-    }) 
-    result_Box.innerHTML = allData.join('');    
+        return `<li id='myid'>${list}</li>`;   
+    })
+    //append li into ul
+    result_Box_To.innerHTML = allData.join('');
+    //**set data inpu fild***
+    let list = document.querySelectorAll('#myid');
+    list.forEach((li) => {
+        li.addEventListener('click', () => {
+            input_To.value = li.innerHTML;
+            result_Box_To.innerHTML = '';
+        })
+    })
 }
-// ***********set data inpu fild*********
-function selectInput(list){  //Not Work
-    input.value = list.innerHTML;
-    result_Box.innerHTML = '';
-}
-// **********input To F**********
+// **********input_To F**********
 input_To.onkeyup = () => {
     let result2 = [];
     let inputTo = input_To.value;
@@ -135,18 +157,6 @@ input_To.onkeyup = () => {
     }
     all_Data_Append_Input_To(result2, result_Box_To);
 } 
-//**********all_Data_Collect_Append current fild***********
-let all_Data_Append_Input_To = (result, result_Box_To) => {
-    let allData = result.map((list) => {
-        return "<li onclick='select_Input_To(this)'>"+ list +"</li>";
-    })
-    result_Box_To.innerHTML = allData.join('');   
-}
-// ***********set data inpu fild*********
-function select_Input_To(list) {
-    input_To.value = list.innerHTML;
-    result_Box_To.innerHTML = '';
-}
 
 // ***********user data cullect and send localStorage F***********
 let user_Data_Send_LocalStorage = () => {
