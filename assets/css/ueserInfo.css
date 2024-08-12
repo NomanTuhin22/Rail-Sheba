@@ -274,6 +274,7 @@
   -ms-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   cursor: pointer;
+  background-color: #ffff !important;
 }
 .custom-bank:hover{
   transform: scale(1.1);
