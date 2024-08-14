@@ -5,6 +5,7 @@
 }
 .body{
     z-index: -8888;
+    width: 100% !important;
 }
 .trin-stop-staion-div{
     position: relative;
@@ -286,7 +287,7 @@
     border-bottom: 1px solid #eef0f9;
 }
 .train-start-End-time-container .duration-train{
-    padding: 20px 0;
+    padding: 20px 5px;
     border-right: 1px solid #d2d2d4;
 }
 .train-start-End-time-container .start-time{
@@ -428,8 +429,78 @@
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
 }
+/* Medium devices (sm, 568px and up) */
+@media (max-width: 576px) {
+    /* trian popup window */
+    .train-stop-main-continer {
+      width: 575px !important;
+    }
+    .total-time img {
+        width: 75px;
+    }
+    #train_Details{
+        text-align: center;
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 640px) {
+    /* trian popup window */
+    .train-stop-main-continer {
+        width: 637px !important;
+    }
+    /* train-start-End-time section */
+    .total-time img {
+        width: 160px;
+    }
+    .train-start-End-time-container .duration-train div p:first-child {
+        font-size: 14px;
+    }
+    .train-start-End-time-container .start-time p:last-child {
+        margin-right: 16px;
+    }
+    .train-start-End-time-container {
+        padding: 0 0px 0 15px;
+    }
+    .train-start-End-time-container .train-details {
+        text-align: center;
+        font-size: 12px;
+        font-weight: 800;
+    }
+    #train_Details{
+        text-align: center;
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+     /* trian popup window */
+     .train-stop-main-continer {
+        min-width: 760px;
+      }
+}
+@media (max-width: 768px) {
+     /* train-start-End-time section */
+    .total-time img {
+        width: 180px;
+    }
+    .train-start-End-time-container .duration-train div p:first-child {
+        font-size: 14px;
+    }
+    .train-start-End-time-container .start-time p:last-child {
+        margin-right: 16px;
+    }
+    .train-start-End-time-container {
+        padding: 0 0px 0 15px;
+    }
+    .train-start-End-time-container .train-details {
+        width: 100px !important;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 800;
+    }
+}
+
 /*Small devices (max-width: 992px) and (min-width: 576px) */
-@media (max-width: 992px) and (min-width: 576px) {
+@media (max-width: 992px)  {
     /***modify-show-div***/
     .modify-D-container{
         overflow: hidden;
@@ -485,55 +556,6 @@
     .ticket-section{
         margin: 25px 10px;
     }
-}
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 640px) {
-    /* train-start-End-time section */
-    .total-time img {
-        width: 160px;
-    }
-    .train-start-End-time-container .duration-train div p:first-child {
-        font-size: 14px;
-    }
-    .train-start-End-time-container .start-time p:last-child {
-        margin-right: 16px;
-    }
-    .train-start-End-time-container {
-        padding: 0 0px 0 15px;
-    }
-    .train-start-End-time-container .train-details {
-        text-align: center;
-        font-size: 12px;
-        font-weight: 800;
-    }
-    #train_Details{
-        text-align: center;
-    }
-}
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 768px) {
-      /* train-start-End-time section */
-    .total-time img {
-        width: 180px;
-    }
-    .train-start-End-time-container .duration-train div p:first-child {
-        font-size: 14px;
-    }
-    .train-start-End-time-container .start-time p:last-child {
-        margin-right: 16px;
-    }
-    .train-start-End-time-container {
-        padding: 0 0px 0 15px;
-    }
-    .train-start-End-time-container .train-details {
-        width: 100px !important;
-        text-align: center;
-        font-size: 12px;
-        font-weight: 800;
-    }
-}
-@media (min-width: 768px) {
-    /* train-start-End-time section */
     .total-time img {
         width: 250px;
     }
@@ -576,7 +598,7 @@
     .modify-hidden-div .search-train{
         margin-top: 10px;
     }
-    /* train-start-End-time section */
+    /* train-start-End-time section img */
     .total-time img {
       width: 180px;
     }

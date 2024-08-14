@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* navigation_header_footer */
+@import url('../css/navigation_header_footer.css');
+
 *{
     margin: 0;
     padding: 0;
@@ -11,6 +14,12 @@
     --raleway : "Raleway", sans-serif;
 }
 /* ***********ticket selection section************ */
+#navigation_Ticket{
+    background-color: #d8f7e8 !important;
+}
+.custom-ul{
+    width: 445px;
+}
 .ticket-selection{
     padding: 50px 50px 50px 50px ;
     background: rgb(172,46,46);
@@ -53,6 +62,9 @@
 }
 .select-coach-subcontainer .custom-menu {
     width: 80%;
+}
+.select-coach-subcontainer .custom-ul {
+    width: 46%;
 }
 .select-coach-subcontainer .custom-li {
     color: #ec8c32;
@@ -161,7 +173,6 @@
     height: 250px;
     background-color: #f1f1f1;
     text-align: center;
-    /* padding-top: 250px; */
 }
 .sidebar-seat-details .custom-sidebar-div-one p{
     background: #88b484;
@@ -283,6 +294,10 @@
     .all-ticket-here {
        margin-left: 0;
     }
+    /* dropdown ul */
+    .select-coach-subcontainer .custom-ul {
+        width: 62.5% ;
+    }
     /*******slide bar**********/
     .sidebar-seat-details {
         padding-left: 10px !important;
@@ -310,6 +325,14 @@
         margin-right: 15px;
     }
 }
+/************ Small devices (landscape phones, 576px and up) ***********/
+@media (min-width: 776px) {
+    /* dropdown ul */
+    .select-coach-subcontainer .custom-ul {
+        width: 46.1% ;
+    }
+}
+
 
 /************* Medium devices (tablets, 850px and up) **********/
 @media (min-width: 850px) {
@@ -317,14 +340,19 @@
         overflow: hidden;
     }
     .all-ticket-here .main-container div {
-        width: 420px;
-    }
-}
- /************* Medium devices (tablets, 900px and up) *************/
-@media (min-width: 850px) {
-    .all-ticket-here .main-container div {
         width: 460px;
     }
+    /* dropdown ul */
+    .select-coach-subcontainer .custom-ul {
+        width: 52.5%;
+    }
+    
+}
+@media (min-width: 992px) {
+ /* dropdown ul */
+ .select-coach-subcontainer .custom-ul {
+    width: 45.9%;
+ }
 }
  /************* larg devices (tablets, 1100px and up) *************/
 @media (min-width: 1100px) {
@@ -338,12 +366,20 @@
         padding: 15px 12px;
         margin: 7px;
     }
+     /* dropdown ul */
+    .select-coach-subcontainer .custom-ul {
+       width: 46.7%;
+    }
 }
  /************* X-Large devices (large desktops, 1200px and up) **********/
 @media (min-width: 1200px) {
     .all-ticket-here .main-container div {
         width: 510px;
         margin-left: 40px;
+    }
+    /* dropdown ul */
+    .select-coach-subcontainer .custom-ul {
+       width: 46.2%;
     }
 }
  /************* X-Large devices (large desktops, 1300px and up) **********/
@@ -363,5 +399,9 @@
 @media (min-width: 1400px) {
     .all-ticket-here .main-container div {
         margin-left: 90px;
+    }
+    /* dropdown ul */
+    .select-coach-subcontainer .custom-ul {
+        width: 46.5%;
     }
 }

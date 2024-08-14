@@ -13,12 +13,11 @@
 }
 #loading{
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: #fff url(../images/preloader.gif) no-repeat center;
     z-index: 99999;
 }
-
 
 .c-pointer{
     cursor: pointer;
@@ -238,9 +237,6 @@
 }
 .show{
     display: block !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
 }
 /***********Custom Media Screen*****@Media****** */
 

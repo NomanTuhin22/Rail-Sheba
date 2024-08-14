@@ -14,7 +14,7 @@ export let navigation = `
            </div>
           <!-- ******nav list****** -->
            <div id="menu_List" class="menu-min-div w-100 hidden d-lg-block">
-               <ul class="d-lg-flex justify-content-xxl-evenly custom-items p-0">
+               <ul class="d-lg-flex justify-content-xxl-evenly justify-content-lg-center custom-items p-0">
                    <li><a href="#">Home</a></li>
                    <li><a href="#">Train Information</a></li>
                    <li><a href="#">Loging</a></li>

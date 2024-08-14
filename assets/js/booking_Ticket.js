@@ -1,5 +1,30 @@
+
+//navigation, worning, footer 
+import {navigation, worning, footer} from "./nav_worning_footer.js";
+
 //*********ticket menu section*********
-let menu_List = document.querySelectorAll('ul li a');
+let navigation_container_Ticket = document.getElementById('navigation_Ticket');
+navigation_container_Ticket.innerHTML = `${navigation}`;
+
+let toggle_Btn = document.getElementById('toggle_Btn');
+let nav = document.getElementById('menu_List');
+// console.log(nav);
+// let userEmil = document.getElementById('userEmil');
+// let logout_Btn = document.getElementById('logout_Btn');
+
+/***toggle menu */
+let count = 0;
+toggle_Btn.addEventListener('click', () => {
+    if(count == 1){
+        nav.style.display = 'block';
+        count = 0; 
+    }else{
+        nav.style.display = 'none';
+        count = 1;
+    }
+})
+
+let menu_List_li = document.querySelectorAll('.custom-ul li a');
 let chose = document.querySelectorAll('#chose');
 let menu_Btn = document.getElementById('dropdownMenuButton1');
 let type_Of_C_Ticket = document.querySelectorAll('#type_Of_C_Ticket div');
@@ -204,7 +229,7 @@ let js_create_Cha = document.querySelectorAll('#js_create_Cha');
 // visialble ticket genarator F call
 booking_Items(js_create_t_Visiable);
 //***dorpdown menu E and this(chose)display***
-menu_List.forEach((item, index) => {
+menu_List_li.forEach((item, index) => {
     item.addEventListener('click', (e) => {
         if(index == 0){
             //visialble ticket call
@@ -380,3 +405,6 @@ let seat_Details_F = (booking_Items_Array) => {
     }
 }
 
+//**************footer section*************
+let footer_Container = document.getElementById('footer');
+footer_Container.innerHTML = `${footer}`;
