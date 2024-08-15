@@ -7,8 +7,7 @@ navigation_container_Ticket.innerHTML = `${navigation}`;
 
 let toggle_Btn = document.getElementById('toggle_Btn');
 let nav = document.getElementById('menu_List');
-let userEmil = document.getElementById('userEmil');
-let logout_Btn = document.getElementById('logout_Btn');
+
 
 /***toggle menu */
 let count = 0;
@@ -21,7 +20,7 @@ toggle_Btn.addEventListener('click', () => {
         count = 1;
     }
 })
-
+//**************worning section*************
 let worning_Container = document.getElementById('worning_Container');
 worning_Container.innerHTML = `${worning}`;
 let custom_W = document.getElementById('custom_W');

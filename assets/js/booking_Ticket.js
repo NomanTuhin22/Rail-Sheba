@@ -116,19 +116,25 @@ js_create_t_Visiable.forEach((strong, index) => {
         strong.setAttribute('id', 'booked');
     }
 })
-
+console.log(booking_Items_Array.length);
 //********purchase ticket E*********/
 let purchase_Btn = document.getElementById('purchase_Btn');
 purchase_Btn.addEventListener('click', () => {
-
     booking_Items_Array.forEach((items, index) => {
         items.style.backgroundColor = 'rgb(255, 129, 10)';
         items.style.color= '#fff';
         items.style.border = 'none';
         items.setAttribute('id', 'booked');
     })
+})
+//********purchase ticket cheack validite E*********/
+purchase_Btn.addEventListener('click', () => {
+    if(booking_Items_Array.length == 0){
+        alert('Select Ticket');
+    }else{
     //**moveto boking page**
     window.open("./purchase.html", "_self");
+    }
 })
 
 //***dainamic Ticket Genarator (chose-K) F***
