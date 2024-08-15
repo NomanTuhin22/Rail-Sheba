@@ -8,9 +8,8 @@ navigation_container_Ticket.innerHTML = `${navigation}`;
 
 let toggle_Btn = document.getElementById('toggle_Btn');
 let nav = document.getElementById('menu_List');
-// console.log(nav);
-// let userEmil = document.getElementById('userEmil');
-// let logout_Btn = document.getElementById('logout_Btn');
+let userEmil = document.getElementById('userEmil');
+let logout_Btn = document.getElementById('logout_Btn');
 
 /***toggle menu */
 let count = 0;
@@ -121,12 +120,15 @@ js_create_t_Visiable.forEach((strong, index) => {
 //********purchase ticket E*********/
 let purchase_Btn = document.getElementById('purchase_Btn');
 purchase_Btn.addEventListener('click', () => {
+
     booking_Items_Array.forEach((items, index) => {
         items.style.backgroundColor = 'rgb(255, 129, 10)';
         items.style.color= '#fff';
         items.style.border = 'none';
         items.setAttribute('id', 'booked');
     })
+    //**moveto boking page**
+    window.open("./purchase.html", "_self");
 })
 
 //***dainamic Ticket Genarator (chose-K) F***

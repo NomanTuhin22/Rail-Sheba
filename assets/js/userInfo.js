@@ -79,8 +79,10 @@ let form_Staion = input.value;
 let to_Station = input_To.value;
 let date_V = jurney_Date.value;
 let send_Date = new Date(date_V);
+console.log(date_V);
 //***user Current Day***
 let select_Day = send_Date.getDate();
+
 let m = send_Date.toDateString();
 //***user Current Month***
 let select_M = m.substring(4, 7);

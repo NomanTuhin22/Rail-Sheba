@@ -40,7 +40,7 @@ export let worning = `
     <div class="d-flex justify-content-center w-100 w-lg-80" id="alert_Text">
        <div class="d-flex gap-3 justify-content-center align-items-lg-center alert-messages shadow px-3">
            <p><img class="aleart-img mt-3" src="./assets/images/aleart.jpg" alt="img"></p>
-           <p class="text-danger">১৮ জুলাই ২০২৪ হতে সাময়িকভাবে ট্রেন চলাচল স্থগিত থাকায় যে সকল ট্রেন সম্পূর্ণ চলাচল করে নাই, সে সকল ট্রেনের টিকিট রিফান্ডের ক্ষেত্রে যাত্রীদের করণীয় সম্পর্কিত তথ্যদিঃ..<a href='https://railapp.railway.gov.bd/' style ='color:#10b981;  font-family:"Roboto", sans-serif;'> railapp.railway.gov.bd</a></p>
+           <p id='custom_W' class="text-danger">১৮ জুলাই ২০২৪ হতে সাময়িকভাবে ট্রেন চলাচল স্থগিত থাকায় যে সকল ট্রেন সম্পূর্ণ চলাচল করে নাই, সে সকল ট্রেনের টিকিট রিফান্ডের ক্ষেত্রে যাত্রীদের করণীয় সম্পর্কিত তথ্যদিঃ..<a href='https://railapp.railway.gov.bd/' style ='color:#10b981;  font-family:"Roboto", sans-serif;'> railapp.railway.gov.bd</a></p>
        </div>
     </div>
 `;
