@@ -18,7 +18,29 @@ toggle_Btn.addEventListener('click', () => {
         nav.style.display = 'none';
         count = 1;
     }
-})
+ })
+// ********verify OTP section********
+let timar = document.getElementById('timar');
+
+let minit = 4;
+let second = 59;
+// *****timer F******
+window.onload = () => {
+    setInterval(() => {
+        if(second >= 0){
+            if(second < 10){
+                timar.innerText = `0${minit}:0${second--}`;
+            }else{
+                timar.innerText = `0${minit}:${second--}`;
+            }
+            if(second == 0 && !minit <= 0){
+                second = 59;
+                timar.innerText = `0${minit--}:${second}`;
+            }
+        }
+    }, 500);
+}
+
 //**************worning section*************
 let worning_Container = document.getElementById('worning_Container');
 worning_Container.innerHTML = `${worning}`;
