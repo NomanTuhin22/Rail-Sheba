@@ -8,7 +8,6 @@ navigation_container_Ticket.innerHTML = `${navigation}`;
 let toggle_Btn = document.getElementById('toggle_Btn');
 let nav = document.getElementById('menu_List');
 
-
 /***toggle menu */
 let count = 0;
 toggle_Btn.addEventListener('click', () => {
@@ -24,7 +23,7 @@ toggle_Btn.addEventListener('click', () => {
 let worning_Container = document.getElementById('worning_Container');
 worning_Container.innerHTML = `${worning}`;
 let custom_W = document.getElementById('custom_W');
-custom_W.innerHTML =`সাময়িকভাবে ট্রেন চলাচল স্থগিত থাকায় Rail Sheba Website টিতে প্রবেশ করা যাচ্ছে না, আসা করি আবশিষ্ট কাজটি শীঘ্রই শেষ করতে পারবো ইনসাআল্লাহ,.....(নোমান তুহিন) |`;
+custom_W.innerHTML =`OTP delivery may be delayed due to congestion at telco or SMS GateWay's end. Shohoz-Synesis-Vincen JV is not responsilble for any delay in OTP delivery.`;
 
 //**************footer section*************
 let footer_Container = document.getElementById('footer');

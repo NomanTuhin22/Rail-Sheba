@@ -1,5 +1,82 @@
+/*******nav_Header_Footer*******/
 @import url('../css/navigation_header_footer.css');
 
-#worning_Container{
-    margin: 68px 0;
+.text-danger {
+	color: #dc3545 !important;
+	font-family: var(--roboto) !important;
+}
+/******Timer section*******/ 
+.timer{
+    border: 2px solid #f3a358;
+    margin: 20px 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.custom-remaining{
+    font-family: var( --roboto);
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+}
+.custom-timer{
+    color:#f3a358;
+}
+.custom-otp-c{
+    margin: 20px 30px;
+    box-shadow: 1px 1px 4px 0px #cfcfcf;
+}
+.verify-phone-number{
+    font-family: var( --roboto);
+}
+.otp-img{
+    font-family: var(--roboto);
+}
+.custom-otp-h{
+    color: #595c7d;
+}
+.custom-otp-p{
+    color:#777676;
+}
+.otp-input{
+    margin: 20px 30px;
+}
+.custom-input-otp{
+    background-color: #e9e6e6;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 15px;
+    font-weight: bold;
+    color:#777676;
+}
+.otp-input input{
+    outline: none;
+    border: 2px solid transparent !important;
+}
+.otp-input input:focus{
+    border: 2px solid #059669 !important;
+}
+.resend-otp{
+    margin: 20px 30px;
+    font-family: var(--roboto);
+}
+.resend-otp p a{
+    color:rgb(170, 168, 168);
+    font-weight: 400;
+}
+.otp-submit{
+    margin: 20px 30px;
+    font-family: var(--roboto);
+}
+.otp-submit-btn{
+    background-color:#7eb2a2;
+    color:white;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: none;
 }

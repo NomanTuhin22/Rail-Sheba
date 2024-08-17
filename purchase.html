@@ -16,10 +16,35 @@
 <div id="navigation_Ticket">
     <div id="navigation"></div>
 </div>
-
-<!-- ***********notice box section***************** -->
+<!-- *****notice box section******** -->
 <div id="worning_Container"></div>
- 
+<!-- ******Timer section******* -->
+ <div class="timer d-flex justify-content-between">
+    <div class="d-flex gap-3 ps-4 pt-3 fw-normal h3 custom-timer"><p><i class="fa-regular fa-clock"></i></p><p>04:59</p></div>
+    <div class="mt-2 pe-4 pt-3 custom-remaining">Remaining, to initiate your payment process</div>
+ </div>
+ <!-- ********verify OTP section******** -->
+ <div class="rounded custom-otp-c">
+    <div class="verify-phone-number">
+        <div><p class="p-3 border-bottom">Verify Your Phone Number</p></div>
+    </div>
+    <div class="otp-img">
+        <div class="d-flex justify-content-center"><img src="./assets/images/verifyOtp.png" alt="img"></div>
+        <h3 class="text-center fw-bold custom-otp-h h4">Enter Your OTP Code</h3>
+        <p class="text-center custom-otp-p">Please enter the 4-digit code you received on your mobile.</p>
+    </div>
+    <div class="otp-input d-flex justify-content-between gap-2">
+        <input class="border w-100 border-white text-center custom-input-otp" type="text" placeholder="*">
+        <input class="border w-100 border-white text-center custom-input-otp" type="text" placeholder="*">
+        <input class="border w-100 border-white text-center custom-input-otp" type="text" placeholder="*">
+        <input class="border w-100 border-white text-center custom-input-otp" type="text" placeholder="*">
+    </div>
+    <div class="resend-otp d-flex justify-content-between">
+        <p>00.00</p>
+        <p><a href="#">Resend otp</a></p>
+    </div>
+    <div class="otp-submit pb-4"><button class="otp-submit-btn py-2 rounded-pill border-white w-100 ">verify</button></div>
+ </div>
 <!-- ********footer section********* -->
 <div id="footer"></div>
  <!-- Boot strap v[5.0.2] scrpt-->
