@@ -65,7 +65,7 @@ export let footer = `
             <div><img src="./assets/images/logo.png" width="100px" alt="logo"></div>
             <div class="logo-text">
                 <p>Bangladesh Railway </p>
-                <p>নিরাপদ. আরামদায়. সাশ্রায়ী</p>
+                <p>নিরাপদ. আরামদায়ক. সাশ্রায়ী</p>
             </div>
         </div>
     </div>

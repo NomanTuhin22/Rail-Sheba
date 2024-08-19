@@ -33,6 +33,7 @@ let timar = document.getElementById('timar');
 let second_Timer = document.getElementById('second_Timer');
 let otp_Input_Field = document.querySelectorAll('#otp_Input_Field');
 let otp_submit_Btn = document.getElementById('otp_submit_Btn');
+let resend_Otp = document.getElementById('resend_Otp');
 
 /****timer****/
 let minit = 3;
@@ -132,7 +133,7 @@ let otp_Genarator_F = (otpValu) => {
 
 // *****timer F******1st
 window.onload = () => {
-  otp_Genarator_F(otpValue);
+// otp_Genarator_F(otpValue);
   setInterval(() => {
       if(second >= 0){
           //2nd timer_F
@@ -150,6 +151,16 @@ window.onload = () => {
   }, 500);
 }
 
+//**********resend_Otp******E*****
+resend_Otp.addEventListener('click', () => {
+    window.location.reload();
+    otp_Input_Field[0].value ='';
+    otp_Input_Field[1].value ='';
+    otp_Input_Field[2].value ='';
+    otp_Input_Field[3].value ='';
+})
+
+    
 //**************footer section*************
 let footer_Container = document.getElementById('footer');
 footer_Container.innerHTML = `${footer}`;

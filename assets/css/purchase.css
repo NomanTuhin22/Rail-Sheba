@@ -94,3 +94,7 @@ input::-webkit-outer-spin-button{
 .otp_Btn_Active{
     background-color: #00b871;
 }
+#resend_Otp{
+    cursor: pointer;
+    text-decoration: underline;
+}
