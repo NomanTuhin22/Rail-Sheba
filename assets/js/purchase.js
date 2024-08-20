@@ -106,7 +106,7 @@ let otp_Validation_F = (otpValue0, otpValue1, otpValue2, otpValue3) => {
         }
         if(otp_Input_Field[0].value == otpValue0 && otp_Input_Field[1].value == otpValue1 && otp_Input_Field[2].value == otpValue2 && otp_Input_Field[3].value == otpValue3){
             //move select_payment_Method.js
-            window.open('./assets/js/select_payment_Method.js');
+            window.open('./select_payment_Method.html', '_self');
         }
         else{
             alert('not match');
