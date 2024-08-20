@@ -1,0 +1,99 @@
+
+@import url('./style.css');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--roboto);
+}
+h1,h2,h3,h4, h5,h6, p{
+    margin: 0;
+    padding: 0;
+}
+.custom-payment-w-p{
+    font-weight: 400;
+    background-color: #ffefda;
+    color: #3a3a3a;
+}
+.coustom-p-w-s{
+    background-color: #ff9e59;
+}
+.custom-trainName_div{
+    box-shadow: 1px 1px 10px 0px #e9e9e9;
+}
+.custom-trainName{
+    font-size: 20px;
+    color: #da924e;
+    text-transform: uppercase;
+}
+.custom-d{
+    color:#444444;
+    font-weight: 400;
+}
+.custom-s-n{
+    color:#00885d;
+    padding-bottom: 10px;
+    padding-top: 3px;
+}
+.custom-n-strong{
+    font-size: 14px;
+    font-weight: 500;
+    color:#575757
+}
+.img-opacity{
+    opacity: .7;
+}
+.custom-coach  h6{
+    font-size: 18px;
+    color:#abadad;
+    font-weight: 400;
+}
+.custom-coach  h6 p{
+    font-size: 15px;
+    color:#00885d;
+    padding-top: 3px;
+    font-weight: 500;
+}
+.custom-fare-details{
+    box-shadow: 1px 1px 10px 0px #e9e9e9;
+}
+.fare-h5{
+    color:#575757
+}
+.custom-tabile{
+    background: rgb(172,46,46);
+    background: radial-gradient(circle, rgba(172,46,46,1) 12%, rgba(3,255,121,1) 100%); 
+}
+.custom-p-p{
+    color:#00885d;
+    font-weight: 600;
+}
+.custom-p-h5{
+    color:#da924e;
+}
+.chage-non-refundable{
+    background-color:#ffefda;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.chage-non-refundable p{
+    font-size: 14px;
+}
+.custom-some_text{
+    font-size: 14px;
+    opacity: .7;
+}
+.custom-payment_Btn{
+    background: #7db1a1;
+}
+.custom-payment_button{
+    background: transparent;
+    border: none;
+    font-weight: 500;
+    color:whitesmoke;
+}

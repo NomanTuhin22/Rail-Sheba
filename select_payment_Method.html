@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rail Sheba</title>
+    <!-- Boot strap v[5.2]  css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/select_payment_Method.css">
+</head>
+<body>
+    <div class="select-payment-method-containerb mx-3 my-2">
+    <!-- payment worning -->
+    <div>
+        <p class="px-2 py-3 custom-payment-w-p rounded">
+        <strong class="px-3 py-2 text-light text-sm-center rounded-circle coustom-p-w-s"><i class="fa-solid fa-exclamation"></i></strong>
+        Place complete your payment within 15 minites, otherwise your seat(S) will be cancelled
+       </p>
+    </div>
+    <!-- custom-trainName_div -->
+    <div class="custom-trainName_div my-3 rounded">
+    <!-- train name -->
+    <div class="border-bottom">
+        <h4 class="custom-trainName px-3 py-3">Drutojan Express(758)</h4>
+    </div>
+    <!-- departure -->
+    <div class="d-flex justify-content-between my-3 border-bottom">
+        <div class="mx-3">
+            <p class="custom-d">Deprature</p>
+            <h6 class="custom-s-n">B SIRAJUL ISLAM</h6>
+            <p class="pb-3"><strong class="custom-n-strong">20 AUG, 7:20 AM</strong></p>
+        </div>
+        <div>
+            <p class="text-center"><img class="img-opacity" src="./assets/images/green-arrow-right-11370.png" alt="img"></p>
+            <p>02h 15m</p>
+        </div>
+        <div class="mx-3">
+            <p class="custom-d">Arival</p>
+            <h6 class="custom-s-n">DINAJPUR</h6>
+            <p class="pb-3"><strong class="custom-n-strong">20 AUG, 7:20 AM</strong></p>
+        </div>
+    </div>
+    <!-- coach -->
+     <div class="d-flex justify-content-between pt-1 pb-3 px-3 custom-coach">
+        <h6 class="d-flex">Coach:<p>Kha</p></h6>
+        <h6 class="d-flex">Class:<p>AC_S</p></h6>
+        <h6 class="d-flex">Seats:<p>KHA-23</p></h6>
+     </div>
+    </div>
+     <!-- fare details -->
+    <div class="custom-fare-details pb-1 rounded">
+        <h5 class="fare-h5 mx-3 py-3">Fare details</h5>
+        <div class="px-3 custom-tabile">
+            <table class="w-100 rounded table table-striped table-hover text-light">
+                <tr class="text-light">
+                    <td >Adult-x 1</td>
+                    <td class="text-end">৳ 165</td>
+                </tr>
+                <tr class="text-light">
+                    <td>Children-x 0</td>
+                    <td class="text-end">৳ 0</td>
+                </tr>
+                <tr class="text-light">
+                    <td>Total Fare**</td>
+                    <td class="text-end">৳ 165</td>
+                </tr>
+                <tr class="text-light">
+                    <td>VAT</td>
+                    <td class="text-end">৳ 25</td>
+                </tr>
+                <tr class="text-light">
+                    <td>Service Charge</td>
+                    <td class="text-end">৳ 20</td>
+                </tr>
+                <tr class="text-light">
+                    <td>SMS Alert Charge</td>
+                    <td class="text-end">৳ 0</td>
+                </tr>
+                <tr class="text-light">
+                    <td class="fw-bold">YOU PAY</td>
+                    <td class="text-end fw-bold">৳ 210</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- payment method -->
+     <div class="payment-method custom-trainName_div my-3 mt-4 pb-2 rounded">
+        <div class="d-flex justify-content-between py-3 border-bottom">
+            <h5 class="fare-h5 custom-p-h5 mx-3">Payment Method</h5>
+            <p class="pt-2 mx-3">Fare: <span class="bold custom-p-p">৳ 210</span></p>
+        </div>
+        <div class="payment-container mx-3 my-3">
+            <div class="bkash d-flex justify-content-center border rounded">
+                <img src="./assets/images/bkash-logo.png" alt="img" width="100px" height="55px">
+            </div>
+            <div class="nagad d-flex justify-content-center border my-3 rounded">
+                <img src="./assets/images/nagod.png" alt="img" width="100px" height="55px">
+            </div>
+            <div class="rocket d-flex justify-content-center border my-3 rounded">
+                <img src="./assets/images/rocate.png" alt="img" width="100px" height="70px">
+            </div>
+            <div class="upay d-flex justify-content-center border my-3 rounded">
+                <img src="./assets/images/upay-logo.png" alt="img" width="100px" height="55px">
+            </div>
+            <div class="visa d-flex justify-content-center border my-3 rounded">
+                <img class="py-2" src="./assets/images/visa-home.png" alt="img" width="80px" height="45px">
+            </div>
+            <div class="mastercard d-flex justify-content-center border rounded">
+                <img src="./assets/images/master-card-logo.png" alt="img" width="100px" height="55px">
+            </div>
+        </div>
+     </div>
+    <div class="chage-non-refundable px-3 py-2 my-4">
+        <p class="pt-1 text-danger">Please note that the service change and SMS Alert charge are non-refundable.</p>
+        <p>Total Fare includes 50 Bedding charges per seat for AC_B and F_BERTH seat classes.</p>
+    </div>
+    <div class="mx-3">
+        <p class="custom-some_text text-center">By clicking PROCEED To PAYMENT,you are agreeing to Bangladesh Railway's <a class="text-success" href='#'>Team and Condition</a> & <a class="text-success" href="#">Privacy Policy</a>.</p>
+    </div>
+    <div class="proceed-to-payment pb-4 pt-3">
+        <p class="px-3 mx-3 py-2 w-80 rounded-pill custom-payment_Btn text-center"><button class="custom-payment_button px-5">PRECEED TO PAYMENT</button></p>
+    </div>
+    </div>
+    <!-- custom js -->
+    <script src="./assets/js/select_payment_Method.js"></script>
+</body>
+</html>

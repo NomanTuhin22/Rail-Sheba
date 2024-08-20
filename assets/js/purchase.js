@@ -105,10 +105,11 @@ let otp_Validation_F = (otpValue0, otpValue1, otpValue2, otpValue3) => {
            alert('Empty Value !!');
         }
         if(otp_Input_Field[0].value == otpValue0 && otp_Input_Field[1].value == otpValue1 && otp_Input_Field[2].value == otpValue2 && otp_Input_Field[3].value == otpValue3){
-            alert('success');
+            //move select_payment_Method.js
+            window.open('./assets/js/select_payment_Method.js');
         }
         else{
-            alert('not match')
+            alert('not match');
         }
     })
 }
@@ -133,7 +134,7 @@ let otp_Genarator_F = (otpValu) => {
 
 // *****timer F******1st
 window.onload = () => {
-// otp_Genarator_F(otpValue);
+otp_Genarator_F(otpValue);
   setInterval(() => {
       if(second >= 0){
           //2nd timer_F
