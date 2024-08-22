@@ -96,7 +96,7 @@ export let card_Bkash = `
      <div class="input-section d-flex text-center align-items-center">
         <div>
             <p class="text-light pb-3">Your bkash Account number</p>
-            <h5><input class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
+            <h5><input id='bank_Input' class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
             <p class="custom-input-p py-3 text-light">By clicking on Confirm,you are agreeing to the <a>terms & conditions</a></p>
         </div>
      </div>
@@ -137,7 +137,7 @@ export let card_Nagad =`
    <div class="input-section-nagad d-flex text-center align-items-center">
       <div>
           <p class="text-light pb-3">Your Nagad Account number</p>
-          <h5><input class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
+          <h5><input id='bank_Input' class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
           <p class="custom-input-p py-3 text-light">By clicking on Confirm,you are agreeing to the <a>terms & conditions</a></p>
       </div>
    </div>
@@ -178,7 +178,7 @@ export let card_Rocket = `
         <div class="input-section-rocket d-flex text-center align-items-center">
            <div>
                <p class="text-light pb-3">Your Nagad Account number</p>
-               <h5><input class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
+               <h5><input id='bank_Input' class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
                <p class="custom-input-p py-3 text-light">By clicking on Confirm,you are agreeing to the <a>terms & conditions</a></p>
            </div>
         </div>
@@ -219,7 +219,7 @@ export let card_Upay = `
       <div class="input-section-upay d-flex text-center align-items-center">
          <div>
              <p class="text-light pb-3">Your Nagad Account number</p>
-             <h5><input class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
+             <h5><input id='bank_Input' class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
              <p class="custom-input-p py-3 text-light">By clicking on Confirm,you are agreeing to the <a>terms & conditions</a></p>
          </div>
       </div>
