@@ -14,51 +14,14 @@
 <body>
 
     <!-- *******payment Bank section******** -->
-        <div class="payment_bank_container">
+      <div class="payment_bank_container">
             <div class="payment-sub-container">
-            <!-- main card container -->
+            <!-- card bkash container -->
               <div class="main-container rounded shadow-lg">
-                <!-- bank logo -->
-                  <div class="d-flex justify-content-center border-bottom">
-                    <img src="./assets/images/paylogo.png" alt="logo" width="170px" h="170px">
-                  </div>
-                <!-- rail seba logo -->
-                  <div>
-                    <div class="d-flex py-4">
-                        <p class="d-flex justify-content-between">
-                            <div class="py-2">
-                                <p class="rounded-circle mx-3 custom-railseba-shadow"><img src="./assets/images/logo.png" alt="logo" width="50px" height="50px"></p>
-                            </div>
-                            <div class="logo-text">
-                               <p>Bangladesh Railway</p>
-                               <p>Invoice : 38458584</p>
-                            </div>
-                        </p>
-                        <p id="total_Amount" class="custom-amount-m mt-3 ">৳ 210</p>
-                    </div>
-                  </div>
-                <!-- input section -->
-                 <div class="input-section d-flex text-center align-items-center">
-                    <div>
-                        <p class="text-light pb-3">Your bkash Account number</p>
-                        <h5><input class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
-                        <p class="custom-input-p py-3 text-light">By clicking on Confirm,you are agreeing to the<a>terms & conditions</a></p>
-                    </div>
-                 </div>
-                <!-- btn group -->
-                 <div class="d-flex justify-content-center custom-group">
-                   <div> 
-                    <button class="custom-btn btn1">CLOSE</button>
-                    <button class="custom-btn btn2">CONFIRM</button>
-                   </div>
-                 </div>
-                <!-- hote line -->
-                <div>
-                    <h6 class="custom-call-text text-center py-3"><span class="custom-call-icon rounded-circle"><i class="fa-solid fa-phone"></i></span> 16247</h6>
-                </div>
+                
               </div>
             </div>
-        </div>
+      </div>
      <!-- *******main container section********-->
     <div class="select-payment-method-containerb mx-3 my-2">
     <!-- payment worning -->
@@ -93,9 +56,9 @@
     </div>
     <!-- coach -->
      <div class="d-flex justify-content-between pt-1 pb-3 px-3 custom-coach">
-        <h6 class="d-flex">Coach:<p id="coach_Name" >Kha</p></h6>
-        <h6 class="d-flex">Class:<p id="chose">AC_S</p></h6>
-        <h6 class="d-flex">Seats:<p id ="chose_Site">KHA-23</p></h6>
+        <h6 class="d-flex">Coach: <p id="coach_Name" > Kha</p></h6>
+        <h6 class="d-flex">Class: <p id="chose"> AC_S</p></h6>
+        <h6 class="d-flex">Seats: <p id ="chose_Site"> KHA-23</p></h6>
      </div>
     </div>
      <!-- fare details -->
@@ -173,6 +136,6 @@
     </div>
     </div>
     <!-- custom js -->
-    <script src="./assets/js/select_payment_Method.js"></script>
+    <script src="./assets/js/select_payment_Method.js" type="module"></script>
 </body>
 </html>

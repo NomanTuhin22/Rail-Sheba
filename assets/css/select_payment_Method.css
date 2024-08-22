@@ -160,7 +160,7 @@ h1,h2,h3,h4, h5,h6, p{
     background-color: #737474;
 }
 .custom-btn{
-    padding: 10px 81.5px;
+    padding: 10px 81.8px;
     border: none;
     background-color: #cfcfcf;
     font-weight: 500;
@@ -187,4 +187,50 @@ h1,h2,h3,h4, h5,h6, p{
 .custom-call-text{
     color:#ee2579;
     font-weight: 600;
+}
+
+/* nagad bg */
+.input-section-nagad{
+    height: 250px;
+    width: 450px;
+    background: url('../images/nagadBg.png') no-repeat;
+    background-size:cover;
+    object-fit: cover;
+}
+.btn-nagad-c{
+    color:#cd130c;
+    font-weight: 600;
+}
+.nagad-icon{
+    background-color:#cd130c;
+}
+/* rocket bg */
+.input-section-rocket{
+    height: 250px;
+    width: 450px;
+    background: url('../images/rocketBg.png') no-repeat;
+    background-size:cover;
+    object-fit: cover;
+}
+.btn-rocket-c{
+    color:#d94dba;
+    font-weight: 600;
+}
+.rocket-icon{
+    background-color:#d94dba;
+}
+/* upay bg */
+.input-section-upay{
+    height: 250px;
+    width: 450px;
+    background: url('../images/upayBg.png') no-repeat;
+    background-size:cover;
+    object-fit: cover;
+}
+.btn-upay-c{
+    color:#ee9b00;
+    font-weight: 600;
+}
+.upay-icon{
+    background-color:#fed103;
 }

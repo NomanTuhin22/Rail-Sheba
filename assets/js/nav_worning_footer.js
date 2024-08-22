@@ -70,3 +70,168 @@ export let footer = `
         </div>
     </div>
 `;
+
+// *********payment section*********
+export let card_Bkash = `
+    <!-- bank logo -->
+                  <div class="d-flex justify-content-center border-bottom">
+                    <img src="./assets/images/paylogo.png" alt="logo" width="170px" h="170px">
+                  </div>
+                <!-- rail seba logo -->
+                  <div>
+                    <div class="d-flex py-4">
+                        <p class="d-flex justify-content-between">
+                            <div class="py-2">
+                                <p class="rounded-circle mx-3 custom-railseba-shadow"><img src="./assets/images/logo.png" alt="logo" width="50px" height="50px"></p>
+                            </div>
+                            <div class="logo-text">
+                               <p>Bangladesh Railway</p>
+                               <p>Invoice : 38458584</p>
+                            </div>
+                        </p>
+                        <p id="total_Amount" class="custom-amount-m mt-3 ">৳ 210</p>
+                    </div>
+                  </div>
+                <!-- input section-->
+                 <div class="input-section d-flex text-center align-items-center">
+                    <div>
+                        <p class="text-light pb-3">Your bkash Account number</p>
+                        <h5><input class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
+                        <p class="custom-input-p py-3 text-light">By clicking on Confirm,you are agreeing to the <a>terms & conditions</a></p>
+                    </div>
+                 </div>
+                <!-- btn group -->
+                 <div class="d-flex justify-content-center custom-group">
+                   <div> 
+                    <button class="custom-btn btn1">CLOSE</button>
+                    <button class="custom-btn btn2">CONFIRM</button>
+                   </div>
+                 </div>
+                <!-- hote line -->
+                <div>
+                    <h6 class="custom-call-text text-center py-3"><span class="custom-call-icon rounded-circle"><i class="fa-solid fa-phone"></i></span> 16247</h6>
+                </div>
+`;
+
+export let card_Nagad =`
+    <!-- bank logo -->
+    <div class="d-flex justify-content-center border-bottom">
+      <img src="./assets/images/nagod.png" alt="logo" width="200px" h="200px">
+    </div>
+    <!-- rail seba logo -->
+    <div>
+      <div class="d-flex py-4">
+          <p class="d-flex justify-content-between">
+              <div class="py-2">
+                  <p class="rounded-circle mx-3 custom-railseba-shadow"><img src="./assets/images/logo.png" alt="logo" width="50px" height="50px"></p>
+              </div>
+              <div class="logo-text">
+                 <p>Bangladesh Railway</p>
+                 <p>Invoice : 38458584</p>
+              </div>
+          </p>
+          <p id="total_Amount" class="custom-amount-m mt-3 ">৳ 210</p>
+      </div>
+    </div>
+    <!-- input section -->
+   <div class="input-section-nagad d-flex text-center align-items-center">
+      <div>
+          <p class="text-light pb-3">Your Nagad Account number</p>
+          <h5><input class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
+          <p class="custom-input-p py-3 text-light">By clicking on Confirm,you are agreeing to the <a>terms & conditions</a></p>
+      </div>
+   </div>
+  <!-- btn group -->
+   <div class="d-flex justify-content-center custom-group">
+     <div> 
+      <button class="custom-btn btn1">CLOSE</button>
+      <button class="custom-btn btn-nagad-c">CONFIRM</button>
+     </div>
+   </div>
+  <!-- hote line -->
+  <div>
+      <h6 class="btn-nagad-c text-center py-3"><span class="custom-call-icon nagad-icon rounded-circle"><i class="fa-solid fa-phone"></i></span> 16167</h6>
+  </div>
+`;
+
+export let card_Rocket = `
+    <!-- bank logo -->
+      <div class="d-flex justify-content-center border-bottom">
+         <img src="./assets/images/rocate.png" alt="logo" width="170px" height="120px">
+       </div>
+       <!-- rail seba logo -->
+       <div>
+         <div class="d-flex py-4">
+             <p class="d-flex justify-content-between">
+                 <div class="py-2">
+                     <p class="rounded-circle mx-3 custom-railseba-shadow"><img src="./assets/images/logo.png" alt="logo" width="50px" height="50px"></p>
+                 </div>
+                 <div class="logo-text">
+                    <p>Bangladesh Railway</p>
+                    <p>Invoice : 38458584</p>
+                 </div>
+             </p>
+             <p id="total_Amount" class="custom-amount-m mt-3 ">৳ 210</p>
+         </div>
+       </div>
+         <!-- input section -->
+        <div class="input-section-rocket d-flex text-center align-items-center">
+           <div>
+               <p class="text-light pb-3">Your Nagad Account number</p>
+               <h5><input class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
+               <p class="custom-input-p py-3 text-light">By clicking on Confirm,you are agreeing to the <a>terms & conditions</a></p>
+           </div>
+        </div>
+       <!-- btn group -->
+        <div class="d-flex justify-content-center custom-group">
+          <div> 
+           <button class="custom-btn btn1">CLOSE</button>
+           <button class="custom-btn btn-rocket-c">CONFIRM</button>
+          </div>
+        </div>
+       <!-- hote line -->
+       <div>
+           <h6 class="btn-nagad-c text-center py-3 btn-rocket-c"><span class="custom-call-icon rounded-circle rocket-icon"><i class="fa-solid fa-phone"></i></span> 16167</h6>
+       </div>
+`;
+
+export let card_Upay = `
+    <!-- bank logo -->
+    <div class="d-flex justify-content-center border-bottom">
+       <img src="./assets/images/upayLogo.png" alt="logo" width="170px" height="120px">
+     </div>
+     <!-- rail seba logo -->
+     <div>
+       <div class="d-flex py-4">
+           <p class="d-flex justify-content-between">
+               <div class="py-2">
+                   <p class="rounded-circle mx-3 custom-railseba-shadow"><img src="./assets/images/logo.png" alt="logo" width="50px" height="50px"></p>
+               </div>
+               <div class="logo-text">
+                  <p>Bangladesh Railway</p>
+                  <p>Invoice : 38458584</p>
+               </div>
+           </p>
+           <p id="total_Amount" class="custom-amount-m mt-3 ">৳ 210</p>
+       </div>
+     </div>
+       <!-- input section -->
+      <div class="input-section-upay d-flex text-center align-items-center">
+         <div>
+             <p class="text-light pb-3">Your Nagad Account number</p>
+             <h5><input class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
+             <p class="custom-input-p py-3 text-light">By clicking on Confirm,you are agreeing to the <a>terms & conditions</a></p>
+         </div>
+      </div>
+     <!-- btn group -->
+      <div class="d-flex justify-content-center custom-group">
+        <div> 
+         <button class="custom-btn btn1">CLOSE</button>
+         <button class="custom-btn btn-upay-c">CONFIRM</button>
+        </div>
+      </div>
+     <!-- hote line -->
+     <div>
+         <h6 class="btn-nagad-c text-center py-3 btn-upay-c"><span class="custom-call-icon rounded-circle upay-icon"><i class="fa-solid fa-phone"></i></span> 16167</h6>
+     </div>
+`;
