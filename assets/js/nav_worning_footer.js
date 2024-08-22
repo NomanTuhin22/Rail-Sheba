@@ -74,43 +74,43 @@ export let footer = `
 // *********payment section*********
 export let card_Bkash = `
     <!-- bank logo -->
-                  <div class="d-flex justify-content-center border-bottom">
-                    <img src="./assets/images/paylogo.png" alt="logo" width="170px" h="170px">
-                  </div>
-                <!-- rail seba logo -->
-                  <div>
-                    <div class="d-flex py-4">
-                        <p class="d-flex justify-content-between">
-                            <div class="py-2">
-                                <p class="rounded-circle mx-3 custom-railseba-shadow"><img src="./assets/images/logo.png" alt="logo" width="50px" height="50px"></p>
-                            </div>
-                            <div class="logo-text">
-                               <p>Bangladesh Railway</p>
-                               <p>Invoice : 38458584</p>
-                            </div>
-                        </p>
-                        <p id="total_Amount" class="custom-amount-m mt-3 ">৳ 210</p>
-                    </div>
-                  </div>
-                <!-- input section-->
-                 <div class="input-section d-flex text-center align-items-center">
-                    <div>
-                        <p class="text-light pb-3">Your bkash Account number</p>
-                        <h5><input class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
-                        <p class="custom-input-p py-3 text-light">By clicking on Confirm,you are agreeing to the <a>terms & conditions</a></p>
-                    </div>
-                 </div>
-                <!-- btn group -->
-                 <div class="d-flex justify-content-center custom-group">
-                   <div> 
-                    <button class="custom-btn btn1">CLOSE</button>
-                    <button class="custom-btn btn2">CONFIRM</button>
-                   </div>
-                 </div>
-                <!-- hote line -->
-                <div>
-                    <h6 class="custom-call-text text-center py-3"><span class="custom-call-icon rounded-circle"><i class="fa-solid fa-phone"></i></span> 16247</h6>
+      <div class="d-flex justify-content-center border-bottom">
+        <img src="./assets/images/paylogo.png" alt="logo" width="170px" h="170px">
+      </div>
+    <!-- rail seba logo -->
+      <div>
+        <div class="d-flex py-4">
+            <p class="d-flex justify-content-between">
+                <div class="py-2">
+                    <p class="rounded-circle mx-3 custom-railseba-shadow"><img src="./assets/images/logo.png" alt="logo" width="50px" height="50px"></p>
                 </div>
+                <div class="logo-text">
+                   <p>Bangladesh Railway</p>
+                   <p>Invoice : 38458584</p>
+                </div>
+            </p>
+            <p id="total_Amount" class="custom-amount-m mt-3 ">৳ 210</p>
+        </div>
+      </div>
+    <!-- input section-->
+     <div class="input-section d-flex text-center align-items-center">
+        <div>
+            <p class="text-light pb-3">Your bkash Account number</p>
+            <h5><input class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
+            <p class="custom-input-p py-3 text-light">By clicking on Confirm,you are agreeing to the <a>terms & conditions</a></p>
+        </div>
+     </div>
+    <!-- btn group -->
+     <div class="d-flex justify-content-center custom-group">
+       <div> 
+        <button id='close_Btn' class="custom-btn btn1">CLOSE</button>
+        <button id='confirm_Btn' class="custom-btn btn2">CONFIRM</button>
+       </div>
+     </div>
+    <!-- hote line -->
+    <div>
+        <h6 class="custom-call-text text-center py-3"><span class="custom-call-icon rounded-circle"><i class="fa-solid fa-phone"></i></span> 16247</h6>
+    </div>
 `;
 
 export let card_Nagad =`
@@ -144,8 +144,8 @@ export let card_Nagad =`
   <!-- btn group -->
    <div class="d-flex justify-content-center custom-group">
      <div> 
-      <button class="custom-btn btn1">CLOSE</button>
-      <button class="custom-btn btn-nagad-c">CONFIRM</button>
+      <button id='close_Btn'  class="custom-btn btn1">CLOSE</button>
+      <button id='confirm_Btn' class="custom-btn btn-nagad-c">CONFIRM</button>
      </div>
    </div>
   <!-- hote line -->
@@ -185,8 +185,8 @@ export let card_Rocket = `
        <!-- btn group -->
         <div class="d-flex justify-content-center custom-group">
           <div> 
-           <button class="custom-btn btn1">CLOSE</button>
-           <button class="custom-btn btn-rocket-c">CONFIRM</button>
+           <button id='close_Btn'  class="custom-btn btn1">CLOSE</button>
+           <button id='confirm_Btn' class="custom-btn btn-rocket-c">CONFIRM</button>
           </div>
         </div>
        <!-- hote line -->
@@ -226,8 +226,8 @@ export let card_Upay = `
      <!-- btn group -->
       <div class="d-flex justify-content-center custom-group">
         <div> 
-         <button class="custom-btn btn1">CLOSE</button>
-         <button class="custom-btn btn-upay-c">CONFIRM</button>
+         <button id='close_Btn'  class="custom-btn btn1">CLOSE</button>
+         <button id='confirm_Btn' class="custom-btn btn-upay-c">CONFIRM</button>
         </div>
       </div>
      <!-- hote line -->

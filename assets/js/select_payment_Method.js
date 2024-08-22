@@ -45,28 +45,56 @@ window.onload = () => {
 // **************banks section************
 let banks = document.querySelectorAll('#bank');
 let main_Container = document.getElementById('main_Container');
+let select_Payment_Method_Container = document.getElementById('select_Payment_Method_Container');
+let payment_Sub_Container = document.getElementById('payment_Sub_Container');
+
+let confirm_Btn = document.getElementById('confirm_Btn');
+
+// *********close_Btn_F**********
+let close_Btn_F = (close_Btn) => {
+    close_Btn.addEventListener('click', () => {
+        select_Payment_Method_Container.style.display ='block';
+        payment_Sub_Container.classList.remove('bg-overlay');
+        main_Container.innerHTML = '';
+    })
+}
 
 // ********all Banks add Event********
 banks.forEach((item, index) =>{
     item.style.cursor = 'pointer';
     item.addEventListener('click', () => {
+        payment_Sub_Container.classList.add('bg-overlay');
+        select_Payment_Method_Container.style.display ='none';
+
         if(index == 0){
             main_Container.innerHTML = `${card_Bkash}`;
+            //select colse btn
+            let close_Btn = document.getElementById('close_Btn');
+            close_Btn_F(close_Btn);
         }
         else if(index == 1){
             main_Container.innerHTML = `${card_Nagad}`;
+            //select colse btn
+            let close_Btn = document.getElementById('close_Btn');
+            close_Btn_F(close_Btn);
         }
         else if(index == 2){
             main_Container.innerHTML = `${card_Rocket}`;
+            //select colse btn
+            let close_Btn = document.getElementById('close_Btn');
+            close_Btn_F(close_Btn);
         }
         else if(index == 3){
             main_Container.innerHTML = `${card_Upay}`;
+            //select colse btn
+            let close_Btn = document.getElementById('close_Btn');
+            close_Btn_F(close_Btn);
         }
-        // else if(index == 4){
-        //     main_Container.innerHTML = `${card_Nagad}`;
-        // }
-        // else if(index == 5){
-        //     main_Container.innerHTML = `${card_Nagad}`;
-        // }
+        else if(index == 4){
+           alert('working');
+        }
+        else if(index == 5){
+            alert('working');
+        }
     })
 })
