@@ -1,7 +1,8 @@
 
 //navigation, worning, footer 
 import {navigation, worning, footer} from "./nav_worning_footer.js";
-
+// get data into localstorage
+let all_Data = JSON.parse(localStorage.getItem('all_Data'));
 //*********ticket menu section*********
 let navigation_container_Ticket = document.getElementById('navigation_Ticket');
 navigation_container_Ticket.innerHTML = `${navigation}`;
@@ -80,7 +81,32 @@ for(let i = 1; i <= 105; i++) {
 let js_create_t_Visiable = document.querySelectorAll('#js_create_t_Visiable');
 //secection ticket array
 let booking_Items_Array = [];
-
+//*******send_Data_Localstorage_F ****************/
+let send_Data_Localstorage_F = (booking_Items_Array) => {
+    booking_Items_Array.forEach((item, index) =>{
+        let ticket = [];
+        
+        if(index == 0){
+            ticket.push(booking_Items_Array[0].innerText);
+            localStorage.setItem('ticket', JSON.stringify(ticket)); 
+        }else if(index == 1){
+            ticket.push(booking_Items_Array[0].innerText);
+            ticket.push(booking_Items_Array[1].innerText);
+            localStorage.setItem('ticket', JSON.stringify(ticket)); 
+        }else if(index == 2){
+            ticket.push(booking_Items_Array[0].innerText);
+            ticket.push(booking_Items_Array[1].innerText);
+            ticket.push(booking_Items_Array[2].innerText);
+            localStorage.setItem('ticket', JSON.stringify(ticket)); 
+        }else{
+            ticket.push(booking_Items_Array[0].innerText);
+            ticket.push(booking_Items_Array[1].innerText);
+            ticket.push(booking_Items_Array[2].innerText);
+            ticket.push(booking_Items_Array[3].innerText);
+            localStorage.setItem('ticket', JSON.stringify(ticket)); 
+        }
+    })
+}
 //*****hidden ticket selection eatch (Chose k/kh/g/gh/umo/ch..) F********
 let booking_Items = (ticket) => {
     ticket.forEach((strong, index) => {
@@ -90,6 +116,8 @@ let booking_Items = (ticket) => {
                  alert('This will be booked');
              }else{
                  booking_Items_Array.push(e.target);
+                 //send data into localStorage F
+                 send_Data_Localstorage_F(booking_Items_Array);
              }
              // send ticket info...
              seat_Details_F(booking_Items_Array);
@@ -116,7 +144,7 @@ js_create_t_Visiable.forEach((strong, index) => {
         strong.setAttribute('id', 'booked');
     }
 })
-console.log(booking_Items_Array.length);
+
 //********purchase ticket E*********/
 let purchase_Btn = document.getElementById('purchase_Btn');
 purchase_Btn.addEventListener('click', () => {

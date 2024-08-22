@@ -97,3 +97,94 @@ h1,h2,h3,h4, h5,h6, p{
     font-weight: 500;
     color:whitesmoke;
 }
+.mouse-pointer{
+    cursor: pointer;
+}
+.total_Duration{
+    font: 14px;
+    font-weight: 500;
+    color:#575757;
+}
+
+/* payment_bank_container section */
+.payment_bank_container{
+    position: relative;
+}
+.payment_bank_container .payment-sub-container{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+.main-container{
+    width: 450px;
+    height: auto;
+    background: rgb(255, 255, 255);
+}
+/* ******popup window****** */
+.logo-text{
+    font-size: 19px;
+}
+.logo-text p:last-child{
+    color:#737474;
+}
+.custom-amount-m{
+    padding-left: 125px;
+    font-weight: 500;
+    font-size: 22px;
+    color:#494949;
+ }
+.custom-railseba-shadow{
+    box-shadow: 1px 1px 5px 0px #919191;
+}
+.input-section{
+    height: 250px;
+    width: 450px;
+    background: url('../images/bkashBg.jpg') no-repeat;
+    background-size:cover;
+    object-fit: cover;
+}
+.custom-input{
+    width: 350px;
+    border: none;
+    text-align: center;
+}
+.custom-input-p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.custom-group{
+    background-color: #737474;
+}
+.custom-btn{
+    padding: 10px 81.5px;
+    border: none;
+    background-color: #cfcfcf;
+    font-weight: 500;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+.btn1{
+    color:#4e5050;
+}
+.btn2{
+    color:#ad3467;
+}
+.custom-btn:hover{
+    background-color: #dfdddd;
+}
+.custom-call-icon{
+    padding: 7px 9px;
+    background-color: #ee2579;
+    color:whitesmoke;
+}
+.custom-call-text{
+    color:#ee2579;
+    font-weight: 600;
+}
