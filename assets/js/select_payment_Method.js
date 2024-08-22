@@ -1,7 +1,6 @@
 //import nav_worning_footer.js file
 import {card_Bkash, card_Nagad, card_Rocket, card_Upay} from "./nav_worning_footer.js";
 
-
 let custom_S_Name = document.getElementById('custom_S_Name');
 let deprature_Date_Time = document.getElementById('deprature_Date_Time');
 let total_Duration = document.getElementById('total_Duration');
@@ -18,7 +17,6 @@ let you_Pay_Amount = document.querySelectorAll('#you_Pay_Amount');
 let user_Data = JSON.parse(localStorage.getItem('all_Data'));
 let ticket = JSON.parse(localStorage.getItem('ticket'));
 let indexPage = JSON.parse(localStorage.getItem('indexPage'));
-console.log(user_Data);
 // string to number
 let original_amount = parseInt(indexPage.ticket_Amount);
 let vat = original_amount + 25 + 20;
@@ -42,5 +40,33 @@ window.onload = () => {
     original_T_Amount[1].innerText = `৳ ${indexPage.ticket_Amount}`;
     you_Pay_Amount[0].innerText = `৳ ${vat}`;
     you_Pay_Amount[1].innerText = `৳ ${vat}`;
-
 }
+
+// **************banks section************
+let banks = document.querySelectorAll('#bank');
+let main_Container = document.getElementById('main_Container');
+
+// ********all Banks add Event********
+banks.forEach((item, index) =>{
+    item.style.cursor = 'pointer';
+    item.addEventListener('click', () => {
+        if(index == 0){
+            main_Container.innerHTML = `${card_Bkash}`;
+        }
+        else if(index == 1){
+            main_Container.innerHTML = `${card_Nagad}`;
+        }
+        else if(index == 2){
+            main_Container.innerHTML = `${card_Rocket}`;
+        }
+        else if(index == 3){
+            main_Container.innerHTML = `${card_Upay}`;
+        }
+        // else if(index == 4){
+        //     main_Container.innerHTML = `${card_Nagad}`;
+        // }
+        // else if(index == 5){
+        //     main_Container.innerHTML = `${card_Nagad}`;
+        // }
+    })
+})
