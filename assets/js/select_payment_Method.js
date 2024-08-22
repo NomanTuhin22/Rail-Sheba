@@ -47,8 +47,8 @@ let banks = document.querySelectorAll('#bank');
 let main_Container = document.getElementById('main_Container');
 let select_Payment_Method_Container = document.getElementById('select_Payment_Method_Container');
 let payment_Sub_Container = document.getElementById('payment_Sub_Container');
+// let confirm_Btn = document.getElementById('confirm_Btn');
 
-let confirm_Btn = document.getElementById('confirm_Btn');
 
 // *********close_Btn_F**********
 let close_Btn_F = (close_Btn) => {
