@@ -20,7 +20,7 @@ let indexPage = JSON.parse(localStorage.getItem('indexPage'));
 // string to number
 let original_amount = parseInt(indexPage.ticket_Amount);
 let vat = original_amount + 25 + 20;
-
+//***cullect data into locallstorage & append into html element, .innerText */
 window.onload = () => {
     // start & end station
     custom_S_Name.innerText = `${user_Data.start_station}`;
@@ -49,26 +49,31 @@ let select_Payment_Method_Container = document.getElementById('select_Payment_Me
 let payment_Sub_Container = document.getElementById('payment_Sub_Container');
 
 // **********popup_Window_F**********
-let popup_Window_F = (total_Amount, bank_Input, confirm_Btn, bKash) => {
+let popup_Window_F = (total_Amount, bank_Input, phone_Otp, confirm_Btn) => {
     total_Amount.innerText = `৳${indexPage.ticket_Amount}`;
-
+   
     //confirm_Btn E
     confirm_Btn.addEventListener('click', () => {
-        if(bank_Input.value == ''){
-            alert('Empty Value');
+        let otp = 123;
+        if(bank_Input.value == '' && phone_Otp.value == ''){
+            alert('Empty Value !!');
         }
-        else if(bank_Input.value.match(/(\+88)?-?01[1-9]\d{8}/g)) {
-            alert('sussess');
+        else if(!bank_Input.value.match(/(\+88)?-?01[1-9]\d{8}/g)) {
+            alert('Phone Number Not Valid !!');
         }else{
-            alert(`Your ${bKash} Accound Number please...!!`);
-        }
+            if(phone_Otp.value != otp){
+                alert('OTP Not Valid !!');
+            }else{
+                console.log('input ok')// working runing
+            }
+        } 
     })
 }
 
 // *********close_Btn_F**********
-let close_Btn_F = (close_Btn, total_Amount, bank_Input, confirm_Btn, bKash) => {
+let close_Btn_F = (close_Btn, total_Amount, bank_Input, phone_Otp, confirm_Btn) => {
     //popup window info colect F
-    popup_Window_F(total_Amount, bank_Input ,confirm_Btn, bKash);
+    popup_Window_F(total_Amount, bank_Input, phone_Otp,confirm_Btn);
     // close popup window E
     close_Btn.addEventListener('click', () => {
         //select_payment container show
@@ -78,7 +83,20 @@ let close_Btn_F = (close_Btn, total_Amount, bank_Input, confirm_Btn, bKash) => {
     })
 }
 
-// ********all Banks add Event********
+// ********select popup window section input F********
+let form_Element = '';
+let form_Element_F = (main_Container) => {
+      //select popup window section
+      let close_Btn = document.getElementById('close_Btn');
+      let total_Amount = document.getElementById('total_Amount');
+      let bank_Input = document.getElementById('bank_Input');
+      let phone_Otp = document.getElementById('phone_Otp');
+      let confirm_Btn = document.getElementById('confirm_Btn');
+      // popup window close
+      close_Btn_F(close_Btn ,total_Amount, bank_Input, phone_Otp, confirm_Btn);
+}
+
+// ********all Banks item loop & add Event********
 banks.forEach((item, index) =>{
     item.style.cursor = 'pointer';
     item.addEventListener('click', () => {
@@ -87,43 +105,23 @@ banks.forEach((item, index) =>{
 
         if(index == 0){
             main_Container.innerHTML = `${card_Bkash}`;
-            let bKash ='Bkash';
-            //select popup window section
-            let close_Btn = document.getElementById('close_Btn');
-            let total_Amount = document.getElementById('total_Amount');
-            let bank_Input = document.getElementById('bank_Input');
-            let confirm_Btn = document.getElementById('confirm_Btn');
-            close_Btn_F(close_Btn ,total_Amount, bank_Input, confirm_Btn, bKash);
+            //select popup window section input
+            form_Element_F(main_Container);
         }
         else if(index == 1){
             main_Container.innerHTML = `${card_Nagad}`;
-            let nagad ='Nagad';
             //select popup window section
-            let close_Btn = document.getElementById('close_Btn');
-            let total_Amount = document.getElementById('total_Amount');
-            let bank_Input = document.getElementById('bank_Input');
-            let confirm_Btn = document.getElementById('confirm_Btn');
-            close_Btn_F(close_Btn ,total_Amount, bank_Input, confirm_Btn, nagad);
+            form_Element_F(main_Container);
         }
         else if(index == 2){
             main_Container.innerHTML = `${card_Rocket}`;
-            let rocket ='Rocket';
             //select popup window section
-            let close_Btn = document.getElementById('close_Btn');
-            let total_Amount = document.getElementById('total_Amount');
-            let bank_Input = document.getElementById('bank_Input');
-            let confirm_Btn = document.getElementById('confirm_Btn');
-            close_Btn_F(close_Btn ,total_Amount, bank_Input, confirm_Btn, rocket);
+            form_Element_F(main_Container);
         }
         else if(index == 3){
             main_Container.innerHTML = `${card_Upay}`;
-            let upay ='Upay';
             //select popup window section
-            let close_Btn = document.getElementById('close_Btn');
-            let total_Amount = document.getElementById('total_Amount');
-            let bank_Input = document.getElementById('bank_Input');
-            let confirm_Btn = document.getElementById('confirm_Btn');
-            close_Btn_F(close_Btn ,total_Amount, bank_Input, confirm_Btn, upay);
+            form_Element_F(main_Container);
         }
         else if(index == 4){
            alert('working');
@@ -133,3 +131,5 @@ banks.forEach((item, index) =>{
         }
     })
 })
+
+

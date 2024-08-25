@@ -97,6 +97,7 @@ export let card_Bkash = `
         <div>
             <p class="text-light pb-3">Your bkash Account number</p>
             <h5><input id='bank_Input' class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
+            <h5 class='my-2'><input id='phone_Otp' class="py-2 custom-input" type="password" placeholder="otp please"></h5>
             <p class="custom-input-p py-3 text-light">By clicking on Confirm,you are agreeing to the <a>terms & conditions</a></p>
         </div>
      </div>
@@ -138,6 +139,7 @@ export let card_Nagad =`
       <div>
           <p class="text-light pb-3">Your Nagad Account number</p>
           <h5><input id='bank_Input' class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
+          <h5 class='my-2'><input id='phone_Otp' class="py-2 custom-input" type="password" placeholder="otp please"></h5>
           <p class="custom-input-p py-3 text-light">By clicking on Confirm,you are agreeing to the <a>terms & conditions</a></p>
       </div>
    </div>
@@ -179,6 +181,7 @@ export let card_Rocket = `
            <div>
                <p class="text-light pb-3">Your Nagad Account number</p>
                <h5><input id='bank_Input' class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
+               <h5 class='my-2'><input id='phone_Otp' class="py-2 custom-input" type="password" placeholder="otp please"></h5>
                <p class="custom-input-p py-3 text-light">By clicking on Confirm,you are agreeing to the <a>terms & conditions</a></p>
            </div>
         </div>
@@ -220,6 +223,7 @@ export let card_Upay = `
          <div>
              <p class="text-light pb-3">Your Nagad Account number</p>
              <h5><input id='bank_Input' class="py-2 custom-input" type="text" placeholder="e.g 01XXXXXXXXX"></h5>
+             <h5 class='my-2'><input id='phone_Otp' class="py-2 custom-input" type="password" placeholder="otp please"></h5>
              <p class="custom-input-p py-3 text-light">By clicking on Confirm,you are agreeing to the <a>terms & conditions</a></p>
          </div>
       </div>
