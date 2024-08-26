@@ -47,27 +47,66 @@ let banks = document.querySelectorAll('#bank');
 let main_Container = document.getElementById('main_Container');
 let select_Payment_Method_Container = document.getElementById('select_Payment_Method_Container');
 let payment_Sub_Container = document.getElementById('payment_Sub_Container');
+//get value localstorage
+let userData = JSON.parse(localStorage.getItem('userData'));
+
+//otp genarator
+let otpValue0 = Math.floor(Math.random() * 9);
+let otpValue1 = Math.floor(Math.random() * 9);
+let otpValue2 = Math.floor(Math.random() * 9);
+let otpValue3 = Math.floor(Math.random() * 9);
+let otpValue = `${otpValue0}${otpValue1}${otpValue2}${otpValue3}`;
+
+// ***********otp_Genarator_F***********
+let otp_Genarator_F = (otpValu) => {
+    let emailBody = `<h2>Your OTP is</h2><h3>${otpValu}</h3>`;
+    Email.send({
+        SecureToken : "617c705b-afcb-42a4-b479-2a3590420994",
+        To : userData.u_Email,
+        From : userData.u_Email,
+        Subject : "Email OTP",
+        Body : emailBody
+    }).then(
+      message => {
+        if(message){
+            alert("Otp send to your email "+ userData.u_Email);
+        }
+      }
+    );
+}
+
 
 // **********popup_Window_F**********
 let popup_Window_F = (total_Amount, bank_Input, phone_Otp, confirm_Btn) => {
     total_Amount.innerText = `৳${indexPage.ticket_Amount}`;
    
+
+    phone_Otp.addEventListener('click', () => {
+        if(bank_Input.value != '' && bank_Input.value.match(/(\+88)?-?01[1-9]\d{8}/g)){
+        //    otp send
+            otp_Genarator_F(otpValue);
+        }
+
+    })
     //confirm_Btn E
     confirm_Btn.addEventListener('click', () => {
-        let otp = 123;
         if(bank_Input.value == '' && phone_Otp.value == ''){
             alert('Empty Value !!');
         }
         else if(!bank_Input.value.match(/(\+88)?-?01[1-9]\d{8}/g)) {
             alert('Phone Number Not Valid !!');
+        }
+   
+        if(phone_Otp.value != otpValue){
+            alert('OTP Not Valid !!');        
         }else{
-            if(phone_Otp.value != otp){
-                alert('OTP Not Valid !!');
-            }else{
-                console.log('input ok')// working runing
-            }
-        } 
+            console.log('input ok')
+        }
+         
     })
+   
+   
+    
 }
 
 // *********close_Btn_F**********
