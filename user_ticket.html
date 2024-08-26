@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rail Sheba</title>
+    <!-- Boot strap v[5.2]  css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/user_ticket.css">
+</head>
+<body>
+    <div>
+       <div class="m-5 p-4 custom-boder">
+            <!--***header section*** -->
+        <div class="d-flex justify-content-between">
+            <div>
+                <img src="./assets/images/logo.png" alt="img" width="100px" height="100px">
+            </div>
+            <div class="text-center">
+                <h4 class="custom_R_N">BANGLADEHS RAILWAY</h4>
+                <h5 class="fw-bold custom_R_N">বাংলাদেশ রেলওয়ে</h5>
+            </div>
+            <div>
+                <p class="text-dark fw-bold">Powered By</p>
+                <p class="custom_p_by">Shohoz Synesis Vincen <h2 class="custom_p_by">JV</h2></p>
+            </div>
+        </div>
+        <!--***notification section*** -->
+        <div class="d-flex align-items-center my-3">
+            <div>
+                <p class="py-3 info_text"><span id="wonner_Name">Dear FAHIM ALI</span>,
+                    Your request to book e-ticket for your journey in Bangladesh Railway was successful. You can travel on the train
+                    mentioned in the ticket subject to showing your NID or Photo ID card. The details of your e-ticket are as below:
+                </p>
+                <p class="info_text">
+                    বাংলাদেশ রেলওয়ে ভ্রামণের জন্য আপনার চাহিদা ই-টিকিট সফলভাবে প্রাদান করা হয়েছে । আপনার এনআইডি কিংবা ছবি সম্বলিত আইডি দেখানো সাপেক্ষে আপনি টিকিটে বর্ণিত ট্রেনে যাত্রা করতে পারবেন । ই-টিকিটের ‍বিস্তারিত নিম্নে দেয়া হল:-
+                </p>
+            </div>
+            <div>
+                <img src="./assets/images/qrcode.png" alt="img">
+            </div>
+        </div>
+        <!--***user information section*** -->
+        <div>
+            <table class="w-100 border custom_tablie">
+                <tr>
+                    <th class="custom-tablie-header px-2 py-1 fs-5 text-light">Journey Information (যাত্রার তথ্য)</th>
+                    <th class="custom-tablie-header px-2 py-1 fs-5 text-light"></th>
+                </tr>
+                <tr>
+                    <td>Issue Date & Time(প্রদানের তারিখ ও সময়)</td>
+                    <td>08-26-2024 12:08 pm</td>
+                </tr>
+                <tr>
+                    <td>Journey Date & Time(যাত্রার তারিখ ও সময়)</td>
+                    <td>09-26-2024 09:08 am</td>
+                </tr>
+                <tr>
+                    <td>Train Name & Number(ট্রেনের নম্বর ও নাম)</td>
+                    <td id="train_Name">EKOTA EXPREESS[705]</td>
+                </tr>
+                <tr>
+                    <td>Form Station(যাত্রা শুরুর স্টেশন)</td>
+                    <td id="form_Station">Dinajpur</td>
+                    
+                </tr>
+                <tr>
+                    <td>To Station(গন্তব্য স্টেশন)</td>
+                    <td id="form_Station">B Sirajul Islam</td>
+                </tr>
+                <tr>
+                    <td>Class Name(শ্রেণির নাম)</td>
+                    <td id="class">S_CHAIR</td>
+                </tr>
+                <tr>
+                    <td>Coach Name(কোচের নাম/ আসন)</td>
+                    <td id="coach">CHA-15</td>
+                </tr>
+                <tr>
+                    <td>Seats(আসন সংখ্যা)</td>
+                    <td id="seats">1</td>
+                </tr>
+                <tr>
+                    <td>Fare(ভাড়া)</td>
+                    <td id="vat">BDT 550.00 টাকা</td>
+                </tr>
+                <tr>
+                    <td>Vat(ভ্যাট)</td>
+                    <td>BDT 00.00 টাকা</td>
+                </tr>
+                <tr>
+                    <td>Service Charge(সেবা খরচ)</td>
+                    <td>BDT 20.00 টাকা</td>
+                </tr>
+                <tr>
+                    <td>Total Fare(মোট ভাড়া)</td>
+                    <td id="total_Fare">BDT 570.00 টাকা</td>
+                </tr>
+                <tr>
+                    <td>**Total Fare inculdes BDT 50 Bedding Charges per seat for AC_BERTH seat classes.</td>
+                </tr>
+            </table>
+        </div>
+        <!--***passenger information*** -->
+        <div class="my-5">
+            <table class="w-100 border custom_tablie">
+                <tr>
+                    <th class="py-1 custom-tablie-header px-2 py-1 fs-5 text-light">Passenger Information</th>
+                    <th class="custom-tablie-header"></th>
+                </tr>
+                <tr>
+                    <td>Passenger Name(যাত্রীর নাম)</td>
+                    <td id="user_Name">Noman Tuhin</td>
+                </tr>
+                <tr>
+                    <td>Identification type(পরিচয়পত্র ধরন)</td>
+                    <td>Email ID</td>
+                </tr>
+                <tr>
+                    <td>Identification ID(পরিচয়পত্র ID)</td>
+                    <td id="emali">tuhin002020@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Mobile Number(মোবাইল নম্বর)</td>
+                    <td id="phone_Number">01234567890</td>
+                </tr>
+            </table>
+        </div>
+        <!--***Please Note*** -->
+        <div class="d-flex custom-note mb-5">
+            <div class="me-5">
+                <p class="fw-bold pb-3 ps-2 fs-5">Please Note</p>
+                <p class="pb-2 ps-2">
+                    .Carrying NID or Photo ID while travelling is mandatory for each
+                    passenger.
+                </p>
+                <p class="pb-2 ps-2">
+                    • You can carry either soft copy or printed copy of your e-ticket while
+                    travelling.
+                </p>
+                <p class="pb-3 ps-2">
+                    • No need to print e-ticket from the counter.
+                </p>
+                <div>
+                    <p class="fs-6 fst-normal">Wishing you a pleasant and safe journey-</p>
+                    <h6 class="fw-bold py-1">Bangladesh Railway</h6>
+                </div>
+            </div>
+            <div>
+                <p class="fw-bold pb-3 ps-2 fs-5">খেয়াল করুনঃ-</p>
+                <p class="pb-2 ps-2">
+                    -ভ্রমণের সময় প্রত্যেক যাত্রীর এনআইডি/ছবি সম্বলিত পরিচয়পত্র সাথে রাখা বাধ্যতামুলক।
+                </p>
+                <p class="pb-2 ps-2">
+                    -ট্রেন ভ্রমণে আপনারা ই-টিকেটের প্রিন্টেড কপি আথবা অনলাইন কপি সাথে রাখুন।
+                </p>
+                <p class="pb-3 ps-2">
+                    -কাউন্টার থেকে টিকেট প্রিন্ট করার প্রয়োজন নেই।
+                </p>
+                <div>
+                    <p class="fs-6 fst-normal">আপনার ভ্রমণ আরামদায়ক ও নিরাপদ হোক, এই কামনায়-</p>
+                    <h6 class="fw-bold py-1">বাংলাদেশ রেলওয়ে</h6>
+                </div>
+            </div>
+        </div>
+
+
+      </div>
+    </div>
+<script src="./assets/js/user_Ticket.js"></script>
+</body>
+</html>

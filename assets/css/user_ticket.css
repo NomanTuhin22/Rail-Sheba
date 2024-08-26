@@ -1,0 +1,42 @@
+@import url('../css/style.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: var(--roboto);
+}
+.custom-boder{
+    border: 5px solid #039d48;
+}
+.custom_R_N{
+    color:#099e4b;
+}
+.custom_p_by{
+    color:#099e4b;
+    font-weight: 500;
+}
+.info_text{
+    font-size: 15px;
+}
+.custom-tablie-header{
+    background-color: #039d48;
+}
+.custom_tablie tr{
+    border:1px solid #9b9b9b;
+}
+.custom_tablie tr td{
+    padding:5px 0 5px 10px;
+    border:1px solid #9b9b9b;
+    width: 65%;
+}
+.custom-note p{
+    font-size: 14px;
+}
