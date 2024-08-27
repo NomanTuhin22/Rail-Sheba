@@ -404,7 +404,27 @@ train_Details.forEach((btn, index) => {
 //**********bookNow_Btn E*****sectoin********
 let ticket_Container = document.querySelectorAll('.ticket');
 let bookNow_Btn = document.querySelectorAll('#bookNow_Btn');
-let getData = JSON.parse(localStorage.getItem('indexPage'));
+let train_Container = document.querySelectorAll('#train_Container');
+let train = document.querySelectorAll('.train-name p');
+
+//*******select Train name E*******
+train_Container.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        if(index == 0){
+          data.train_Name = `${train[index].innerText}`;
+          localStorage.setItem('indexPage',JSON.stringify(data));
+        }
+        if(index == 1){
+          data.train_Name = `${train[index].innerText}`;
+          localStorage.setItem('indexPage',JSON.stringify(data));
+        }
+        if(index == 2){
+          data.train_Name = `${train[index].innerText}`;
+          localStorage.setItem('indexPage',JSON.stringify(data));
+        }
+    })
+})
+
 //******bookNow-Btn click and move the ticket.html page ***********/
 ticket_Container.forEach((value, index) => {
   value.addEventListener('click', (e) => {
@@ -414,10 +434,10 @@ ticket_Container.forEach((value, index) => {
         let p_Div = c_Div.parentElement.children[0].innerHTML;
         let amount = c_Div.parentElement.children[1].children[0].innerText;
         // set value
-        getData.class = `${p_Div}`;
-        getData.ticket_Amount = `${amount}`;
+        data.class = `${p_Div}`;
+        data.ticket_Amount = `${amount}`;
         // send value
-        localStorage.setItem('indexPage',JSON.stringify(getData));
+        localStorage.setItem('indexPage',JSON.stringify(data));
         //move the ticket_Booking.html page 
         window.open("ticket_Booking.html", "_self");
       }

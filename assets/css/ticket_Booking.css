@@ -264,6 +264,9 @@
     color:#fff !important;
     border: 2px solid #7bff00 !important;
 }
+.hidden{
+    display: none;
+}
 /* **********************media screen******************** */
 /************ Small devices (landscape phones, 576px and up) ***********/
 @media (min-width: 576px) {

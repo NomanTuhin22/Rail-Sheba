@@ -14,7 +14,7 @@
 <body>
     <div>
        <div class="m-5 p-4 custom-boder">
-            <!--***header section*** -->
+        <!--***header section*** -->
         <div class="d-flex justify-content-between">
             <div>
                 <img src="./assets/images/logo.png" alt="img" width="100px" height="100px">
@@ -52,11 +52,11 @@
                 </tr>
                 <tr>
                     <td>Issue Date & Time(প্রদানের তারিখ ও সময়)</td>
-                    <td>08-26-2024 12:08 pm</td>
+                    <td id="start_Date_Time">08-26-2024 12:08 pm</td>
                 </tr>
                 <tr>
                     <td>Journey Date & Time(যাত্রার তারিখ ও সময়)</td>
-                    <td>09-26-2024 09:08 am</td>
+                    <td id="end_Date_Time">09-26-2024 09:08 am</td>
                 </tr>
                 <tr>
                     <td>Train Name & Number(ট্রেনের নম্বর ও নাম)</td>
@@ -69,7 +69,7 @@
                 </tr>
                 <tr>
                     <td>To Station(গন্তব্য স্টেশন)</td>
-                    <td id="form_Station">B Sirajul Islam</td>
+                    <td id="to_Station">B Sirajul Islam</td>
                 </tr>
                 <tr>
                     <td>Class Name(শ্রেণির নাম)</td>
@@ -85,19 +85,19 @@
                 </tr>
                 <tr>
                     <td>Fare(ভাড়া)</td>
-                    <td id="vat">BDT 550.00 টাকা</td>
+                    <td id="fare">BDT 550.00 টাকা</td>
                 </tr>
                 <tr>
                     <td>Vat(ভ্যাট)</td>
-                    <td>BDT 00.00 টাকা</td>
+                    <td id="vat">BDT 00.00 টাকা</td>
                 </tr>
                 <tr>
                     <td>Service Charge(সেবা খরচ)</td>
                     <td>BDT 20.00 টাকা</td>
                 </tr>
                 <tr>
-                    <td>Total Fare(মোট ভাড়া)</td>
-                    <td id="total_Fare">BDT 570.00 টাকা</td>
+                    <td class="custom-amount">Total Fare(মোট ভাড়া)</td>
+                    <td id="total_Fare" class="custom-amount">BDT 570.00 টাকা</td>
                 </tr>
                 <tr>
                     <td>**Total Fare inculdes BDT 50 Bedding Charges per seat for AC_BERTH seat classes.</td>
@@ -111,10 +111,10 @@
                     <th class="py-1 custom-tablie-header px-2 py-1 fs-5 text-light">Passenger Information</th>
                     <th class="custom-tablie-header"></th>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <td>Passenger Name(যাত্রীর নাম)</td>
                     <td id="user_Name">Noman Tuhin</td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td>Identification type(পরিচয়পত্র ধরন)</td>
                     <td>Email ID</td>
@@ -166,8 +166,6 @@
                 </div>
             </div>
         </div>
-
-
       </div>
     </div>
 <script src="./assets/js/user_Ticket.js"></script>

@@ -239,3 +239,6 @@ h1,h2,h3,h4, h5,h6, p{
     background: rgb(238,0,0);
     background: radial-gradient(circle, rgba(238,0,0,1) 17%, rgba(27,131,37,1) 78%);       
 }
+.hide{
+    display: none;
+}

@@ -40,3 +40,7 @@ body{
 .custom-note p{
     font-size: 14px;
 }
+.custom-amount{
+    color:rgb(34, 34, 34);
+    font-weight: 500;
+}

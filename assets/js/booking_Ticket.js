@@ -217,7 +217,7 @@ for(let i = 1; i <= gh_Ticket; i++) {
     
     let js_create_t_Gh = document.querySelectorAll('#js_create_t_Gh');
     js_create_t_Gh.forEach((value, index) => {
-        ///*cheack if index(1-9)is, true then append 0 (0, 00, 9 ,09) */
+        /*cheack if index(1-9)is, true then append 0 (0, 00, 9 ,09) */
         if(index < 10 && index > 0){
             value.innerText = `Gh-0${index}`;  
         }else{
