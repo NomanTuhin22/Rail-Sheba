@@ -17,8 +17,8 @@ export let navigation = `
                <ul class="d-lg-flex justify-content-xxl-evenly justify-content-lg-center custom-items p-0">
                    <li><a href="#">Home</a></li>
                    <li><a href="#">Train Information</a></li>
-                   <li><a href="#">Loging</a></li>
                    <li><a href="#">Contact Us</a></li>
+                   <li><a href="#">Register</a></li>
                    <li class="user-id"><a id="user_Id" href="#">Loging <i class="fa-solid fa-user"></i></a>
                        <div class="dropdown-div shadow">
                           <div>

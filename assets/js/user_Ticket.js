@@ -18,18 +18,26 @@ let total_Fare = document.getElementById('total_Fare');
 let user_Name = document.getElementById('user_Name');
 let emali = document.getElementById('emali');
 let phone_Number = document.getElementById('phone_Number');
-
-start_Date_Time.innerText = `${all_Data.select_Day} ${all_Data.start_Time}`;
-end_Date_Time.innerText = `${all_Data.select_Day} ${all_Data.start_Time}`;
-
+//juney time
+start_Date_Time.innerText = `${indexPage.J_Date} ${all_Data.start_Time}`;
+end_Date_Time.innerText = `${indexPage.J_Date} ${all_Data.start_Time}`;
+//train name
 train_Name.innerText = `${indexPage.train_Name}`;
+//stations
 form_Station.innerText = `${indexPage.start_Station}`;
 to_Station.innerText = `${indexPage.end_Station}`;
+//class
 class_Name.innerText = `${indexPage.class}`;
+//coachs
 coach.innerText = `${indexPage.all_Coach}`;
+//seats
 seats.innerText = `${ticket}`;
+//fare
 fare.innerText = `BDT ${indexPage.ticket_Amount}.00 টাকা`;
 let t_amount = parseInt(indexPage.ticket_Amount) + 20;
+//total fare
 total_Fare.innerText = `BDT ${t_amount}.00 টাকা`;
+//user email
 emali.innerHTML = `${userData.u_Email}`;
+//user phone number
 phone_Number.innerText = `${indexPage.phone_Number}`

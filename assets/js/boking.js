@@ -7,15 +7,12 @@ let indexPage_Data = JSON.parse(localStorage.getItem('indexPage'));
 //get & set current month
 let user_date = indexPage_Data.J_Date;
 let user_Month = user_date.substring(8);
-
 // ******Get input data in localstorage*******
 let input_Data = localStorage.getItem('indexPage');
 let data = JSON.parse(input_Data);
-
 // ********navigation*********
 let navigation_container = document.getElementById('navigation');
 navigation_container.innerHTML = `${navigation}`;
-
 let toggle_Btn = document.getElementById('toggle_Btn');
 let menu_List = document.getElementById('menu_List');
 let userEmil = document.getElementById('userEmil');

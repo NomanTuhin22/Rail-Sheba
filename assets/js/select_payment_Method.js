@@ -16,15 +16,6 @@ let coach_Name = document.querySelectorAll('#coach_Name');
 let chose_Class = document.querySelectorAll('#chose');
 let chose_Site = document.querySelectorAll('#chose_Site');
 let coach_Container = document.querySelectorAll('#coach_Container');
-// ticket form substring value collect
-let coac_h_0 = ticket[0];
-let coac_h_1 = ticket[1];
-let coac_h_2 = ticket[2];
-let coac_h_3 = ticket[3];
-let chose0 = coac_h_0.substring(0, 1);
-let chose1 = coac_h_1.substring(0, 1);
-let chose2 = coac_h_2.substring(0, 1);
-let chose3 = coac_h_3.substring(0, 1);
 
 let original_T_Amount = document.querySelectorAll('#original_T_Amount');
 let you_Pay_Amount = document.querySelectorAll('#you_Pay_Amount');
@@ -32,20 +23,98 @@ let you_Pay_Amount = document.querySelectorAll('#you_Pay_Amount');
 let original_amount = parseInt(indexPage.ticket_Amount);
 let vat = original_amount + 25 + 20;
 
+// **********send_Substring_Coach_F***********
+let send_Substring_Coach_F = () => {
+    for(let i = 0; i <= ticket.length; i++){
+        let coach = [];//[k1,k2,k3,k4]
+        let array = []
+
+        if(ticket.length == 1){
+            // coach[]
+            coach.push(ticket[0]);
+            //subString value
+            let chose0_Name = coach[0].substring(0, 1);
+            //array[];
+            array.push(chose0_Name);
+            //send value localstorage
+            indexPage.all_Coach = array;
+            localStorage.setItem('indexPage', JSON.stringify(indexPage));
+        }
+        if(ticket.length == 2){
+             // coach[]
+            coach.push(ticket[0]);
+            coach.push(ticket[1]);
+            //subString value
+            let chose0_Name = coach[0].substring(0, 1);
+            let chose1_Name = coach[1].substring(0, 1);
+            //array[];
+            array.push(chose0_Name);
+            array.push(chose1_Name);
+            //send value localstorage
+            indexPage.all_Coach = array;
+            localStorage.setItem('indexPage', JSON.stringify(indexPage));
+        }
+        if(ticket.length == 3){
+            // coach[]
+            coach.push(ticket[0]);
+            coach.push(ticket[1]);
+            coach.push(ticket[2]);
+            //subString value
+            let chose0_Name = coach[0].substring(0, 1);
+            let chose1_Name = coach[1].substring(0, 1);
+            let chose2_Name = coach[2].substring(0, 1);
+            //array[];
+            array.push(chose0_Name);
+            array.push(chose1_Name);
+            array.push(chose2_Name);
+            //send value localstorage
+            indexPage.all_Coach = array;
+            localStorage.setItem('indexPage', JSON.stringify(indexPage));
+        }
+        if(ticket.length == 4){
+            // coach[]
+            coach.push(ticket[0]);
+            coach.push(ticket[1]);
+            coach.push(ticket[2]);
+            coach.push(ticket[3]);
+            //subString value
+            let chose0_Name = coach[0].substring(0, 1);
+            let chose1_Name = coach[1].substring(0, 1);
+            let chose2_Name = coach[2].substring(0, 1);
+            let chose3_Name = coach[3].substring(0, 1);
+            //array[];
+            array.push(chose0_Name);
+            array.push(chose1_Name);
+            array.push(chose2_Name);
+            array.push(chose3_Name);
+            //send value localstorage
+            indexPage.all_Coach = array;
+            localStorage.setItem('indexPage', JSON.stringify(indexPage));
+        }
+    }
+}
+send_Substring_Coach_F();
+
 //***coach_section_value_append F*******
 let coach_section_value_append = () => {
     //send all chose name into locastorage
-    let coach = [chose0,chose1,chose2,chose3];
-    indexPage.all_Coach = coach;
-    localStorage.setItem('indexPage', JSON.stringify(indexPage));
-
+    let indexPage = JSON.parse(localStorage.getItem('indexPage'));
+    
     for(let i = 1; i <= ticket.length; i++){
-        if(ticket.length == 2){
+        if(indexPage.all_Coach.length == 1){
+            //coach name
+            coach_Name[0].innerText = `1st.L-${indexPage.all_Coach[0]}`;
+            //coach class 
+            chose_Class[0].innerText = `${indexPage.class}`;
+            //chose_Site
+            chose_Site[0].innerText =`${ticket[0]}`;
+        }
+        if(indexPage.all_Coach.length == 2){
             //this container show
             coach_Container[1].style.display = 'block';
             //coach name
-            coach_Name[0].innerText = `1st.L-${chose0}`;
-            coach_Name[1].innerText = `1st.L-${chose1}`;    
+            coach_Name[0].innerText = `1st.L-${indexPage.all_Coach[0]}`;
+            coach_Name[1].innerText = `1st.L-${indexPage.all_Coach[1]}`;    
             //coach class 
             chose_Class[0].innerText = `${indexPage.class}`;
             chose_Class[1].innerText = `${indexPage.class}`;
@@ -53,43 +122,43 @@ let coach_section_value_append = () => {
             chose_Site[0].innerText =`${ticket[0]}`;
             chose_Site[1].innerText =`${ticket[1]}`;
         }
-        else if(ticket.length == 3){
-            //this container show
+        if(indexPage.all_Coach.length == 3){
+            // //this container show
             coach_Container[1].style.display = 'block';
             coach_Container[2].style.display = 'block';
-            //coach name
-            coach_Name[0].innerText = `1st.L-${chose0}`;
-            coach_Name[1].innerText = `1st.L-${chose1}`;
-            coach_Name[2].innerText = `1st.L-${chose2}`;
-            //coach class 
+            // //coach name
+            coach_Name[0].innerText = `1st.L-${indexPage.all_Coach[0]}`;
+            coach_Name[1].innerText = `1st.L-${indexPage.all_Coach[1]}`;
+            coach_Name[2].innerText = `1st.L-${indexPage.all_Coach[2]}`;
+            // //coach class 
             chose_Class[0].innerText = `${indexPage.class}`;
             chose_Class[1].innerText = `${indexPage.class}`;
             chose_Class[2].innerText = `${indexPage.class}`;
-            //chose_Site
+            // //chose_Site
             chose_Site[0].innerText =`${ticket[0]}`;
             chose_Site[1].innerText =`${ticket[1]}`;
             chose_Site[2].innerText =`${ticket[2]}`;
         }
-        else if(ticket.length == 4){
-            //this container show
+        if(indexPage.all_Coach.length == 4){
+            // //this container show
             coach_Container[1].style.display = 'block';
             coach_Container[2].style.display = 'block';
             coach_Container[3].style.display = 'block';
             //coach name
-            coach_Name[0].innerText = `1st.L-${chose0}`;
-            coach_Name[1].innerText = `1st.L-${chose1}`;
-            coach_Name[2].innerText = `1st.L-${chose2}`;
-            coach_Name[3].innerText = `1st.L-${chose3}`;
-            //coach class 
+            coach_Name[0].innerText = `1st.L-${indexPage.all_Coach[0]}`;
+            coach_Name[1].innerText = `1st.L-${indexPage.all_Coach[1]}`;
+            coach_Name[2].innerText = `1st.L-${indexPage.all_Coach[2]}`;
+            coach_Name[3].innerText = `1st.L-${indexPage.all_Coach[3]}`;
+            // //coach class 
             chose_Class[0].innerText = `${indexPage.class}`;
             chose_Class[1].innerText = `${indexPage.class}`;
             chose_Class[2].innerText = `${indexPage.class}`;
             chose_Class[3].innerText = `${indexPage.class}`;
-             //chose_Site
-             chose_Site[0].innerText =`${ticket[0]}`;
-             chose_Site[1].innerText =`${ticket[1]}`;
-             chose_Site[2].innerText =`${ticket[2]}`;
-             chose_Site[3].innerText =`${ticket[3]}`;
+            // chose_Site
+            chose_Site[0].innerText =`${ticket[0]}`;
+            chose_Site[1].innerText =`${ticket[1]}`;
+            chose_Site[2].innerText =`${ticket[2]}`;
+            chose_Site[3].innerText =`${ticket[3]}`;
         }
     }
 }
@@ -105,7 +174,7 @@ window.onload = () => {
     // total duration jurny
     total_Duration.innerText = `${user_Data.total_Duration_H}H ${user_Data.total_Duration_M}M`;
     //coach_section_value_append F
-    coach_section_value_append();
+      coach_section_value_append();
     // original & inculed vat ticket amount
     original_T_Amount[0].innerText = `৳ ${indexPage.ticket_Amount}`;
     original_T_Amount[1].innerText = `৳ ${indexPage.ticket_Amount}`;
@@ -119,14 +188,12 @@ let select_Payment_Method_Container = document.getElementById('select_Payment_Me
 let payment_Sub_Container = document.getElementById('payment_Sub_Container');
 //get value localstorage
 let userData = JSON.parse(localStorage.getItem('userData'));
-
 //otp genarator
 let otpValue0 = Math.floor(Math.random() * 9);
 let otpValue1 = Math.floor(Math.random() * 9);
 let otpValue2 = Math.floor(Math.random() * 9);
 let otpValue3 = Math.floor(Math.random() * 9);
 let otpValue = `${otpValue0}${otpValue1}${otpValue2}${otpValue3}`;
-
 // ***********otp_Genarator_F***********
 let otp_Genarator_F = (otpValu) => {
     let emailBody = `<h2>Your OTP is</h2><h3>${otpValu}</h3>`;
@@ -144,7 +211,6 @@ let otp_Genarator_F = (otpValu) => {
       }
     );
 }
-
 // **********popup_Window_F**********
 let popup_Window_F = (total_Amount, bank_Input, phone_Otp, confirm_Btn) => {
     total_Amount.innerText = `৳${indexPage.ticket_Amount}`;
