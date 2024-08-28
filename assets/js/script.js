@@ -45,8 +45,10 @@ let forget_Password_F = () => {
     if(!email.value == '' && !passwordValue.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/)) {
        label_Password.innerText = 'Enter Phone Number';
        forget_Password.innerText = 'Get New Password';
+       password.type ='text';
        //phone Number Validation
        if(passwordValue.match(/(\+88)?-?01[1-9]\d{8}/g)){
+            password.type ='password';
             let num = Math.floor(Math.random(100) * 10);
             //Rail00@#
             let newPassword = `Abc0${num}@#`;

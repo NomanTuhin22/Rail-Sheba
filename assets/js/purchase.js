@@ -59,7 +59,6 @@ let timar_F = () => {
         00`;
     }
 }
-
 // ***********input filed F***********
 otp_Input_Field[0].focus();
 otp_Input_Field.forEach((input, index) => {
@@ -88,7 +87,6 @@ otp_Input_Field.forEach((input, index) => {
         }else{
             otp_submit_Btn.classList.remove('otp_Btn_Active');
         }
-
     })
 })
 // random number
@@ -97,7 +95,6 @@ let otpValue1 = Math.floor(Math.random() * 9);
 let otpValue2 = Math.floor(Math.random() * 9);
 let otpValue3 = Math.floor(Math.random() * 9);
 let otpValue = `${otpValue0}${otpValue1}${otpValue2}${otpValue3}`;
-
 // ***********otp_Validation_F***********
 let otp_Validation_F = (otpValue0, otpValue1, otpValue2, otpValue3) => {
     otp_submit_Btn.addEventListener('click', () => {
@@ -131,7 +128,6 @@ let otp_Genarator_F = (otpValu) => {
       }
     );
 }
-
 // *****timer F******1st
 window.onload = () => {
 otp_Genarator_F(otpValue);
@@ -151,7 +147,6 @@ otp_Genarator_F(otpValue);
       }
   }, 500);
 }
-
 //**********resend_Otp******E*****
 resend_Otp.addEventListener('click', () => {
     window.location.reload();

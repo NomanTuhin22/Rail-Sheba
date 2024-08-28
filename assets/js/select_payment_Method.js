@@ -25,6 +25,7 @@ let chose0 = coac_h_0.substring(0, 1);
 let chose1 = coac_h_1.substring(0, 1);
 let chose2 = coac_h_2.substring(0, 1);
 let chose3 = coac_h_3.substring(0, 1);
+
 let original_T_Amount = document.querySelectorAll('#original_T_Amount');
 let you_Pay_Amount = document.querySelectorAll('#you_Pay_Amount');
 // string to number
@@ -33,6 +34,11 @@ let vat = original_amount + 25 + 20;
 
 //***coach_section_value_append F*******
 let coach_section_value_append = () => {
+    //send all chose name into locastorage
+    let coach = [chose0,chose1,chose2,chose3];
+    indexPage.all_Coach = coach;
+    localStorage.setItem('indexPage', JSON.stringify(indexPage));
+
     for(let i = 1; i <= ticket.length; i++){
         if(ticket.length == 2){
             //this container show
@@ -138,17 +144,19 @@ let otp_Genarator_F = (otpValu) => {
       }
     );
 }
+
 // **********popup_Window_F**********
 let popup_Window_F = (total_Amount, bank_Input, phone_Otp, confirm_Btn) => {
     total_Amount.innerText = `৳${indexPage.ticket_Amount}`;
-   
 
     phone_Otp.addEventListener('click', () => {
         if(bank_Input.value != '' && bank_Input.value.match(/(\+88)?-?01[1-9]\d{8}/g)){
-        //    otp send
+            //send phone number
+            indexPage.phone_Number = bank_Input.value;
+            localStorage.setItem('indexPage',JSON.stringify(indexPage));
+            //otp send
             otp_Genarator_F(otpValue);
         }
-
     })
     //confirm_Btn E
     confirm_Btn.addEventListener('click', () => {
@@ -162,7 +170,7 @@ let popup_Window_F = (total_Amount, bank_Input, phone_Otp, confirm_Btn) => {
         if(phone_Otp.value != otpValue){
             alert('OTP Not Valid !!');        
         }else{
-            console.log('input ok')
+            window.open("user_ticket.html", "_self");
         }   
     })
 }

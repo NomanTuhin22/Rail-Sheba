@@ -4,6 +4,10 @@ import {navigation, worning, footer} from "./nav_worning_footer.js";
 //********Get all_Data into localStorage**********
 let all_User_Data = JSON.parse(localStorage.getItem('all_Data'));
 let indexPage_Data = JSON.parse(localStorage.getItem('indexPage'));
+//get & set current month
+let user_date = indexPage_Data.J_Date;
+let user_Month = user_date.substring(8);
+
 // ******Get input data in localstorage*******
 let input_Data = localStorage.getItem('indexPage');
 let data = JSON.parse(input_Data);
@@ -232,9 +236,9 @@ let train_Details = document.querySelectorAll('#train_Details');
 let start_Time = document.querySelectorAll('.start-time');
 let total_time= document.querySelectorAll('.total-time');
 //***start time jone***
-start_Time[0].children[0].innerText = `${all_User_Data.select_Day} ${all_User_Data.select_M} ${all_User_Data.start_Time}`;
-start_Time[1].children[0].innerText = `${all_User_Data.select_Day} ${all_User_Data.select_M} ${all_User_Data.start_Time}`;
-start_Time[2].children[0].innerText = `${all_User_Data.select_Day} ${all_User_Data.select_M} ${all_User_Data.start_Time}`;
+start_Time[0].children[0].innerText = `${user_Month} ${all_User_Data.select_M} ${all_User_Data.start_Time}`;
+start_Time[1].children[0].innerText = `${user_Month} ${all_User_Data.select_M} ${all_User_Data.start_Time}`;
+start_Time[2].children[0].innerText = `${user_Month} ${all_User_Data.select_M} ${all_User_Data.start_Time}`;
 //***start time station***
 start_Time[0].children[1].innerText = `${indexPage_Data.start_Station}`;
 start_Time[1].children[1].innerText = `${indexPage_Data.start_Station}`;
@@ -251,9 +255,9 @@ ticket[2].children[2].children[1].innerText =`${all_User_Data.random_Ticket}`;
 ticket[3].children[2].children[1].innerText =`${all_User_Data.random_Ticket}`;
 //***end time***
 let end_Time = document.querySelectorAll('.end-time');
-end_Time[0].children[0].innerText = `${all_User_Data.select_Day} ${all_User_Data.select_M} ${all_User_Data.end_Time}`;
-end_Time[1].children[0].innerText = `${all_User_Data.select_Day} ${all_User_Data.select_M} ${all_User_Data.end_Time}`;
-end_Time[2].children[0].innerText = `${all_User_Data.select_Day} ${all_User_Data.select_M} ${all_User_Data.end_Time}`;
+end_Time[0].children[0].innerText = `${user_Month} ${all_User_Data.select_M} ${all_User_Data.end_Time}`;
+end_Time[1].children[0].innerText = `${user_Month} ${all_User_Data.select_M} ${all_User_Data.end_Time}`;
+end_Time[2].children[0].innerText = `${user_Month} ${all_User_Data.select_M} ${all_User_Data.end_Time}`;
 
 end_Time[0].children[1].innerText = `${all_User_Data.end_Time}`;
 end_Time[0].children[1].innerText = `${indexPage_Data.end_Station}`;
@@ -425,7 +429,7 @@ train_Container.forEach((item, index) => {
     })
 })
 
-//******bookNow-Btn click and move the ticket.html page ***********/
+//******bookNow-Btn click and move the ticket.html page ********/
 ticket_Container.forEach((value, index) => {
   value.addEventListener('click', (e) => {
       if(e.target.id == 'bookNow_Btn'){

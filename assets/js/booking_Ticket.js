@@ -134,7 +134,6 @@ let booking_Items = (ticket) => {
          })
     })
  }
-
  //********booked ticket Loop*********/
 js_create_t_Visiable.forEach((strong, index) => {
     for(let i = k_Ticket; i <= index; i++){
@@ -144,7 +143,6 @@ js_create_t_Visiable.forEach((strong, index) => {
         strong.setAttribute('id', 'booked');
     }
 })
-
 //********purchase ticket E*********/
 let purchase_Btn = document.getElementById('purchase_Btn');
 purchase_Btn.addEventListener('click', () => {
@@ -164,7 +162,6 @@ purchase_Btn.addEventListener('click', () => {
     window.open("./purchase.html", "_self");
     }
 })
-
 //***dainamic Ticket Genarator (chose-K) F***
 for(let i = 1; i <= k_Ticket; i++) {
     let k =`<strong id='js_create_k'>K- 00</strong>`;
