@@ -76,17 +76,8 @@ let stations_List = ['Abdulpur','Ashanganj','Akkelpur','Azampur','B_Sirajul_Isla
 // **********some Data Stor in localStorage*************
 //***ticket Value***
 let form_Staion = input.value;
-console.log(form_Staion)
 let to_Station = input_To.value;
-let date_V = jurney_Date.value;
-let send_Date = new Date(date_V);
-//***user Current Day***
-let select_Day = send_Date.getDate();
-console.log(select_Day)
-let m = send_Date.toDateString();
-//***user Current Month***
-let select_M = m.substring(4, 7);
-console.log(select_M);
+
 let start_Time = new Date().toLocaleTimeString();
 //****end Time**********
 let current_Time = new Date();
@@ -162,7 +153,7 @@ input_To.onkeyup = () => {
 } 
 
 // ***********user data cullect and send localStorage F***********
-let user_Data_Send_LocalStorage = () => {
+let user_Data_Send_LocalStorage = (select_M, select_Day) => {
     let all_Data = {
         start_station : `${form_Staion}`,
         to_Station    : `${to_Station}`,
@@ -179,13 +170,23 @@ let user_Data_Send_LocalStorage = () => {
 
 // ***********valiation F***********
 let valiation_F = () => {
+        let date_V = jurney_Date.value;
+        let send_Date = new Date(date_V);
+        //***user Current Day***
+        let select_Day = send_Date.getDate();
+        let m = send_Date.toDateString();
+        //***user Current Month***
+        let select_M = m.substring(4, 7);
+
     // get value F call
-        let all_Data = user_Data_Send_LocalStorage();
+        let all_Data = user_Data_Send_LocalStorage(select_M, select_Day);
         // *** all dainamic data append in this objct*********
         let start_Jurney_V = input.value;
         let end_Jurney_V = input_To.value;
         let jurney_Date_V = jurney_Date.value;
         let selection_V = selection.value;
+
+        
         
         if((start_Jurney_V && end_Jurney_V && jurney_Date_V && selection_V) == ''){
             helping_Text.innerText = 'Empty Value !!';
