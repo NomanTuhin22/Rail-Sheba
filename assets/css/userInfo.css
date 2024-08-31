@@ -162,7 +162,6 @@
   -moz-transition: all .1s ease-in-out;
   -ms-transition: all .1s ease-in-out;
   -o-transition: all .1s ease-in-out;
-
 }
 .search-result-box ul li:hover{
   background-color: #e0f0ea;
@@ -286,6 +285,18 @@
 }
 
 /* ***********media screen************  */
+/* *******576px******** */
+@media (max-width: 576px) {
+  .custom_m_p{
+    margin: 5px 10px !important;
+    padding: 5px 8px !important;
+  }
+  /* .vedio_div{
+    width: 400px !important;
+    height: auto;
+    display: none;
+  } */
+}
 /* *******576px******** */
 @media (min-width: 576px) {
   .vedio_div{

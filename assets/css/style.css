@@ -46,8 +46,8 @@
     align-items: center;
 }
 .loging-sub-container{
-    width: 90%;
-    height: 550px;
+    width: 100%;
+    height: auto;
 }
 .c_login_img{
     width: 400px;
@@ -238,7 +238,6 @@
     display: block !important;
 }
 /***********Custom Media Screen*****@Media****** */
-
 /****media screen max-width 776px***/
 @media only screen and (max-width: 776px) {
     .card3{
@@ -258,6 +257,10 @@
         padding-top: 0;
         font-size: 16px;
         color: #175689;
+    }
+    .loging-sub-container{
+        width: 90%;
+        height: auto;
     }
 }
 /****media screen max-width 850px***/
