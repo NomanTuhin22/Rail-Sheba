@@ -186,8 +186,6 @@ let valiation_F = () => {
         let jurney_Date_V = jurney_Date.value;
         let selection_V = selection.value;
 
-        
-        
         if((start_Jurney_V && end_Jurney_V && jurney_Date_V && selection_V) == ''){
             helping_Text.innerText = 'Empty Value !!';
             helping_Text.classList.add('h-wornig');
@@ -212,7 +210,7 @@ let valiation_F = () => {
             //*********send Data localStorage***********
             localStorage.setItem('all_Data',JSON.stringify(all_Data));
             //**moveto boking page**
-            window.open("./boking.html", "_self");
+            window.open("./booking.html", "_self");
         } 
 }
 

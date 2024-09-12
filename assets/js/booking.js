@@ -440,7 +440,7 @@ ticket_Container.forEach((value, index) => {
         // send value
         localStorage.setItem('indexPage',JSON.stringify(data));
         //move the ticket_Booking.html page 
-        window.open("ticket_Booking.html", "_self");
+        window.open("ticket_booking.html", "_self");
       }
   })
 })

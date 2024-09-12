@@ -94,7 +94,7 @@ let loging_Accound_F = () => {
         worning_F(empty);
     }else{
         //****goto home page*/
-        window.open("./userInfo.html" , "_self");
+        window.open("./user_info.html" , "_self");
     }
 }
 // *******loging_Accound_F*****Event*****
@@ -113,7 +113,7 @@ let validation_F = () => {
             if(user_Password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/)){
              //*****sed data card 3******** 
             //****go to home page*/
-            window.open("./userInfo.html" , "_self");
+            window.open("./user_info.html" , "_self");
             //user_Password(user_Password);
              setData_LocalStorage_F(user_Email ,user_Password);
              email.value ='';
