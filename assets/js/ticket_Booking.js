@@ -1,8 +1,7 @@
 
 //navigation, worning, footer 
-import {navigation, worning, footer} from "./nav_worning_footer.js";
-// get data into localstorage
-let all_Data = JSON.parse(localStorage.getItem('all_Data'));
+import {navigation, worning, footer} from "./nav_Worning_Footer.js";
+
 //*********ticket menu section*********
 let navigation_container_Ticket = document.getElementById('navigation_Ticket');
 navigation_container_Ticket.innerHTML = `${navigation}`;

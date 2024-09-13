@@ -1,5 +1,5 @@
 //navigation, worning, footer 
-import {navigation, worning, footer} from "./nav_worning_footer.js";
+import {navigation, worning, footer} from "./nav_Worning_Footer.js";
 
 //*********purchase menu section*********
 let navigation_container_Ticket = document.getElementById('navigation_Ticket');

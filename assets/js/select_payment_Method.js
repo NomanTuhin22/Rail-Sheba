@@ -1,5 +1,5 @@
 //import nav_worning_footer.js file
-import {card_Bkash, card_Nagad, card_Rocket, card_Upay} from "./nav_worning_footer.js";
+import {card_Bkash, card_Nagad, card_Rocket, card_Upay} from "./nav_Worning_Footer.js";
 // all data access
 let user_Data = JSON.parse(localStorage.getItem('all_Data'));
 let indexPage = JSON.parse(localStorage.getItem('indexPage'));
