@@ -1,5 +1,5 @@
 //navigation, worning, footer 
-import {navigation, worning, footer} from "./nav_worning_footer.js";
+import {navigation, worning, footer} from "nav_worning_footer.js";
 
 //********Get all_Data into localStorage**********
 let all_User_Data = JSON.parse(localStorage.getItem('all_Data'));
