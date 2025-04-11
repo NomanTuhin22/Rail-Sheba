@@ -1,5 +1,5 @@
 //navigation, worning, footer 
-import {navigation, worning, footer} from "./nav_Worning_Footer.js";
+import { footer, navigation, worning } from "./nav_worning_footer.js";
 
 // ***********Train Info section***********
 let train_Info = {
