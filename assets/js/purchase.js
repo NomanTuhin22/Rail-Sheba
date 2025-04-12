@@ -95,6 +95,7 @@ let otpValue1 = Math.floor(Math.random() * 9);
 let otpValue2 = Math.floor(Math.random() * 9);
 let otpValue3 = Math.floor(Math.random() * 9);
 let otpValue = `${otpValue0}${otpValue1}${otpValue2}${otpValue3}`;
+
 // ***********otp_Validation_F***********
 let otp_Validation_F = (otpValue0, otpValue1, otpValue2, otpValue3) => {
     otp_submit_Btn.addEventListener('click', () => {
@@ -112,24 +113,18 @@ let otp_Validation_F = (otpValue0, otpValue1, otpValue2, otpValue3) => {
 }
 // ***********otp_Genarator_F***********
 let otp_Genarator_F = (otpValu) => {
-    let emailBody = `<h2>Your OTP is</h2><h3>${otpValu}</h3>`;
-    Email.send({
-        SecureToken : "617c705b-afcb-42a4-b479-2a3590420994",
-        To : userData.u_Email,
-        From : userData.u_Email,
-        Subject : "Email OTP",
-        Body : emailBody
-    }).then(
-      message => {
-        if(message){
-            alert("Otp send to your email "+ userData.u_Email);
+        if(otpValu){
+            otp_Input_Field[0].placeholder= otpValue0;
+            otp_Input_Field[1].placeholder= otpValue1;
+            otp_Input_Field[2].placeholder= otpValue2;
+            otp_Input_Field[3].placeholder= otpValue3;
+            alert('আপনি input এ দেয়া নম্বরটি ও অনুসরণ করতে পারেন !');
             otp_Validation_F(otpValue0, otpValue1, otpValue2, otpValue3);
         }
-      }
-    );
 }
 // *****timer F******1st
 window.onload = () => {
+alert(`Past This OTP : ${otpValue}`);
 otp_Genarator_F(otpValue);
   setInterval(() => {
       if(second >= 0){
