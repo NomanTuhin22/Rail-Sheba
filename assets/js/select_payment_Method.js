@@ -26,7 +26,7 @@ let vat = original_amount + 25 + 20;
 // **********send_Substring_Coach_F***********
 let send_Substring_Coach_F = () => {
     for(let i = 0; i <= ticket.length; i++){
-        let coach = [];//[k1,k2,k3,k4]
+        let coach = []; //[k1,k2,k3,k4]
         let array = []
 
         if(ticket.length == 1){
@@ -187,7 +187,7 @@ let main_Container = document.getElementById('main_Container');
 let select_Payment_Method_Container = document.getElementById('select_Payment_Method_Container');
 let payment_Sub_Container = document.getElementById('payment_Sub_Container');
 //get value localstorage
-let userData = JSON.parse(localStorage.getItem('userData'));
+// let userData = JSON.parse(localStorage.getItem('userData'));
 //otp genarator
 let otpValue0 = Math.floor(Math.random() * 9);
 let otpValue1 = Math.floor(Math.random() * 9);
@@ -195,21 +195,11 @@ let otpValue2 = Math.floor(Math.random() * 9);
 let otpValue3 = Math.floor(Math.random() * 9);
 let otpValue = `${otpValue0}${otpValue1}${otpValue2}${otpValue3}`;
 // ***********otp_Genarator_F***********
-let otp_Genarator_F = (otpValu) => {
-    let emailBody = `<h2>Your OTP is</h2><h3>${otpValu}</h3>`;
-    Email.send({
-        SecureToken : "617c705b-afcb-42a4-b479-2a3590420994",
-        To : userData.u_Email,
-        From : userData.u_Email,
-        Subject : "Email OTP",
-        Body : emailBody
-    }).then(
-      message => {
-        if(message){
-            alert("Otp send to your email "+ userData.u_Email);
-        }
-      }
-    );
+let otp_Genarator_F = (otpValue) => {
+    if(otpValue){
+        alert("Your OTP : "+ otpValue);
+        console.log("Your OTP : "+ otpValue);
+    }
 }
 // **********popup_Window_F**********
 let popup_Window_F = (total_Amount, bank_Input, phone_Otp, confirm_Btn) => {
